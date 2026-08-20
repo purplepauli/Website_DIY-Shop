@@ -1,0 +1,35 @@
+
+<link rel="stylesheet" href="/css/dashboard/lists.css">
+<script src="/js/dashboard/safety.js" defer></script>
+
+<% 
+    const guides = data ?? []; console.log(guides);
+    const _overlay = overlay ?? false; console.log(overlay);
+%>
+
+<div id="overlay">
+    <% if(overlay) { %>
+         <%- include("overlay");  %> 
+    <% } %>
+</div>
+
+<div class="list-head">
+    <h2 class="page-head__count" id="guideCountHeading">Es gibt <%= guides.length == 1 ? "einen Sicherheitsratgeber" : guides.length + " Sicherheitsratgeber"%></h2>
+    <a href="?o=true" class="btn btn--primary">Neuen Ratgeber hinzufügen</a>
+</div>
+<div class="list" id="list-safety">
+    <% guides.forEach(guide => { %>
+        <div class="list-row" data-id="<%= guide.id %>">
+            <div class="list-row-title"><%= guide.title %></div>
+            <div class="list-row-content">
+                <div class="list-row-tags">
+                    
+                </div>
+                <div class="list-row-actions">
+                    <button type="button" class="btn btn--delete" data-action="delete" data-id="<%= guide.id %>">Löschen</button>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+</div>
+

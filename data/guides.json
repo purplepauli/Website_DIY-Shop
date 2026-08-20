@@ -1,0 +1,833 @@
+{
+    "bar-bauen": {
+        "title": "Outdoor-Bar selber bauen",
+        "category": "bauen",
+        "tag": "Ratgeber",
+        "image": "/images/guides/Bar.jpg",
+        "teaser": "Es gibt Gärten, die alle haben. Und es gibt Deinen – mit einer Outdoor Bar Marke Eigenbau. Während andere den Grill anfeuern, lässt Du die Korken knallen. Zeit für einen Schluck an Deiner neuen Gartenbar, wir zeigen Dir wie Du eine Outdoor Bar selber bauen kannst.",
+        "intro": "Eine eigene Bar ist mehr als nur Möbelstück – sie ist der Mittelpunkt für gemütliche Abende mit Freunden und Familie. Das Beste daran: Mit etwas handwerklichem Geschick und ein paar guten Werkzeugen ist dieses Projekt auch für Einsteiger machbar. Vom stabilen Holzrahmen bis zur durchdachten Ablagefläche zeigen wir Dir, wie Du Schritt für Schritt Deine Wunschbar baust – maßgeschneidert auf Deinen Platz und Deinen Stil. Schraube, säge und hämmere Dich zu Deiner ersten eigenen Cocktailrunde.",
+        "difficulty": 4,
+        "time": "5 Tage",
+        "products": [
+            {
+                "artikelnummer": "SKU-009",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-013",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-023",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-052",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-020",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-017",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-016",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-040",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-042",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-039",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-048",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-045",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-050",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-049",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-058",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-059",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-060",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-061",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-062",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-063",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-064",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-065",
+                "type": "werkzeug"
+            }
+        ],
+        "steps": [
+            {
+                "title": "Grundriss aufzeichnen",
+                "text": "Wenn Du eine Outdoor Bar selber bauen möchtest, benötigst Du als erstes ein Fundament. Geeignet ist z. B. eine 10 cm dicke Fundamentplatte, die ein leichtes Gefälle hat. Auf das Fundament wird der Grundriss aufgezeichnet. Die Markierungslinien stehen im rechten Winkel zueinander, wenn die Diagonalen exakt gleich lang sind.",
+                "image": "/images/guidesteps/bar_1.avif"
+            },
+            {
+                "title": "Bodenhölzer ausrichten",
+                "text": "Streiche die Bodenhölzer (1) werden mit Holzschutzlasur. Zum Verschrauben auf dem Fundament müssen sie vorgebohrt werden: vier Bohrungen mit Ø 8 mm, gleichmäßig über die Länge verteilt. Markiere anschließend die Positionen der Bodenhölzer auf der Fundamentplatte. Verlege Dachpappestreifen an den angezeichneten Positionen und lege die Bodenhölzer darauf. Bohre die Dübellöcher durch die vorgebohrten Löcher der Bodenhölzer in das Fundament. Steck die Durchsteckdübel ein und verschraube die Hölzer mit dem Fundament. Lege am vorderen Rand der Bodenhölzer das Querholz (2) auf: vorne mit 70 mm Abstand und seitlich mit jeweils 70 mm Überstand. Verschraube das Querholz (2) mit Schrauben 6 x 100 mm auf den Bodenhölzern (1) – Schraubenlöcher vorbohren.",
+                "image": "/images/guidesteps/bar_2.avif"
+            },
+            {
+                "title": "Bodenbretter verlegen",
+                "text": "Verlege die drei ersten Bodenbretter (3) vorne beginnend und außen bündig am Querholz (2). Verschraube vorerst nur das 2. und 3. Brett an den Bodenhölzern (1) mit je zwei Schrauben. Lege nun ein viertes Brett lose als Abstand auf. Setze dann vier weitere Bodenbretter (3) an – außen mit jeweils 70 mm Überstand – und verschraube sie mit den Bodenhölzern (1) mit je zwei Schrauben 4 x 40 mm. Nimm die beiden losen Bretter anschließend wieder heraus.",
+                "image": "/images/guidesteps/bar_3.avif"
+            },
+            {
+                "title": "Pfosten aufstellen",
+                "text": "Schneide 6 Stücke Dachpappe 70 x 70 mm zu und lege sie unter die Pfosten (4), (5) und (6). Stell die Pfosten auf, richte sie mit der Wasserwaage in beiden Achsen senkrecht aus und verschraube sie von außen mit Schrauben 6 x 100 mm mit den Bodenhölzern – Schraubenlöcher vorbohren. Verschraube die beiden Pfosten (4) zusätzlich von vorne am Querholz (2). Sichere die Pfosten direkt nach dem Anschrauben mit quer angeklemmten Latten, damit sie nicht abknicken können.",
+                "image": "/images/guidesteps/bar_4.avif"
+            },
+            {
+                "title": "Dachunterbau für Outdoor Bar",
+                "text": "Oben an den Pfosten (4) (5) und (6) wird von außen je ein Träger (7) befestigt, vorne und hinten mit jeweils 45 mm Überstand. Fixiere die Träger (7) zuerst mit Schraubzwingen und richte sie auf gleicher Höhe und parallel zueinander aus, mit etwa 10 cm Gefälle nach hinten. Richte auch die Pfosten aus: senkrecht, parallel zueinander und im rechten Winkel zu den Bodenhölzern. Träger (7) anschließend vorbohren und mit den Pfosten (4) (5) und (6) mit Schrauben 4 x 80 mm verschrauben.",
+                "image": "/images/guidesteps/bar_5.avif"
+            },
+            {
+                "title": "Bodenbretter auffüllen",
+                "text": "Nun werden die Lücken zwischen den Bodenbrettern ergänzt. Zeichne dazu die Positionen der drei hinteren Pfosten (5) am hinteren Bodenbrett (3) an sowie die Positionen der beiden mittleren Pfosten (6) am mittleren Bodenbrett (3). Säge anschließend die Aussparungen heraus. Setze die beiden Bodenbretter anschließend ein und verschraube sie mit je zwei Schrauben mit den Bodenhölzern (1). Das vordere Bodenbrett noch nicht verschrauben.",
+                "image": "/images/guidesteps/bar_6.avif"
+            },
+            {
+                "title": "Seitenwand der Outdoor Bar verkleiden",
+                "text": "Nun wird die rechte Seitenwand verkleidet. Dazu den äußeren Abstand der beiden Pfosten (5) und (6) messen und in dieser Länge die benötigten Verkleidungsbretter (10) zuschneiden. Das oberste Brett wird passend zum Winkel der Dachneigung zugeschnitten. Verschraube die Verkleidungsbretter (10) von innen mit den beiden Pfosten (5) und (6) – von unten beginnend und mit der Feder nach oben. Verwende Schrauben 4 x 40 mm.",
+                "image": "/images/guidesteps/bar_7.avif"
+            },
+            {
+                "title": "Rückwand der Outdoor Bar verkleiden",
+                "text": "Verschraube am hinteren rechten Pfosten (5) ein zusätzliches Kantholz (11) mit Schrauben 6 x 100 mm – daran werden später die Verkleidungsbretter (12) der Rückwand verschraubt. Achte deshalb darauf, dass die Schrauben der Verkleidungsbretter später nicht die Befestigungsschrauben des Kantholzes treffen können. Nun den äußeren Abstand des mittleren Pfostens (5) zum zusätzlich angebrachten Kantholz (11) messen. Schneide die Verkleidungsbretter (12) auf dieses Maß zu und verschraube sie mit dem mittleren Pfosten (5) und dem Kantholz (11). Das oberste Brett wird in der Höhe passend zugeschnitten.",
+                "image": "/images/guidesteps/bar_8.avif"
+            },
+            {
+                "title": "Front verkleiden",
+                "text": "Nun wird der Innenbereich mit Verkleidungsbrettern (13) abgetrennt. Wähle die Höhe so, dass später die Theke in der gewünschten Höhe darauf montiert werden kann. Die Verkleidungsbretter (12) auf 2140 mm zuschneiden und von vorne an den beiden Pfosten (6) mit Schrauben 4 x 40 mm anschrauben.",
+                "image": "/images/guidesteps/bar_9.avif"
+            },
+            {
+                "title": "Sitzhöhe bestimmen",
+                "text": "Für die Sitzbank werden zwei Kanthölzer (14) an den beiden vorderen Pfosten (4) montiert. Wähle die Höhe der Sitzfläche nach Deinen Vorstellungen. Fixiere die Kanthölzer mit Klemmen in dieser Höhe von vorne und hinten an den Pfosten und richte sie waagerecht und auf einer Höhe aus.",
+                "image": "/images/guidesteps/bar_10.avif"
+            },
+            {
+                "title": "Loch für Schrauben bohren",
+                "text": "Bohre auf jeder Seite ein Loch mit Ø 10 mm exakt waagerecht durch Kanthölzer (14) und Pfosten (4).",
+                "image": "/images/guidesteps/bar_11.avif"
+            },
+            {
+                "title": "Kanthölzer verschrauben",
+                "text": "Verschraube die Kanthölzer (14) von außen mit den Schlossschrauben M10, Unterlegscheibe und Hutmutter mit den Pfosten (6).",
+                "image": "/images/guidesteps/bar_12.avif"
+            },
+            {
+                "title": "Sitzbank stabilisieren",
+                "text": "Für die Stabilität der Sitzbank werden vier weitere Hölzer (15) montiert – Dachpappe nicht vergessen. Schneide die Hölzer (15) dazu auf die exakte Höhe zu, oben bündig mit der Oberkante des eben eingeschraubten Kantholzes. Richte die Hölzer senkrecht aus und verschraube sie: unten mit jeweils zwei Senkkopfschrauben seitlich mit den Bodenhölzern (1) und oben mit jeweils einer Schlossschraube M10, Unterlegscheibe und Hutmutter von außen zwischen den Querhölzern (14).",
+                "image": "/images/guidesteps/bar_13.avif"
+            },
+            {
+                "title": "Stützen zuschneiden",
+                "text": "Schneide für die Montage der zusätzlichen äußeren Stützen (15) das vordere Bodenbrett zu, das nur lose aufgelegt wurde.",
+                "image": "/images/guidesteps/bar_14.avif"
+            },
+            {
+                "title": "Stützen montieren",
+                "text": "Setze die äußeren zusätzlichen Stützen (15) mit Dachpappe auf der Fundamentplatte auf und verschraube sie von außen mit Senkkopfschrauben 6 x 100 mm mit den beiden äußeren Bodenhölzern (1).",
+                "image": "/images/guidesteps/bar_15.avif"
+            },
+            {
+                "title": "Stützen fixieren",
+                "text": "Fixiere drei weitere horizontale Kanthölzer (14) mit Klemmen an den soeben montierten Stützen. Wähle dazu eine Höhe nach Deinen Vorstellungen zum Abstützen der Füße. Bohre je ein Schraubenloch mit Ø 10 mm durch die drei Kanthölzer (14) und die äußeren Stützen (15). Verschraube anschließend die drei Kanthölzer (14) mit je einer Schlossschraube M10, Unterlegscheibe und Hutmutter mit den äußeren Stützen (15).",
+                "image": "/images/guidesteps/bar_16.avif"
+            },
+            {
+                "title": "Stützen verschrauben",
+                "text": "Setz die vier mittleren Stützen (16) auf das vordere Bodenbrett (3) auf. Richte sie senkrecht und in einer Flucht mit den vorderen Stützen aus. Verschraube sie unten mit Stuhlwinkeln und oben mit je 2 Schrauben 6 x 80 mm mit den drei zuvor angebrachten Kanthölzern (14).",
+                "image": "/images/guidesteps/bar_17.avif"
+            },
+            {
+                "title": "Kanten schleifen",
+                "text": "Schneide die Platte für die Sitzfläche an den vorderen Pfosten (4) aus. Schleife die Kanten im 45°-Winkel an und glätte alle Schnittflächen.",
+                "image": "/images/guidesteps/bar_18.avif"
+            },
+            {
+                "title": "Sitzfläche montieren",
+                "text": "Jetzt wird die Sitzfläche montiert. Bohre dazu von unten acht Bohrlöcher mit Ø 5 mm in die oberen Kanthölzer (14). Senke die Bohrlöcher von unten, damit die Schraubenköpfe nach dem Verschrauben nicht überstehen. Lege die Sitzfläche auf und verschraube sie von unten mit Senkkopfschrauben 5,0 x 90 mm.",
+                "image": "/images/guidesteps/bar_19.avif"
+            },
+            {
+                "title": "Theke mit Winkelstützen montieren",
+                "text": "Die Theke wird rechts und links mit Winkelstützen montiert und liegt später auf den Verkleidungsbrettern (13) auf. Schneide ein Brett 200 x 200 x 24 mm diagonal durch; so erhältst Du zwei dreieckige Winkelstützen (18). Schleife die Kanten im 45°-Winkel an und glätte alle Schnittflächen. Bohre drei Befestigungslöcher mit Ø 5 mm mit einem Abstand von 35 mm zu einer der kurzen Seiten. Richte die Winkelstützen (18) oben bündig mit den Verkleidungsbrettern (13) aus und verschraube sie mit Schrauben 4,5 x 60 mm von innen mit den Pfosten (6) – am rechten Pfosten wird durch die Verkleidungsbretter (10) geschraubt.",
+                "image": "/images/guidesteps/bar_20.avif"
+            },
+            {
+                "title": "Winkelstützen zuschneiden",
+                "text": "Schneide aus einfachem Vierkantholz 40 x 40 mm zwei Kanthölzer (19) mit 200 mm Länge zu. Schleife die Kanten im 45°-Winkel an und glätte alle Schnittflächen. Bohre jeweils fünf Löcher mit Ø 5 mm in die Kanthölzer: drei waagerecht und zwei senkrecht. Die Bohrungen außen und unten senken. Verschraube die Kanthölzer (19) oben bündig mit den Winkelstützen (18) mit Schrauben 4,5 x 60 mm.",
+                "image": "/images/guidesteps/bar_21.avif"
+            },
+            {
+                "title": "Thekenplatte montieren",
+                "text": "Die Thekenplatte (20) wird rechts und links so ausgespart, dass sie innen zwischen Pfosten (6) und Verkleidungsbretter (10) passt und außen über die Verkleidungsbretter (13) ragt.",
+                "image": "/images/guidesteps/bar_22.avif"
+            },
+            {
+                "title": "Theke verschrauben",
+                "text": "Lege die Thekenplatte (20) auf die Verkleidungsbretter (13) und die seitlichen Abstützungen (18) und (19) auf. Richte sie sauber aus und verschraube sie von unten mit Senkkopfschrauben 4,5x60 mm mit den Kanthölzern (19).",
+                "image": "/images/guidesteps/bar_23.avif"
+            },
+            {
+                "title": "Löcher für Regal bohren",
+                "text": "Eckregale bieten selbst in engsten Räumen Stauraum, ohne zu stören. Schneide für jeden Regalboden ein Kantholz (21) 40 x 40 x 200 mm zu und ein Kantholz (22) 40 x 40 x 160 mm. Bohre und senke jeweils zwei Befestigungslöcher waagerecht mit Ø 6 mm in die Hölzer und zwei Löcher senkrecht mit Ø 5 mm – daran wird später der Regalboden verschraubt. Richte die Kanthölzer mit der Wasserwaage aus und übertrage die Position der Bohrlöcher mit der Bohrspitze auf die Verkleidungsbretter (10) und (12). Anschließend die Schraubenlöcher mit Ø 6 mm durchbohren.",
+                "image": "/images/guidesteps/bar_24.avif"
+            },
+            {
+                "title": "Kanthölzer für Regal verschrauben",
+                "text": "Verschraube die Kanthölzer von innen mit Schlossschrauben M6 x 60 mm, Unterlegscheibe und Hutmutter M6 mit den Verkleidungsbrettern (10) und (12).",
+                "image": "/images/guidesteps/bar_25.avif"
+            },
+            {
+                "title": "Regalbretter anbringen",
+                "text": "Schneide ein Brett 300 x 300 mm diagonal durch; so erhältst Du zwei dreieckige Regalbretter (23). Schleife die Kanten im 45°-Winkel an und glätte alle Schnittflächen. Lege das Regalbrett (23) auf die Kanthölzer und verschraube es von unten durch die Kanthölzer mit Senkkopfschrauben 4,5x60 mm.",
+                "image": "/images/guidesteps/bar_26.avif"
+            },
+            {
+                "title": "Dachsparren auflegen",
+                "text": "Für das Dach werden in Richtung der Dachschräge Dachsparren aufgelegt. Schneide die Dachsparren (24) so zu, dass vorne und hinten ein Dachüberstand entsteht. Lege die beiden äußeren Dachsparren (24) auf die Pfetten (8) auf, direkt an den Pfosten (4), (6) und (5). Richte sie vorne und hinten mit gleichem Überstand aus. Verschraube diese beiden Sparren mit Winkelverbindern auf den Pfetten. Hierzu Schrauben 4,5 x 30 mm verwenden.",
+                "image": "/images/guidesteps/bar_27.avif"
+            },
+            {
+                "title": "Bretter aufnageln",
+                "text": "Für die 2340 x 1940 mm große Trägerfläche (25) für die Dacheindeckung werden Schalbretter oder OSB-Verlegeplatten quer zu den Dachsparren (24) aufgenagelt, ringsum mit gleichem Überstand zu der Trägerkonstruktion aus Dachsparren und Pfetten. Verschraube anschließend ringsum Dachkantenwinkel (26) an der Trägerfläche (25) aus Schalbrettern oder OSB-Verlegeplatten, damit kein Wasser in sie eindringen kann.",
+                "image": "/images/guidesteps/bar_28.avif"
+            },
+            {
+                "title": "Dachpappe verlegen",
+                "text": "Verlege die Dachpappe (27) in Bahnen von unten nach oben mit mind. 10 cm Überlappung auf der Trägerfläche (25) und befestige sie mit Dachpappstiften – achte darauf, dass die Trägerfläche anschließend vollständig mit Dachpappe abgedeckt und geschützt ist.",
+                "image": "/images/guidesteps/bar_29.avif"
+            },
+            {
+                "title": "Bitumenschindeln verlegen",
+                "text": "Dachpappe allein reicht als Dacheindeckung nicht aus, sie ist nur die Grundlage, z. B. für Bitumenschindeln (28). Zusätzlich kann vor dem Eindecken eine Dachentwässerung montiert werden.",
+                "image": "/images/guidesteps/bar_30.avif"
+            },
+            {
+                "title": "Outdoor Bar einrichten",
+                "text": "Fertig bist Du mit Outdoor Bar selber bauen. Jetzt heißt es einrichten und Platz nehmen. Prost!",
+                "image": "/images/guidesteps/bar_31.avif"
+            }
+        ]
+    },
+    "wand-tapezieren": {
+        "title": "Vliestapete tapezieren",
+        "category": "renovieren",
+        "tag": "Anleitung",
+        "image": "/images/guides/Tapezieren.jpg",
+        "teaser": "Vliestapeten bieten einen enormen Vorteil gegenüber Papiertapeten, da sie mit der Wandklebetechnik verarbeitet werden können. Wir zeigen Dir, wie Du Vliestapeten tapezieren kannst.",
+        "intro": "Eine eigentapezierte Wand ist eines der dankbarsten DIY-Projekte überhaupt: Der Aufwand ist überschaubar, das Ergebnis sofort sichtbar – und am Ende hast Du einen Raum, der komplett neu wirkt. Egal ob klassisches Papier, Vlies oder ein mutiges Muster: Mit der richtigen Vorbereitung und ein wenig Geduld gelingt das Tapezieren auch im ersten Versuch faltenfrei und gerade. Wir zeigen Dir Schritt für Schritt, wie Du Wände richtig vermisst, den Untergrund vorbereitest und die Bahnen sauber ankleben – damit Deine Wand am Ende aussieht, als hätte ein Profi sie gemacht.",
+        "difficulty": 3,
+        "time": "1 Tag pro Raum",
+        "products": [
+            {
+                "artikelnummer": "SKU-004",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-031",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-032",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-033",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-034",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-035",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-036",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-037",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-038",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-039",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-040",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-041",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-042",
+                "type": "werkzeug"
+            }
+        ],
+        "steps": [
+            {
+                "title": "Alte Tapeten entfernen",
+                "text": "Alte Tapeten müssen restlos von der Wand entfernt werden. Am besten weichst Du sie mit warmem Wasser ein, dann lässt sie sich leichter mit einem Spachtel abtragen. Für das Einweichen kannst Du eine Tiefengrundbürste verwenden. Das Wasser dringt besser in die Tapetenschichten ein, wenn Du sie mit einer Igelwalze perforierst. Verbessert wird die Wirkung des Einweichens noch mit einem Tapetenlöser.",
+                "image": "/images/guidesteps/tapezieren_1.avif"
+            },
+            {
+                "title": "Wandfläche vorbereiten",
+                "text": "Sind die alten Tapeten entfernt, wird die Wandfläche vorbereitet. Sie muss trocken, glatt, sauber sowie trag- und gleichmäßig saugfähig sein. Wasser- und Rostflecken auf der Wand werden vor dem Tapezieren mit einer Isolier-Grundierung überstrichen, damit sie später nicht durch die Tapete durchschlagen. Löcher und Risse werden mit Füllspachtel gefüllt und geglättet. Für kleinere Stellen eignet sich auch Reparaturspachtel.",
+                "image": "/images/guidesteps/tapezieren_2.avif"
+            },
+            {
+                "title": "Wände mit Tapeziergrund grundieren",
+                "text": "Ob die Wand stark oder wenig saugfähig ist, kannst Du durch das Benetzen der Fläche mit Wasser ermitteln. Perlt das Wasser ab, ist die Saugfähigkeit zu gering; zieht das Wasser schnell ein, ist sie zu hoch. Mit einem pigmentierten Tapeziergrund werden zum einen Farb- und Helligkeitsunterschiede der Wandfläche ausgeglichen und dadurch das Tapezierergebnis gleichmäßiger. Das ist bei Vliestapeten besonders wichtig. Zum anderen wird durch den Tapeziergrund eine gleichmäßige Saugfähigkeit erreicht.",
+                "image": "/images/guidesteps/tapezieren_3.avif"
+            },
+            {
+                "title": "Abstände mit Schlagschnur anzeichnen",
+                "text": "An der Decke wird längs zum Lichteinfall tapeziert – wie auch später an den Wänden. Markiere die Breite der ersten Bahn mit 50  cm Abstand zur Wand. Am besten geht das mit einer Schlagschnur, die man zu zweit an der Decke spannt und loslässt, sodass sie ihre Farbe als Strich auf die Decke überträgt. Ermittle die Bahnenlängen und schneide diese zuzüglich 10 cm Überstand zu.",
+                "image": "/images/guidesteps/tapezieren_4.jpg"
+            },
+            {
+                "title": "Decke einkleistern",
+                "text": "Dann den Vliestapetenkleber anrühren und ziehen lassen. Den Bereich für die erste Tapetenbahn mit etwas Überstand einkleistern.",
+                "image": "/images/guidesteps/tapezieren_5.avif"
+            },
+            {
+                "title": "Decke mit Vliestapete tapezieren",
+                "text": "Das Anbringen der Tapete machst Du am besten zu zweit. Die Tapetenbahn stückweise abrollen und an der Decke mit der Tapezierbürste andrücken und glatt streichen.",
+                "image": "/images/guidesteps/tapezieren_6.jpg"
+            },
+            {
+                "title": "Überstände entfernen",
+                "text": "Der Überstand, der an allen Kanten zur Wand hin eingeplant wurde, kann dann mit einem Tapezierspachtel und einem Cuttermesser sauber abgetrennt werden. Alle weiteren Bahnen nun nacheinander an der Decke tapezieren.",
+                "image": "/images/guidesteps/tapezieren_7.jpg"
+            },
+            {
+                "title": "An Fenster und Wand tapezieren",
+                "text": "An den Wänden wird mit dem Lichteinfall tapeziert, also immer vom Fenster zu den Zimmerecken. Als erstes die Fensterlaibung plus 3 cm Überstand messen. Den Wert von der Rollenbreite abziehen und den verbleibenden Abstand am Fenster z. B. nach links anzeichnen. Mit Wasserwaage oder Senklot eine Linie für die erste Tapetenbahn ziehen. Den Kleber anrühren und ziehen lassen.",
+                "image": "/images/guidesteps/tapezieren_8.jpg"
+            },
+            {
+                "title": "Neben dem Fenster tapezieren",
+                "text": "Das Feld für die erste Tapetenbahn einkleistern. Die zugeschnittene Tapetenbahn an der Wand mit 3 cm Überstand zur Decke ansetzen, nach unten abrollen, dabei an der Linie ausrichten und mit der Tapezierbürste feststreichen. So kannst Du die Vliestapete kleben.",
+                "image": "/images/guidesteps/tapezieren_9.avif"
+            },
+            {
+                "title": "Fensterlaibung mit Vliestapete tapezieren",
+                "text": "Schneide die Tapete oben an der Fensterlaibung mit der Schere waagerecht ein, damit Du sie in die Laibung klappen und andrücken kannst. Den Überstand zum Fenster abschneiden. Auf der gegenüberliegenden Seite verfährst Du genauso.",
+                "image": "/images/guidesteps/tapezieren_10.jpg"
+            },
+            {
+                "title": "Doppelnahtschnitt ausführen",
+                "text": "Über dem Fenster beginnst Du an der Fenstermitte und tapezierst nach links und nach rechts. In der Verlängerung der Laibungskante erfolgt ein Doppelnahtschnitt. Dabei trennst Du die beiden überlappenden Tapetenbahnen gemeinsam durch und entfernst die Überstände. Unterhalb und oberhalb der Fensterbank schneidest Du die Tapete waagerecht ein. Direkt hinter einem Heizkörper wird nicht tapeziert.",
+                "image": "/images/guidesteps/tapezieren_11.jpg"
+            },
+            {
+                "title": "Wand mit Vliestapete tapezieren",
+                "text": "Im weiteren Verlauf die angrenzenden Wände auf Stoß tapezieren.",
+                "image": "/images/guidesteps/tapezieren_12.avif"
+            },
+            {
+                "title": "Vliestapete an Tür tapezieren",
+                "text": "Je nach Tapezierrichtung (Lichteinfall) wird von links oder rechts an die Tür heran tapeziert. Am einfachsten ist es, wenn die benötigten Tapetenbahnen für das Tapezieren an der Tür erst in der Länge zugeschnitten werden – wieder zuzüglich Überstand. Sitzt die Tür nahe an einer Raumecke, schneidest Du die benötigte Tapetenbahn (a) in der Breite mit Überstand zur angrenzenden Wand zu. Sitzt die Türzarge genau senkrecht, kannst Du die Tapete direkt an der Zarge ansetzen. Eine angezeichnete Linie nach oben erleichtert das Ansetzen und Ausrichten der Bahn. Den Wandbereich dann einkleistern und die geschnittene Bahn tapezieren.",
+                "image": "/images/guidesteps/tapezieren_13.avif"
+            },
+            {
+                "title": "Vliestapete über Tür tapezieren",
+                "text": "Im weiteren Verlauf werden die Tapetenabschnitte über der Tür zugeschnitten. Bei einer Tapete mit Rapport musst Du beim Zuschnitt den Musteransatz berücksichtigen. Zum leichteren Tapezieren können Tapetenbahnen auch quer durchtrennt und nach dem Abschneiden des nicht benötigten Tapetenabschnittes an der Wand wieder nahtlos zusammengefügt werden.",
+                "image": "/images/guidesteps/tapezieren_14.avif"
+            },
+            {
+                "title": "Nahtstelle sauber kleben",
+                "text": "Hier ist sauberes Arbeiten besonders wichtig, damit man die Nahtstelle nachher nicht sieht. Diese Methode bietet sich an, wenn der Tapetenabschnitt (b) an der Wand schmal ausfällt.",
+                "image": "/images/guidesteps/tapezieren_15.avif"
+            },
+            {
+                "title": "Tapeten abziehen",
+                "text": "Selbst die schönsten Tapeten wollen nach einigen Jahren ausgetauscht werden. Vliestapeten kannst Du problemlos und ohne Rückstände einfach von der Wand abziehen. Dies gestaltet sich wesentlich müheloser als z.  B. bei „normalen“ Papiertapeten. Das ist einer der großen Vorteile dieses Materials! Dadurch wird ein Tapetenwechsel ohne den üblichen, hohen Zeitaufwand möglich.",
+                "image": "/images/guidesteps/tapezieren_16.jpg"
+            },
+            {
+                "title": "Ideale Basis für neue Tapeten",
+                "text": "Hast Du Deine alten Vliestapeten von den Wänden entfernt, kannst Du direkt loslegen und neu tapezieren. Die Wände sind nach dem Entfernen der Vliestapete schon für den neuen Belag bestens vorbereitet.",
+                "image": "/images/guidesteps/tapezieren_17.jpg"
+            }
+        ]
+    },
+    "tuerschloss-reparieren": {
+        "title": "Türschloss reparieren",
+        "category": "reparieren",
+        "tag": "Anleitung",
+        "image": "/images/guides/Türschloss.jpg",
+        "teaser": "Ein Türschloss ausbauen ist gar nicht so schwer und in wenigen Minuten erledigt. Wir zeigen Dir, wie Du Türschloss und Schließzylinder ganz einfach selbst ausbauen und auswechseln kannst.",
+        "intro": "Ein klemmendes Schloss oder ein abgebrochener Schlüssel klingt nach einem großen Problem – ist es aber meistens nicht. In den allermeisten Fällen reicht der Austausch des Schließzylinders, und das schaffst Du in wenigen Minuten ganz ohne Schlüsseldienst. Wir zeigen Dir, worauf Du achten musst und wie der Einbau Schritt für Schritt gelingt – damit Deine Tür wieder zuverlässig auf- und zugeht.",
+        "difficulty": 1,
+        "time": "30 Minuten",
+        "products": [
+            {
+                "artikelnummer": "SKU-040",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-043",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-044",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-045",
+                "type": "material"
+            }
+        ],
+        "steps": [
+            {
+                "title": "Nötige Maße nehmen",
+                "text": "Messe zunächst den alten Schließzylinder aus, damit Du den neuen passgenau kaufen kannst. Messe dazu von der Außenkante des Schutzbeschlags bis zur Mitte des Einsteckschlosses. Von dort bis zur Oberfläche des Türbeschlags (innen). Achtung: Die Abstände sind oft asymmetrisch!",
+                "image": "/images/guidesteps/tuerschloss_1.webp"
+            },
+            {
+                "title": "Zylinder lösen",
+                "text": "Der Schließzylinder wird von einer Stellschraube fixiert, die sich unter dem Riegel im Einsteckschloss auf der Innenseite des Türblatts befindet. Drehe diese Schraube aus dem Einsteckschloss. Dafür genügt ein einfacher Schraubendreher.",
+                "image": "/images/guidesteps/tuerschloss_2.webp"
+            },
+            {
+                "title": "Zylinder entfernen",
+                "text": "Sobald die Schraube draußen ist, kann der Schließzylinder einfach aus dem Türschloss gezogen werden. Drehe den Schlüssel im alten Schließzylinder um gut 20° bis 30°, damit die Schließnase den Zylinder freigibt. Ziehe den Zylinder dann aus dem Türschloss.",
+                "image": "/images/guidesteps/tuerschloss_3.webp"
+            },
+            {
+                "title": "Drücker entfernen",
+                "text": "Wenn Du das ganze Türschloss ausbauen möchtest, musst Du jetzt zusätzlich noch den Drücker (also die Türklinke) entfernen. Mit einem einfachen Vierkantschlüssel (Inbus) kannst Du den Drücker lösen und abziehen (siehe Bild). Achtung: Beachte beim Kauf des neuen Schlosses unbedingt das Entfernungsmaß und die Anschlagrichtung, also ob die Tür links oder rechts öffnet.",
+                "image": "/images/guidesteps/tuerschloss_4.webp"
+            },
+            {
+                "title": "Schloss wechseln",
+                "text": "Jetzt kannst Du das alte Türschloss ausbauen und das neue Schloss einsetzen. Der Abstand zwischen Klinkenvierkant und Drehpunkt des Schlüssels bzw. des Schließzylinders beträgt bei einer Zimmertür 72 mm, bei Haustüren meist 92 mm.",
+                "image": "/images/guidesteps/tuerschloss_5.webp"
+            },
+            {
+                "title": "Den neuen Zylinder anpassen",
+                "text": "Prüfe vor dem Einsetzen des neuen Zylinders, welche Seite die richtige ist. Wenn die Tür asymmetrisch ist, hat auch der Schließzylinder eine Richtung. Er ist dann auf der einen Seite deutlich länger als auf der anderen.",
+                "image": "/images/guidesteps/tuerschloss_6.webp"
+            },
+            {
+                "title": "Den Schließzylinder einsetzen",
+                "text": "Drehe den Schlüssel im neuen Schließzylinder, bis die Schließnase einklappt. Dann kannst Du den Schließzylinder problemlos ins Türschloss einschieben.",
+                "image": "/images/guidesteps/tuerschloss_7.webp"
+            },
+            {
+                "title": "Befestigen",
+                "text": "Jetzt einfach den Zylinder einstecken und am Einsteckschloss festschrauben. Tipp: Nur wenn Du den Zylinder aus Sicherheitsgründen tauschst, solltest Du auch das Einsteckschloss tauschen.",
+                "image": "/images/guidesteps/tuerschloss_8.webp"
+            }
+        ]
+    },
+    "pergola-bauen": {
+        "title": "Pergola bauen",
+        "category": "bauen",
+        "tag": "Ratgeber",
+        "image": "/images/guides/Pergola.jpg",
+        "teaser": "Du hast Dich für eine Pergola im Garten entschieden? Gute Wahl! Eine Pergola sieht nicht nur gut aus, sondern schützt Dich auch vor Sonne, Regen oder Schnee. So steht gemütlichen Stunden im Garten nichts mehr im Weg. Wir zeigen Dir, wie Du eine Pergola selber bauen kannst.",
+        "intro": "<p>Wenn Du eine Pergola selber bauen möchtest, spielen Material, Standort und spätere Nutzung eine entscheidende Rolle. Je nachdem, wo und wie Du sie einsetzen willst, ergeben sich unterschiedliche Bauweisen und Gestaltungsmöglichkeiten.</p>\n\n<h3>Welche Pergola passt zu Dir?</h3>\n<ul>\n  <li><strong>Holzpergola:</strong> Holz ist das klassische Material für selbst gebaute Pergolen. Es lässt sich gut verarbeiten, ist stabil und passt optisch zu vielen Garten- und Terrassenstilen. Gängig sind Douglasie, Lärche oder druckimprägniertes Holz. Regelmäßiger Holzschutz verlängert die Lebensdauer.</li>\n  <li><strong>Pergola aus Metall:</strong> Metallpergolen wirken modern und sind sehr langlebig. Beim Selbstbau ist der Aufwand größer, da präzise Befestigungen und Korrosionsschutz wichtig sind. Sie eignen sich vor allem für klare, reduzierte Gestaltungen.</li>\n  <li><strong>Materialkombinationen:</strong> Auch Kombinationen, etwa Holzpfosten mit Metallelementen oder textilem Sonnenschutz, sind möglich. Das erlaubt eine flexible Anpassung an Design und Nutzung.</li>\n</ul>\n\n<h3>Wo soll die Pergola stehen?</h3>\n<ul>\n  <li><strong>Freistehend im Garten:</strong> Eine freistehende Pergola eignet sich, um im Garten einen eigenen Bereich zu definieren – zum Beispiel als Sitzplatz oder Ruhezone. Der Standort sollte eben sein und ausreichend befestigt werden.</li>\n  <li><strong>Pergola an Haus oder Terrasse:</strong> Wird die Pergola an der Hauswand montiert, entsteht ein Übergang zwischen Innen- und Außenbereich.</li>\n  <li><strong>Kleine Flächen und schmale Grundstücke:</strong> Auch auf begrenztem Raum ist eine Pergola möglich. Schmale oder kompakte Konstruktionen spenden Schatten und bringen Struktur, ohne viel Platz einzunehmen.</li>\n</ul>\n\n<h3>Wofür willst Du die Pergola einsetzen?</h3>\n<ul>\n  <li><strong>Schattenplatz und Sonnenschutz:</strong> Pergolen bieten je nach Ausführung leichten bis effektiven Sonnenschutz. Ergänzt mit Stoffdach, Sonnensegel oder einer richtigen Überdachung lässt sich der Schatten gezielt steuern.</li>\n  <li><strong>Essplatz:</strong> Über einem Tisch oder einer Sitzgruppe geplant, wird die Pergola zum festen Treffpunkt im Außenbereich. Zusätzliche Elemente wie Beleuchtung sorgen für gemütliche Abendstunden draußen.</li>\n  <li><strong>Rankhilfe für Pflanzen:</strong> Als Rankgerüst genutzt, wächst die Pergola mit der Zeit zu. Kletterpflanzen sorgen für natürlichen Schatten und zusätzliche Abgrenzung.</li>\n</ul>",
+        "difficulty": 4,
+        "time": "2-3 Tage",
+        "products": [
+            {
+                "artikelnummer": "SKU-009",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-048",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-011",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-013",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-023",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-046",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-047",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-049",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-050",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-040",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-039",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-051",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-052",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-053",
+                "type": "werkzeug"
+            }
+        ],
+        "steps": [
+            {
+                "title": "Fundamente oder Pfostenträger aufstellen",
+                "text": "Die Pergola steht auf Betonfundamenten mit Aufschraubbodenhülsen oder bei anderen Untergründen auf Pfostenträgern. Gut für den konstruktiven Holzschutz sind 10 cm Abstand der Pfosten zum Boden.",
+                "image": "/images/guidesteps/pergola_1.jpg"
+            },
+            {
+                "title": "Querbalken auf Pfosten anbringen",
+                "text": "Der nächste Schritt hängt ohnehin davon ab, wie Du die Pergola konstruierst. Die Pfetten (Querbalken) werden entweder mit Winkelelementen auf den Pfosten befestigt, zwischen zwei oder vier Stützen eingespannt oder seitlich daran geschraubt und noch mit Schlossschrauben verbunden.",
+                "image": "/images/guidesteps/pergola_2.jpg"
+            },
+            {
+                "title": "Pfetten verlängern",
+                "text": "Wenn Du die Pfetten verlängern musst, sollten sie über einem Pfosten aufeinandertreffen. Zusätzlich überblattet man die Balken. Das heißt, man sägt an beiden Enden jeweils ein Stück (ca. 5 cm lang und halbe Balkendicke) aus, sodass sie hinterher ineinandergreifen. Nicht von oben verschrauben, sondern ebenfalls mit Winkeln von unten am Pfosten befestigen.",
+                "image": "/images/guidesteps/pergola_3.jpg"
+            },
+            {
+                "title": "Sparren verankern",
+                "text": "Die Sparren werden hochkant in die Pfetten eingesenkt und mit Sparrenpfettenankern verbunden oder von unten verschraubt. Dabei sollten sich die Verschraubungen nicht direkt über den Pfosten befinden. Es ist sinnvoll, die Aussparungen in die Sparren zu sägen, bevor diese auf die Pfetten geschraubt werden. Am besten baust Du die ganze Konstruktion zunächst mit Schraubzwingen auf und zeichnest die erforderlichen Markierungen ein. Dann kannst Du die Hölzer passgenau zuschneiden und das Teil endgültig aufbauen und verschrauben. Zusätzliche Stabilität bekommt die Pergola noch durch Querstreben.",
+                "image": "/images/guidesteps/pergola_4.jpg"
+            },
+            {
+                "title": "Pergola bepflanzen",
+                "text": "Ist Deine Konstruktion fertig, kannst Du die Pergola bepflanzen. Dafür nutzt Du am besten Kletterpflanzen oder Weinpflanzen. Ist die Pergola berankt, spendet sie Dir Schatten im Sommer, gewährt aber auch einen guten Luftdurchzug. Umso dichter die Pergola bewachsen ist, umso besser schützt sie Dich auch bei einem leichten Sommerregen.",
+                "image": "/images/guidesteps/pergola_5.jpg"
+            },
+            {
+                "title": "Pergola überdachen",
+                "text": "Möchtest Du auch bei schlechtem Wetter draußen sitzen, lohnt sich eine feste Überdachung Deiner Pergola. Eine Bedachung, z. B. mit Stegdoppelplatten, macht aus der Pergola ein richtiges Bauwerk.",
+                "image": "/images/guidesteps/pergola_6.jpg"
+            }
+        ]
+    },
+    "laminat-verlegen": {
+        "title": "Laminat verlegen",
+        "category": "renovieren",
+        "tag": "Anleitung",
+        "image": "/images/guides/Laminat.jpg",
+        "teaser": "Ein neuer Boden verändert den gesamten Raum. Laminat ist langlebig, pflegeleicht und lässt sich dank moderner Klick-Systeme wunderbar selbst verlegen. Wir zeigen Dir Schritt für Schritt, worauf Du achten musst, damit am Ende nichts quietscht.",
+        "intro": "Laminat verlegen ist weniger kompliziert, als Du vielleicht denkst. Mit unserer Anleitung zeigen wir Dir Schritt für Schritt, wie das geht.",
+        "difficulty": 2,
+        "time": "25 Minuten pro m² (+ 2 Tage Aklimatisieren)",
+        "products": [
+            {
+                "artikelnummer": "SKU-002",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-015",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-023",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-049",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-040",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-051",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-054",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-055",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-056",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-057",
+                "type": "material"
+            }
+        ],
+        "steps": [
+            {
+                "title": "Schwimmende Verlegung",
+                "text": "Laminat wird immer schwimmend verlegt. Damit ist gemeint, dass die Dielen nicht mit dem Untergrund verbunden werden. Außen am Rand bekommen die Dielen eine Dehnungsfuge zu den Wänden, um bei Temperaturschwankungen Längenausdehnungen ausgleichen zu können. So werden auch Schallbrücken zum aufsteigenden Mauerwerk verhindert. Geeignete Untergründe sowie die Verlegebedingungen sind in der  Übersicht aufgeführt. Da die angegebenen Trockenzeiten von klimatischen Bedingungen abhängen, sind diese nur als Richtlinie zu verstehen. Zur Sicherheit rechnet man 2 Wochen hinzu. Als Untergründe nicht geeignet sind: alte Teppichböden, Nadelfilzböden (unhygienisch, teilweise zu weich, fehlende Dampfbremse), Steinholz-Estriche (zu hohe Restfeuchte)",
+                "image": "/images/guidesteps/laminat_1.jpg",
+                "imageFit": "contain"
+            },
+            {
+                "title": "Dehnfugen und Übergangsprofil",
+                "text": "Bei größeren Räumen werden Dehnfugen benötigt, welche mittels Übergangsprofil abgedeckt werden: nach 8 m in Richtung der Dielenbreite und nach 10 m in Richtung der Dielenlänge zu angrenzenden Bodenbelägen, unter jeder Tür und bei Raumeinschnürungen bei Bewegungsfugen im Unterboden",
+                "image": "/images/guidesteps/laminat_2.avif"
+            },
+            {
+                "title": "Untergrund vorbereiten",
+                "text": "Der Untergrund muss trocken und eben sein. Beachte hierzu auch die Herstellerempfehlungen. Unebenheiten größer als 3 mm pro Meter müssen ausgeglichen werden, z. B. mit einer Fließspachtelmasse.",
+                "image": "/images/guidesteps/laminat_3.avif"
+            },
+            {
+                "title": "Dampfbremsfolie verlegen",
+                "text": "Verlege je nach Untergrund eine Dampfbremsfolie. Die Bahnen mit einer Überlappung von 10 cm verlegen und die Stöße mit Alu-Dichtband dampfdicht verkleben. An den Rändern die Folie ca. 5 cm nach oben klappen.",
+                "image": "/images/guidesteps/laminat_4.avif"
+            },
+            {
+                "title": "Bodenunterlage verlegen",
+                "text": "Anschließend verlegst Du zum Ausgleich kleiner Unebenheiten eine Bodenunterlage, welche genau zu Deinem ausgewählten Bodenbelag und Untergrund passt.",
+                "image": "/images/guidesteps/laminat_5.avif"
+            },
+            {
+                "title": "Rollen oder Faltplatten",
+                "text": "Diese ist als Rollenware oder in Form von Faltplatten erhältlich.",
+                "image": "/images/guidesteps/laminat_6.avif"
+            },
+            {
+                "title": "Dicht- und Distanzband anbringen",
+                "text": "Bei Verwendung einer Unterlage mit integrierter Dampfbremsfolie werden die umlaufenden Ränder am besten mit Dicht- und Distanzband abgedichtet. Das Dicht- und Distanzband wird an zwei Raumseiten verlegt, das einfache Dichtband umläuft den ganzen Raum.",
+                "image": "/images/guidesteps/laminat_7.avif"
+            },
+            {
+                "title": "Distanzschaum nach Laminatverlegen entfernen ",
+                "text": "Der enthaltene Distanzschaum wird nach der Verlegung des Bodens entfernt.",
+                "image": "/images/guidesteps/laminat_8.avif"
+            },
+            {
+                "title": "Laminat 48h lagern",
+                "text": "Vor der Verlegung den Boden mindestens 48 Stunden im Verlegeraum lagern (geschlossene Verpackungen).",
+                "image": "/images/guidesteps/laminat_9.avif"
+            },
+            {
+                "title": "Federn absägen",
+                "text": "Für die erste Verlegereihe werden die Federn an den Dielen gleichmäßig abgesägt. Bei unregelmäßigem Wandverlauf diesen auf der erste Dielenreihe anzeichnen. Hierzu ein Holzbrettchen durchbohren und einen Stift einsetzen. Die Dielen dann entlang der angezeichneten Linie zusägen.",
+                "image": "/images/guidesteps/laminat_10.avif"
+            },
+            {
+                "title": "Erste Diele verlegen",
+                "text": "Die erste Diele mit der Federseite zur Wand verlegen. Durch das Dicht- und Distanzband werden Dehnfugen von ca. 10 – 15 mm zur Wand gesichert.",
+                "image": "/images/guidesteps/laminat_11.avif"
+            },
+            {
+                "title": "Restliche Dielen verlegen",
+                "text": "Weitere Dielen werden nun in der ersten Reihe jeweils an der Stirnseite angefügt.",
+                "image": "/images/guidesteps/laminat_12.avif"
+            },
+            {
+                "title": "Letzte Diele verlegen",
+                "text": "Die letzte Diele der Reihe wird um 180° gedreht und die benötigte Länge mit dem entsprechenden Wandabstand genau angezeichnet. Das Anzeichnen erfolgt je nach verwendeter Säge auf der Ober- oder Unterseite. Bei Verwendung einer Handsäge sägst Du von der Oberseite her.",
+                "image": "/images/guidesteps/laminat_13.avif"
+            },
+            {
+                "title": "Elektrosäge nutzen",
+                "text": "Bei Elektrosägen wird von der Unterseite her gesägt, um Kantenabsplitterungen zu vermeiden. Verwende das passende Sägeblatt.",
+                "image": "/images/guidesteps/laminat_14.avif"
+            },
+            {
+                "title": "Erste Reihe abschließen",
+                "text": "Die letzte Bodendiele der ersten Reihe wird nun eingesetzt. Das Reststück kann für den Anfang der nächsten Reihe verwendet werden, sofern das Reststück 30 cm nicht unterschreitet und an der ersten Reihe die Feder nicht abgesägt wurde. Die Stöße sollten mindestens 40 cm versetzt sein. Die Verlegung weiterer Reihen erfolgt entsprechend der Verriegelungs-Technik. Je nach Boden kann es auch hilfreich sein, das Verbinden mit einem Schlagklotz oder Zugeisen zu unterstützen.",
+                "image": "/images/guidesteps/laminat_15.avif"
+            },
+            {
+                "title": "Letzte Reihe verlegen",
+                "text": "Für die letzte Reihe muss nun die Dielenbreite ermittelt werden. Dazu lege eine Diele auf die vorletzte Reihe deckungsgleich auf und zeichne die benötigte Breite mit Hilfe eines weiteren Dielenstückes auf die Dielen für die letzte Reihe auf. Auch hier muss die Dehnungsfuge zur Wand berücksichtigt werden. Jetzt können die Dielen eingefügt werden. Unter Umständen wird ein Zugeisen für das Zusammenfügen benötigt.",
+                "image": "/images/guidesteps/laminat_16.avif"
+            }
+        ]
+    },
+    "wasserhahn-reparieren": {
+        "title": "Tropfenden Wasserhahn reparieren",
+        "category": "reparieren",
+        "tag": "Anleitung",
+        "image": "/images/guides/Wasserhahn.jpg",
+        "teaser": "Plopp... Plopp... Plopp... Das nervige Geräusch eines undichten Wasserhahns raubt Dir den Schlaf und verschwendet bares Geld. Mit unserer Anleitung wechselst Du die Dichtung oder die Kartusche im Handumdrehen selbst aus.",
+        "intro": "Ein tropfender Wasserhahn raubt nicht nur den Schlaf, sondern kostet auf Dauer auch bares Geld. Die gute Nachricht: Die Ursache ist fast immer eine verschlissene Dichtung oder Kartusche – und die ist mit wenig Aufwand selbst auszutauschen. Wir zeigen Dir, welches Werkzeug Du brauchst und wie Du in wenigen Minuten wieder Ruhe in Dein Bad oder Deine Küche bringst.",
+        "difficulty": 2,
+        "time": "20 bis 45 Minuten",
+        "products": [
+            {
+                "artikelnummer": "SKU-043",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-016",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-017",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-044",
+                "type": "werkzeug"
+            },
+            {
+                "artikelnummer": "SKU-045",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-066",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-067",
+                "type": "material"
+            },
+            {
+                "artikelnummer": "SKU-068",
+                "type": "werkzeug"
+            }
+        ],
+        "steps": [
+            {
+                "title": " Ursachenforschung",
+                "text": "Bevor Du mit der Reparatur beginnst, solltest Du die wahrscheinlichsten Ursachen des tropfenden Wasserhahns kennen. Bei Einhebelmischern resultieren Undichtigkeiten meist aus Kalkablagerungen oder Verschleiß an den Dichtflächen der Kartusche. Ist bei Dir eine Mischbatterie mit zwei drehbaren Wasserhähnen oder ein einzelner Wasserhahn zum Drehen installiert, sind meist defekte Dichtungen Schuld am Wasseraustritt. Bei den genannten Ursachen tropft der Hahn direkt aus der Auslauföffnung. Ist der Wasserauslauf Deines Hahns schwenkbar , können auch Dichtungsringe am Schwenkmechanismus undicht werden. Wie auch bei Dichtungen an drehbaren Wasserhähnen unterliegen die Dichtungen am Schwenkmechanismus Verschleiß, Materialermüdung und Kalkablagerungen. Diese Faktoren können sowohl in Kombination als auch einzeln zu Undichtigkeiten am Schwenkmechanismus führen. Folglich tropft der Hahn deshalb nicht aus dem Auslauf, sondern aus dem Schwenkgelenk. Beim Drehen des Hahns tritt meist ein verstärkter Wasserverlust auf.",
+                "image": "/images/guidesteps/wasserhahn_1.jpg",
+                "imageFit": "contain"
+            },
+            {
+                "title": "Ersatzteile und Werkzeug bereitlegen",
+                "text": "Lege vor der Reparatur Ersatzteile wie Dichtungen oder Kartuschen bereit. Passende Dichtungen lassen sich meist in Dichtungssets mit den verschiedensten Dichtungen finden. Achte jedoch darauf, dass die Dichtungen für Trinkwasser zugelassen sind und keine Schadstoffe wie Asbest enthalten. Welche Kartusche Du für Deinen Einhebelmischer benötigst, lässt sich anhand der Typbezeichnung des Hahns , zum Beispiel auf der Webseite des Herstellers, herausfinden. Teilweise sind Typ bzw. Teilenummern auf einem Aufkleber an der Zuleitung der Armatur vermerkt. Um einen Wasserhahn zu reparieren, reicht meist das Werkzeug eines gut ausgestatteten Werkzeugkastens für Heimwerker. Du benötigst auf jeden Fall verschiedene Schraubendreher mit Kreuz- und Längsschlitz, Wasserpumpenzange, Steckschlüssel- und Sechskantschlüsselsatz. Weiterhin solltest Du etwas Hahnfett bereithalten.",
+                "image": "/images/guidesteps/wasserhahn_2.jpg",
+                "imageFit": "contain"
+            },
+            {
+                "title": "Wasser absperren",
+                "text": "Bevor Du mit Reparaturarbeiten am Wasserhahn beginnst, musst Du das Wasser absperren. Die meisten Wasserhähne verfügen dazu unterhalb der Armatur über sogenannte Sperr- oder Eckventile . Drehe diese zu und prüfe anschließend durch Aufdrehen des Wasserhahns, ob das Wasser wirklich abgesperrt ist. Mit dem Öffnen des Hahns nimmst Du gleichzeitig den Druck aus der Leitung. So spritzt Dir bei der Reparatur kein Wasser entgegen. Sperr- oder Eckventile sind normalerweise separat für Kalt- und Warmwasser vorhanden. Wurden die Ventile lange nicht betätigt, kommt es relativ häufig vor, dass die Ventile nicht richtig schließen, beim Schließen plötzlich selbst undicht werden oder sich nicht mehr drehen lassen. Du kannst das Wasser dann am Haupthahn in der Nähe des Hausanschlusses absperren. Achte dann aber darauf, dass kein Wasser von Geräten wie Spülmaschine, Waschmaschine oder Boilern benötigt wird. Defekte Ventile solltest Du reparieren oder austauschen.",
+                "image": "/images/guidesteps/wasserhahn_3.jpg",
+                "imageFit": "contain"
+            },
+            {
+                "title": "Ablauf verschließen",
+                "text": "Schrauben oder andere Kleinteile des Wasserhahns aus dem Siphon von Waschbecken oder Spüle zu fischen, ist eine mühsame und nicht gerade appetitliche Angelegenheit. Verschließe den Ablauf des Waschbeckens daher vor der Reparatur.",
+                "image": "/images/guidesteps/wasserhahn_4.jpg",
+                "imageFit": "contain"
+            },
+            {
+                "title": "Mischhebel demontieren",
+                "text": "Der Mischhebel von Einhandmischern wird normalerweise nur durch eine Schraube fixiert. Löse die Fixierschraube mit einem Schraubendreher. Für eine schöne Optik der Armatur verstecken die Hersteller die Schraube oft unter dem blauroten Symbol für heißes und kaltes Wasser . Lösen lässt sich die Abdeckung oft mit einem kleinen Schraubendreher. Teilweise wird die Fixierschraube des Mischhebels erst sichtbar, wenn Du diesen nach oben bewegst. Einige Mischhebel verfügen auch über Fixierschrauben unter einer Abdeckung auf dem Mischhebel. Nachdem die Fixierschrauben gelöst wurden, kannst Du den Mischhebel durch leichtes Hin- und Herbewegen abnehmen. Geh dabei nicht mit Gewalt vor, da es sonst leicht zu Beschädigungen kommt.",
+                "image": "/images/guidesteps/wasserhahn_5.jpg",
+                "imageFit": "contain"
+            },
+            {
+                "title": "Kartusche entnehmen",
+                "text": "Nach Demontage des Mischhebels wird die meist aus Kunststoff bestehende Mischkartusche sichtbar. Die Kartusche wird durch eine Spannmutter fixiert. Löse diese mit einem passenden Steck- oder Gabelschlüssel. Nach dem Lösen kannst Du die Kartusche entnehmen.",
+                "image": "/images/guidesteps/wasserhahn_6.jpg",
+                "imageFit": "contain"
+            },
+            {
+                "title": "Wasserhahn reinigen",
+                "text": "Reinige das Innere des Wasserhahns von Schmutz und Kalkablagerungen. Kalkablagerungen lassen sich zum Beispiel mit einem in Essig getränkten Schwamm reinigen. Für schlecht zugängliche Stellen bietet sich eine vorher in Essig getauchte Zahnbürste an. Trage bei der Arbeit Handschuhe und Schutzbrille, da Essig Haut und Augen reizen bzw. verletzen kann. Achte bei verchromten Armaturen darauf, dass diese außen nicht mit dem Essig in Kontakt kommen. Essig kann Chrom schädigen. Spül den Hahn nach der Reinigung mit klarem Wasser.",
+                "image": "/images/guidesteps/wasserhahn_7.jpg",
+                "imageFit": "contain"
+            },
+            {
+                "title": "Kartusche austauschen und Mischhebel montieren",
+                "text": "Defekte bzw. undichte Kartuschen können in der Regel nicht repariert werden. Tausch die Kartusche daher inklusive Dichtungen gegen einen neue aus und befestige diese wieder mit der Spannmutter. Achte dabei auf die richtige Positionierung, welche oft durch Bohrungen vorgegeben ist. Anschließend schraubst Du den Mischhebel wieder fest. Zieh die Schrauben nur handfest an, um Spannungen und Risse zu vermeiden.",
+                "image": "/images/guidesteps/wasserhahn_8.jpg",
+                "imageFit": "contain"
+            },
+            {
+                "title": "Griff demontieren",
+                "text": "Der Griff eines Wasserhahns wird meist durch eine Schraube fixiert, die sich unter einer Abdeckung befindet. Entferne die Abdeckung, indem Du diese vorsichtig mit einem Schraubendreher herausdrückst und löse die Halteschraube. Danach kannst Du den Griff gerade nach oben bzw. nach vorne abziehen. Achte darauf, keine Bauteile zu beschädigen und lege die Schraube sicher beiseite.",
+                "image": "/images/guidesteps/wasserhahn_9.jpg",
+                "imageFit": "contain"
+            },
+            {
+                "title": "Ventil lösen",
+                "text": "Löse das nun sichtbare Ventil mit einem Schraubenschlüssel.",
+                "image": "/images/guidesteps/wasserhahn_10.jpg",
+                "imageFit": "contain"
+            },
+            {
+                "title": "Dichtung tauschen",
+                "text": "Die Dichtung befindet sich an der Unterseite des Ventils. Löse die Befestigung des Ventils mit Schraubendreher oder Schraubenschlüssel und tausche die Dichtung anschließend aus. Spüle den Hahn nach der Reinigung gründlich mit klarem Wasser.",
+                "image": "/images/guidesteps/wasserhahn_11.jpg",
+                "imageFit": "contain"
+            },
+            {
+                "title": "Ventil und Griff montieren",
+                "text": "Montier Ventil und Griff. Zieh die Schrauben dabei nur handfest an.",
+                "image": "/images/guidesteps/wasserhahn_12.jpg",
+                "imageFit": "contain"
+            }
+        ]
+    }
+}

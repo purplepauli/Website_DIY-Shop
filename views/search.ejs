@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+
+<%# Überschrift mit korrekter Singular/Plural-Form %>
+<h1>
+    <%= products.length %>
+    <%= products.length === 1 ? 'Ergebnis' : 'Ergebnisse' %>
+    für '<%= searchTerm %>'
+</h1>
+
+<%# Bestehendes Produktkarten-Partial einbinden. Über die optionale
+    emptyMessage zeigen wir bei 0 Treffern einen sinnvollen Hinweis
+    statt des Standardtextes. %>
+<%- include('partials/product-grid', {
+        title: '',
+        products: products,
+        emptyMessage: 'Keine Produkte gefunden für "' + searchTerm + '". Versuch es mit einem anderen Begriff oder der Artikelnummer.'
+    }) %>
+
+<%- include('partials/footer') %>

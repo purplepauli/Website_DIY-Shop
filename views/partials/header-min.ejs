@@ -1,0 +1,112 @@
+<link rel="stylesheet" href="/css/partials/header.css">
+
+<header>
+    <a href="/" class="logo"> DIY Store - Würzburg </a>
+
+    <form class="search-bar" method="GET" action="/suche" autocomplete="off">
+        <input id="searchInput" type="text" name="q" placeholder="Produkt suchen" autocomplete="off"
+                value="<%= typeof searchTerm !== 'undefined' ? searchTerm : '' %>">
+        <button type="submit">Suchen</button>
+        <div id="searchSuggestions" class="search-suggestions" hidden></div>
+    </form>
+
+    <div class="user-actions">
+        <% if (typeof user !=='undefined' && user ) { %>
+            <button onclick="window.location.href='/auth/logout'">🚪 Abmelden</button>
+            <% } else { %>
+                <button onclick="window.location.href='/auth/login'">👤 Anmelden</button>
+                <% } %>
+
+                    <button id="cartBtn" onclick="window.location.href='/warenkorb'">🛒 Warenkorb (0)</button>
+    </div>
+</header>
+
+<nav>
+    <%# Hilfsvariablen für die aktive Nav-Erkennung. currentPath und
+        currentCategory werden in app.js per Middleware in res.locals gesetzt. %>
+    <% const isProdukte = (typeof currentPath !== 'undefined' && currentPath === '/produkte'); %>
+    <% const activeCat = (typeof currentCategory !== 'undefined' && currentCategory) ? currentCategory : ''; %>
+    <% const activeSubcat = (typeof currentSubcategory !== 'undefined' && currentSubcategory) ? currentSubcategory : ''; %>
+    <ul class="nav-list">
+        <li class="nav-primary-end">
+            <a href="/produkte"
+                class="<%= (isProdukte && !activeCat) ? 'nav-active' : '' %>">Alle Produkte</a>
+        </li>
+        <li class="nav-dropdown">
+            <a href="/produkte?category=<%= encodeURIComponent("Renovierung") %>"
+                class="nav-link <%= (isProdukte && activeCat === 'Renovierung') ? 'nav-active' : '' %>">Renovierung</a>
+
+            <ul class="dropdown-menu">
+                <li><a href="/produkte?category=<%= encodeURIComponent("Renovierung") %>&subcategory=<%= encodeURIComponent("Wandgestaltung") %>"
+                    class="<%= (isProdukte && activeCat === 'Renovierung' && activeSubcat === 'Wandgestaltung') ? 'nav-active' : '' %>">Wandgestaltung</a></li>
+
+                <li><a href="/produkte?category=<%= encodeURIComponent("Renovierung") %>&subcategory=<%= encodeURIComponent("Bodenbeläge") %>"
+                    class="<%= (isProdukte && activeCat === 'Renovierung' && activeSubcat === 'Bodenbeläge') ? 'nav-active' : '' %>">Bodenbeläge</a></li>
+
+                <li><a href="/produkte?category=<%= encodeURIComponent("Renovierung") %>&subcategory=<%= encodeURIComponent("Türen & Fenster") %>"
+                    class="<%= (isProdukte && activeCat === 'Renovierung' && activeSubcat === 'Türen & Fenster') ? 'nav-active' : '' %>">Türen & Fenster</a></li>
+
+                <li><a href="/produkte?category=<%= encodeURIComponent("Renovierung") %>&subcategory=<%= encodeURIComponent("Werkzeuge & Zubehör") %>"
+                    class="<%= (isProdukte && activeCat === 'Renovierung' && activeSubcat === 'Werkzeuge & Zubehör') ? 'nav-active' : '' %>">Werkzeuge & Zubehör</a></li>
+            </ul>
+        </li>
+        <li class="nav-dropdown">
+            <a href="/produkte?category=<%= encodeURIComponent("Bau") %>"
+                class="nav-link <%= (isProdukte && activeCat === 'Bau') ? 'nav-active' : '' %>">Bau</a>
+
+            <ul class="dropdown-menu">
+                <li><a href="/produkte?category=<%= encodeURIComponent("Bau") %>&subcategory=<%= encodeURIComponent("Rohbau") %>"
+                    class="<%= (isProdukte && activeCat === 'Bau' && activeSubcat === 'Rohbau') ? 'nav-active' : '' %>">Rohbau</a></li>
+
+                <li><a href="/produkte?category=<%= encodeURIComponent("Bau") %>&subcategory=<%= encodeURIComponent("Holz & Plattenwerkstoffe") %>"
+                    class="<%= (isProdukte && activeCat === 'Bau' && activeSubcat === 'Holz & Plattenwerkstoffe') ? 'nav-active' : '' %>">Holz & Plattenwerkstoffe</a></li>
+
+                <li><a href="/produkte?category=<%= encodeURIComponent("Bau") %>&subcategory=<%= encodeURIComponent("Dachbaustoffe") %>"
+                    class="<%= (isProdukte && activeCat === 'Bau' && activeSubcat === 'Dachbaustoffe') ? 'nav-active' : '' %>">Dachbaustoffe</a></li>
+
+                <li><a href="/produkte?category=<%= encodeURIComponent("Bau") %>&subcategory=<%= encodeURIComponent("Dämmung & Isolierung") %>"
+                    class="<%= (isProdukte && activeCat === 'Bau' && activeSubcat === 'Dämmung & Isolierung') ? 'nav-active' : '' %>">Dämmung & Isolierung</a></li>
+            </ul>
+        </li>
+        <li class="nav-dropdown">
+            <a href="/produkte?category=<%= encodeURIComponent("Industriehardware") %>"
+                class="nav-link <%= (isProdukte && activeCat === 'Industriehardware') ? 'nav-active' : '' %>">Industriehardware</a>
+            <ul class="dropdown-menu">
+                <li><a href="/produkte?category=<%= encodeURIComponent("Industriehardware") %>&subcategory=<%= encodeURIComponent("Verbindungstechnik") %>"
+                    class="<%= (isProdukte && activeCat === 'Industriehardware' && activeSubcat === 'Verbindungstechnik') ? 'nav-active' : '' %>">Verbindungstechnik</a></li>
+
+                <li><a href="/produkte?category=<%= encodeURIComponent("Industriehardware") %>&subcategory=<%= encodeURIComponent("Befestigungssysteme") %>"
+                    class="<%= (isProdukte && activeCat === 'Industriehardware' && activeSubcat === 'Befestigungssysteme') ? 'nav-active' : '' %>">Befestigungssysteme</a></li>
+
+                <li><a href="/produkte?category=<%= encodeURIComponent("Industriehardware") %>&subcategory=<%= encodeURIComponent("Maschinenteile & Lager") %>"
+                    class="<%= (isProdukte && activeCat === 'Industriehardware' && activeSubcat === 'Maschinenteile & Lager') ? 'nav-active' : '' %>">Maschinenteile & Lager</a></li>
+
+                <li><a href="/produkte?category=<%= encodeURIComponent("Industriehardware") %>&subcategory=<%= encodeURIComponent("Arbeitsschutz & Betriebsaustattung") %>"
+                    class="<%= (isProdukte && activeCat === 'Industriehardware' && activeSubcat === 'Arbeitsschutz & Betriebsaustattung') ? 'nav-active' : '' %>">Arbeitsschutz & Betriebsaustattung</a></li>
+            </ul>
+        </li>
+        <li class="nav-dropdown">
+            <a href="/produkte?category=<%= encodeURIComponent("Verschiedene") %>"
+                class="nav-link <%= (isProdukte && activeCat === 'Verschiedene') ? 'nav-active' : '' %>">Verschiedene Produkte</a>
+
+            <ul class="dropdown-menu">
+                <li><a href="/produkte?category=<%= encodeURIComponent("Verschiedene") %>&subcategory=<%= encodeURIComponent("Gartenbedarf") %>"
+                    class="<%= (isProdukte && activeCat === 'Verschiedene' && activeSubcat === 'Gartenbedarf') ? 'nav-active' : '' %>">Gartenbedarf</a></li>
+
+                <li><a href="/produkte?category=<%= encodeURIComponent("Verschiedene") %>&subcategory=<%= encodeURIComponent("Elektro-Installationsmaterial") %>"
+                    class="<%= (isProdukte && activeCat === 'Verschiedene' && activeSubcat === 'Elektro-Installationsmaterial') ? 'nav-active' : '' %>">Elektro-Installationsmaterial</a></li>
+
+                <li><a href="/produkte?category=<%= encodeURIComponent("Verschiedene") %>&subcategory=<%= encodeURIComponent("Sanitärbedarf") %>"
+                    class="<%= (isProdukte && activeCat === 'Verschiedene' && activeSubcat === 'Sanitärbedarf') ? 'nav-active' : '' %>">Sanitärbedarf</a></li>
+                    
+                <li><a href="/produkte?category=<%= encodeURIComponent("Verschiedene") %>&subcategory=<%= encodeURIComponent("Saisonale Angebote & Restposten") %>"
+                    class="<%= (isProdukte && activeCat === 'Verschiedene' && activeSubcat === 'Saisonale Angebote & Restposten') ? 'nav-active' : '' %>">Saisonale Angebote & Restposten</a></li>
+            </ul>
+        </li>
+        <li class="nav-secondary-start">
+            <a href="/guides"
+                class="<%= (typeof currentPath !== 'undefined' && currentPath === '/guides') ? 'nav-active' : '' %>">Projektratgeber und Guides</a>
+        </li>
+        <li><a href="/ratgeber">Sicherheitsratgeber</a></li>
+    </ul>
+</nav>

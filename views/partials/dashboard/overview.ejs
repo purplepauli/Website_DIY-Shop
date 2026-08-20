@@ -1,0 +1,68 @@
+<%
+    const _data = data ?? {}; console.log(data);
+
+    const _s = (typeof stats !== 'undefined') ? stats : {
+        bestellungen: { value: 47, sub: '12 unbearbeitet' },
+        umsatz:       { value: '12.480 €', sub: '+8 % ggü. Vorwoche' },
+        neueNutzer:   { value: 23, sub: '5 heute registriert' },
+        produkte:     { value: 107, sub: '59 verfügbar' },
+        ratgeber:     { value: 34, sub: '3 in Bearbeitung' },
+        guides:       { value: 18, sub: '2 Entwürfe' },
+        tickets:      { value: 6, sub: '1 dringend' },
+        auslastung:   { value: '72 %', sub: 'im normalen Bereich' },
+        teamOnline:   { value: 8, sub: 'von 12 Mitarbeitenden' }
+    };
+
+%>
+
+
+<link rel="stylesheet" href="/css/dashboard/overview.css">
+<script src="/js/dashboard/overview.js" defer></script>
+
+
+<div class="dash-grid-container">
+    <section class="grid" aria-label="Kennzahlen-Übersicht">
+
+    <a class="tile" href="/mitarbeiter/dashboard/bestellungen" data-tile-index="0">
+        <span class="tile__number"><%= _data.orderTotal %></span>
+        <span class="tile__label">Bestellungen</span>
+        <span class="tile__sub"><%= data.totalOrders %></span>
+    </a>
+
+    <a class="tile" href="/mitarbeiter/dashboard/bestellungen" data-tile-index="1">
+        <span class="tile__number">4715 €</span>
+        <span class="tile__label"></span>
+        <span class="tile__sub tile__sub--positive"><%= _s.umsatz.sub %></span>
+    </a>
+
+    <a class="tile" href="" data-tile-index="2">
+        <span class="tile__label">Status</span>
+        <span class="tile__sub">Alles gut</span>
+    </a>
+
+    <a class="tile" href="/mitarbeiter/dashboard/accounts" data-tile-index="3">
+        <span class="tile__number"><%= data.accountTotal %></span>
+        <span class="tile__label">Angemeldete Nutzer</span>
+        <span class="tile__sub"></span>
+    </a>
+
+    <a class="tile" href="/mitarbeiter/dashboard/sicherheitsratgeber" data-tile-index="4">
+        <span class="tile__number"><%= data.guideTotal %></span>
+        <span class="tile__label">Sicherheitsratgeber</span>
+        <span class="tile__sub"></span>
+    </a>
+
+    <a class="tile" href="" data-tile-index="5">
+    </a>
+
+    <a class="tile" href="" data-tile-index="6">
+    </a>
+
+    <a class="tile" href="" data-tile-index="7" id="tileAuslastung">
+    </a>
+
+    <a class="tile" href="" data-tile-index="8">
+    </a>
+
+    </section>
+</div>

@@ -1,0 +1,93 @@
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>Lokaler Store & Anfahrt</h4>
+            <p>
+                <strong>DIY Store Würzburg</strong><br>
+                Handwerksstraße 1<br>
+                97070 Würzburg<br><br>
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>Öffnungszeiten</h4>
+            <p>
+                Montag - Freitag: 08:00 - 19:00 Uhr<br>
+                Samstag: 08:00 - 16:00 Uhr<br>
+                Sonntag: Geschlossen
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>Zahlungsmethoden</h4>
+            <ul>
+                <li>💳 Visa</li>
+                <li>💳 Mastercard</li>
+                <li>🅿️ PayPal</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Rechtliches</h4>
+            <ul>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/datenschutz">Datenschutz</a></li>
+                <li><a href="/agb">AGB</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Has to be in main.js so you can call it from index.ejs page.
+
+    // 1. Warenkorb aus dem LocalStorage laden (oder leeres Array erstellen)
+    let cart = JSON.parse(localStorage.getItem('diyCart')) || [];
+
+    // 2. Button oben rechts aktualisieren
+    function updateCartCounter() {
+        const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const cartBtn = document.getElementById('cartBtn');
+        if (cartBtn) {
+            cartBtn.innerText = `🛒 Warenkorb (${count})`;
+        }
+    }
+
+        // 3. Produkt hinzufügen (aus index.ejs)
+        function addToCart(id, name, price, imagePath, quantity = 1, variant = '') {
+            const normalizedPrice = Number(price) || 0;
+            const existingItem = cart.find(item => item.id === id && item.variant === variant);
+            if (existingItem) {
+                existingItem.quantity += parseInt(quantity); // Wenn schon drin, Anzahl + übergebene Menge
+            } else { // Sonst neu anlegen
+                cart.push({ 
+                    id, 
+                    name, 
+                    price: normalizedPrice, 
+                    quantity: parseInt(quantity), 
+                    imagePath,
+                    variant }); 
+            }
+
+        // JS-Array cart[] wird in string (JSON) umgewandelt und in localStorage gespeichert (nicht flüchtig)
+        // kann durch JSON.parse() wieder in ein JS-Objekt umgewandelt werden.
+        localStorage.setItem('diyCart', JSON.stringify(cart));
+        updateCartCounter();
+        alert(`${name} wurde zum Warenkorb hinzugefügt!`);
+    }
+
+    document.addEventListener('DOMContentLoaded', updateCartCounter);
+</script>
+
+<%# Live-Suche / Autocomplete für die globale Suchleiste. Wird auf jeder
+    Seite unconditional geladen, weil das Suchfeld im Header global ist. %>
+<script src="/javascripts/live-search.js"></script>
+
+<%# Dynamically include additional scripts if provided by index.js %>
+    <% if (typeof extraScripts !=='undefined' ) { %>
+        <% extraScripts.forEach(function(script) { %>
+            <script src="<%= script %>"></script>
+            <% }); %>
+                <% } %>
+                    </body>
+
+                    </html>

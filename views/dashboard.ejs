@@ -1,0 +1,64 @@
+<%  
+ 	const _user = (typeof user !== 'undefined') ? user : { name: 'Gast' };
+	const _currentPage = (typeof page !== 'undefined') ? page : "overview";
+	const _status = (typeof systemStatus !== 'undefined') ? systemStatus : 'green';
+	const _statusLabels = { green: 'Alle Systeme normal', orange: 'Eingeschränkter Betrieb', red: 'Störung erkannt' };
+	const _statusLabel = _statusLabels[_status] || _statusLabels.green;
+
+	const isActive = (label) => label === _currentPage ? 'is-active' : '';
+	setTimeout(() => { page = "security" }, 5000);
+%>
+
+<link rel="stylesheet" href="/css/_style.css">
+<link rel="stylesheet" href="/css/dashboard.css">
+
+<script src="/js/dashboard.js" defer></script>
+
+
+
+<%- include("partials/header-min") %>
+
+<div class="dash" id="dashboard" data-page="<%= _currentPage %>">
+  <nav class="sidebar" aria-label="Hauptnavigation">
+    <div class="sidebar__greeting">Hallo, <%= user.name %></div>
+    <hr class="sidebar__divider">
+
+    <ul class="sidebar__nav">
+      <li><a href="/mitarbeiter/dashboard/uebersicht" class="sidebar__link" data-link="overview">Übersicht</a></li>
+
+      <li class="sidebar__heading">Verkauf</li>
+      <li><a href="/mitarbeiter/dashboard/bestellungen" class="sidebar__link" data-link="orders">Bestellungen</a></li>
+      <li><a href="/mitarbeiter/dashboard/accounts" class="sidebar__link" data-link="accounts">Konten</a></li>
+
+      <li class="sidebar__heading">Inhalte</li>
+      <li><a href="/mitarbeiter/dashboard/sicherheitsratgeber" class="sidebar__link" data-link="safety">Sicherheitsratgeber</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="dash__main">
+
+    <div class="dash__topline">
+      <h1 class="splash" id="splashText" data-page="<%= _currentPage %>">Lädt …</h1>
+    </div>
+
+	<%
+		const pages = [
+			"safety", 
+			"products",
+			"accounts",
+			"orders",
+			"guides", 
+			"overview"
+		];
+
+		const partial = typeof page !== 'undefined' && pages.includes(page) ? page : 'overview';
+	%>
+
+	<%- include('partials/dashboard/' + partial) %>
+
+  </div>
+
+</div>
+
+<%- include("partials/footer-min")%>

@@ -1,0 +1,55 @@
+<%- include('partials/header') %>
+    <link rel="stylesheet" href="/stylesheets/guides.css">
+
+    <main>
+        <section class="guides-header">
+            <h1>Du hast das Projekt. Wir haben den Weg dorthin.</h1>
+            <p>Wir unterstützen dich mit unseren professionellen Anleitungen Schritt für Schritt bei der Umsetzung
+                deiner Ideen.</p>
+
+            <!-- Filter-Leiste -->
+            <div class="filter-bar">
+                <button class="filter-btn <%= activeCategory === 'all' ? 'active' : '' %>" data-filter="all">Alle
+                    Projekte</button>
+                <button class="filter-btn <%= activeCategory === 'bauen' ? 'active' : '' %>"
+                    data-filter="bauen">Bauen</button>
+                <button class="filter-btn <%= activeCategory === 'renovieren' ? 'active' : '' %>"
+                    data-filter="renovieren">Renovieren</button>
+                <button class="filter-btn <%= activeCategory === 'reparieren' ? 'active' : '' %>"
+                    data-filter="reparieren">Reparieren</button>
+            </div>
+        </section>
+        <%- include('partials/card-grid', { items: guides, urlPrefix: 'guides' , showFilter: true, activeCategory:
+            activeCategory }) %>
+    </main>
+
+    <%- include('partials/footer') %>
+
+        <!-- JavaScript für den Filter -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const filterBtns = document.querySelectorAll('.filter-btn');
+                const guideCards = document.querySelectorAll('.guide-card');
+
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        // 1. Allen Buttons die Klasse 'active' wegnehmen und dem geklickten geben
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+
+                        // 2. Herausfinden, was gefiltert werden soll (z.B. 'bauen')
+                        const filterValue = btn.getAttribute('data-filter');
+
+                        // 3. Karten ein- oder ausblenden
+                        guideCards.forEach(card => {
+                            // Wenn 'all' ausgewählt ist ODER die Kategorie der Karte dem Filter entspricht
+                            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                                card.style.display = 'flex';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            });
+        </script>

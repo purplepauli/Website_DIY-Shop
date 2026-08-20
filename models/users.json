@@ -1,0 +1,16 @@
+[
+  {
+    "name": "hallo",
+    "email": "nein@doof.com",
+    "surname": "lol",
+    "password": "$2b$12$aZgO56ZmYW02ILXOZOLM6.9yPJlXEfUadazZBbblFBtGViiWNhMsm",
+    "isAdmin": false
+  },
+  {
+    "name": "admin",
+    "email": "admin@admin.de",
+    "surname": "admin",
+    "password": "$2b$12$NOgwr1UYTO9MDuQi5TGFHu9t5Dky2ZptdT6j/tjL2t/HtKSDkdQKq",
+    "isAdmin": true
+  }
+]

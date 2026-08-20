@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DIY Store Würzburg</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/_style.css">
+</head>
+
+
+<body <%= typeof success === 'string' ? 'data-success=true' : 'data-success=false' %>>
+    <%- include('partials/header-min') %>
+
+    <div class="page-wrapper">
+
+        <div class="panel">
+
+            <h1 class="title">Anmeldung</h1>
+
+                <% if (typeof success !== 'undefined' && success) { %>
+                    <div id="success" class="success-box"><%= success %></div>
+                <% } %>
+
+                <div class="error-box" id="error-box" hidden>NO ERROR</div>
+
+                <% if (typeof error !== 'undefined' && error) { %>
+                    <div class="error-box"><%= error %></div>
+                <% } %>
+
+                <form id="loginForm" method="POST" action="/auth/login">
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">E-Mail</label>
+                        <input class="form-input" type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="password">Passwort</label>
+                        <input class="form-input" type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input class="checkbox-input" type="checkbox" value="true" name="isHuman">
+                            Ich bin ein Mensch
+                        </label>
+                    </div>
+
+                    <button class="submit-btn" type="submit">Login</button>
+                </form>
+
+                <div class="footer-text">
+                    Noch kein Konto?
+                    <a href="/auth/register">Jetzt registrieren</a>
+                </div>
+
+        </div>
+    </div>
+
+    <%- include('partials/footer-min') %>
+</body>
+
+<script defer>
+    // Clear form caches if a new account has been created
+    const successStatus = document.body.dataset.success;
+    if(successStatus === "true") {
+        console.log("success!");
+        localStorage.removeItem("loginFormCache");
+        
+        try {
+            const email = JSON.parse(localStorage.getItem("registerFormCache")).email;
+            saveToLocalStorage(email);
+            console.log("saved to local storage");
+        } catch(e){
+            //ignore
+            console.log("failed to save to local storage");
+        }
+        localStorage.removeItem("registerFormCache");
+    }
+
+
+    const form = document.getElementById("loginForm");
+    const emailInput = document.getElementById("email");
+    const isHumanInput = document.querySelector('input[name="isHuman"]');
+    const errorBox = document.getElementById("error-box");
+
+
+    function saveToLocalStorage(email = null) {
+        const data = {}
+        
+        if(email) data.email = email;
+        else data.email = emailInput.value;
+
+        localStorage.setItem("loginFormCache", JSON.stringify(data));
+    }
+
+
+    function loadFromLocalStorage() {
+        const raw = localStorage.getItem("loginFormCache");
+        if (!raw) return;
+
+        try {
+            const data = JSON.parse(raw);
+
+            if(data.email) emailInput.value = data.email;
+        } catch (e) {
+            console.warn("Failed to load cached form data", e);
+        }
+    }
+
+    loadFromLocalStorage();
+
+    form.addEventListener("input", saveToLocalStorage);
+
+
+    function rejectParams(msg){
+        errorBox.innerText = msg;
+        errorBox.removeAttribute("hidden");
+    }
+
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if(!isHumanInput.checked) return rejectParams("Bitte bestätige, dass Du ein Mensch bist");
+
+        saveToLocalStorage();
+        form.submit();
+    });
+</script>
+</html>

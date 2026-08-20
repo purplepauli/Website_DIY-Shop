@@ -1,0 +1,235 @@
+<%- include('partials/header') %>
+
+    <section class="projects-section">
+        <h2>Starte mit uns Dein nächstes Projekt!</h2>
+
+        <div class="project-carousel">
+
+            <button type="button" class="carousel-arrow carousel-arrow-prev" aria-label="Vorheriges Projekt">
+                &#8249;
+            </button>
+
+            <div class="carousel-viewport" id="projectCarouselViewport">
+                <div class="carousel-track" id="projectCarouselTrack">
+
+                    <article class="project-slide">
+                        <a href="/guides?category=bauen" class="project-tile project-tile-bauen">
+                            <div class="tile-slideshow">
+                                <div class="tile-slide is-active" style="--slide-image: url('/images/bauen.jpg');">
+                                </div>
+                                <div class="tile-slide" style="--slide-image: url('/images/bauen-2.jpg');"></div>
+                                <div class="tile-slide" style="--slide-image: url('/images/bauen-3.jpg');"></div>
+                            </div>
+                            <div class="tile-overlay">
+                                <div class="tile-overlay-card">
+                                    <span class="tile-title">Bauen</span>
+                                    <p class="tile-subtext">Du möchtest etwas komplett Neues entstehen lassen – vom
+                                        ersten Entwurf bis zum fertigen Bauwerk.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/guides/pergola-bauen" class="guide-link">
+                            <span class="guide-link-arrow" aria-hidden="true">&#8594;</span>
+                            Schau dir den Guide „Pergola bauen" an
+                        </a>
+                    </article>
+
+                    <article class="project-slide">
+                        <a href="/guides?category=renovieren" class="project-tile project-tile-renovieren">
+                            <div class="tile-slideshow">
+                                <div class="tile-slide is-active" style="--slide-image: url('/images/renovieren.jpg');">
+                                </div>
+                                <div class="tile-slide" style="--slide-image: url('/images/renovieren-2.jpg');">
+                                </div>
+                                <div class="tile-slide" style="--slide-image: url('/images/renovieren-3.jpg');">
+                                </div>
+                            </div>
+                            <div class="tile-overlay">
+                                <div class="tile-overlay-card">
+                                    <span class="tile-title">Renovieren</span>
+                                    <p class="tile-subtext">Du willst bestehenden Räumen neues Leben einhauchen und
+                                        sie frisch gestalten.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/guides/wand-tapezieren" class="guide-link">
+                            <span class="guide-link-arrow" aria-hidden="true">&#8594;</span>
+                            Schau dir den Guide „Vliestapete tapezieren" an
+                        </a>
+                    </article>
+
+                    <article class="project-slide">
+                        <a href="/guides?category=reparieren" class="project-tile project-tile-reparieren">
+                            <div class="tile-slideshow">
+                                <div class="tile-slide is-active" style="--slide-image: url('/images/reparieren.jpg');">
+                                </div>
+                                <div class="tile-slide" style="--slide-image: url('/images/reparieren-2.jpg');">
+                                </div>
+                                <div class="tile-slide" style="--slide-image: url('/images/reparieren-3.jpg');">
+                                </div>
+                            </div>
+                            <div class="tile-overlay">
+                                <div class="tile-overlay-card">
+                                    <span class="tile-title">Reparieren</span>
+                                    <p class="tile-subtext">Du möchtest etwas Kaputtes wieder in Schuss bringen? Wir
+                                        zeigen Dir, wie Dir das mit ein paar
+                                        Handgriffen gelingt.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/guides/tuerschloss-reparieren" class="guide-link">
+                            <span class="guide-link-arrow" aria-hidden="true">&#8594;</span>
+                            Schau dir den Guide „Türschloss reparieren" an
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+
+            <button type="button" class="carousel-arrow carousel-arrow-next" aria-label="Nächstes Projekt">
+                &#8250;
+            </button>
+
+        </div>
+
+        <div class="carousel-dots" id="projectCarouselDots">
+            <button type="button" class="carousel-dot is-active" aria-label="Zu Bauen springen"></button>
+            <button type="button" class="carousel-dot" aria-label="Zu Renovieren springen"></button>
+            <button type="button" class="carousel-dot" aria-label="Zu Reparieren springen"></button>
+        </div>
+    </section>
+
+    <%- include('partials/product-grid', { title: 'Aus unserer Werbung', products: products }) %>
+    <script>
+        (function () {
+            // ---------- Teil 1: echtes Endlos-Karussell ohne Rück-Sprung ----------
+            //
+            // Trick: Die 3 echten Kacheln werden 2x geklont, sodass insgesamt
+            // 3 Kopien nebeneinander im Track liegen: [B,R,Rep, B,R,Rep, B,R,Rep].
+            // Wir starten in der mittleren Kopie. Bewegt man sich über den Rand
+            // der mittleren Kopie hinaus, springen wir NACH der Animation
+            // (ohne Übergang) exakt eine Kopie zurück/vor – das ist unsichtbar,
+            // weil an dieser Stelle exakt die gleiche Kachel liegt.
+            const viewport = document.getElementById('projectCarouselViewport');
+            const track = document.getElementById('projectCarouselTrack');
+            const originalSlides = Array.from(track.children);
+            const slideCount = originalSlides.length; // 3
+            const dots = Array.from(document.querySelectorAll('#projectCarouselDots .carousel-dot'));
+            const prevBtn = document.querySelector('.carousel-arrow-prev');
+            const nextBtn = document.querySelector('.carousel-arrow-next');
+            const carousel = document.querySelector('.project-carousel');
+
+            const PEEK = 0;     // Kein seitliches Durchschimmern der Nachbar-Kachel mehr (0 = komplett verdeckt)
+            const GAP = 20;    // Abstand zwischen den Kacheln in px
+            const AUTOPLAY_MS = 7000;  // Zeit bis zum automatischen Weiterspringen
+            const TRANSITION_MS = 550;  // muss zur CSS-Transition unten passen
+
+            // Zwei zusätzliche Kopien anlegen (insgesamt 3 Kopien = 9 Slides)
+            for (let copy = 0; copy < 2; copy++) {
+                originalSlides.forEach(slide => {
+                    const clone = slide.cloneNode(true);
+                    clone.setAttribute('aria-hidden', 'true');
+                    clone.querySelectorAll('a').forEach(a => a.setAttribute('tabindex', '-1'));
+                    track.appendChild(clone);
+                });
+            }
+            const slides = Array.from(track.children); // 9 Slides gesamt
+
+            let index = slideCount; // Start: erste Kachel der mittleren Kopie
+            let autoplayTimer = null;
+
+            function slideWidth() {
+                return viewport.clientWidth - PEEK * 2;
+            }
+
+            function realIndex(i) {
+                return ((i % slideCount) + slideCount) % slideCount;
+            }
+
+            function render(animate) {
+                const width = slideWidth();
+                const offset = PEEK - index * (width + GAP);
+                track.style.transition = animate ? `transform ${TRANSITION_MS}ms cubic-bezier(.4,0,.2,1)` : 'none';
+                track.style.transform = `translateX(${offset}px)`;
+                slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+                const activeReal = realIndex(index);
+                dots.forEach((dot, i) => dot.classList.toggle('is-active', i === activeReal));
+                slides.forEach((slide, i) => {
+                    slide.setAttribute('aria-hidden', i === index ? 'false' : 'true');
+                });
+            }
+
+            function layout() {
+                const width = slideWidth();
+                slides.forEach(slide => {
+                    slide.style.width = width + 'px';
+                    slide.style.marginRight = GAP + 'px';
+                });
+                render(false);
+            }
+
+            // Nach jeder animierten Bewegung: prüfen, ob wir die mittlere
+            // Kopie verlassen haben, und falls ja, unsichtbar zurückspringen.
+            track.addEventListener('transitionend', (e) => {
+                if (e.propertyName !== 'transform') return;
+                if (index < slideCount) {
+                    index += slideCount;
+                    render(false);
+                } else if (index >= slideCount * 2) {
+                    index -= slideCount;
+                    render(false);
+                }
+            });
+
+            function step(delta) {
+                index += delta;
+                render(true);
+                restartAutoplay();
+            }
+
+            function goToReal(target) {
+                const current = realIndex(index);
+                let diff = (target - current + slideCount) % slideCount;
+                if (diff === 0) return;
+                // kürzesten Weg wählen (bei 3 Kacheln immer 1 Schritt vor oder zurück)
+                if (diff === 1) {
+                    step(1);
+                } else {
+                    step(-1);
+                }
+            }
+
+            function restartAutoplay() {
+                clearInterval(autoplayTimer);
+                autoplayTimer = setInterval(() => step(1), AUTOPLAY_MS);
+            }
+
+            prevBtn.addEventListener('click', () => step(-1));
+            nextBtn.addEventListener('click', () => step(1));
+            dots.forEach((dot, i) => dot.addEventListener('click', () => goToReal(i)));
+
+            window.addEventListener('resize', layout);
+            layout();
+            restartAutoplay();
+
+            // Autoplay pausieren, während die Maus über dem Karussell steht
+            carousel.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
+            carousel.addEventListener('mouseleave', restartAutoplay);
+
+            // ---------- Teil 2: Diashow innerhalb jeder Kachel (Bilder überblenden) ----------
+            const SLIDESHOW_INTERVAL_MS = 4000;
+
+            document.querySelectorAll('.tile-slideshow').forEach(slideshow => {
+                const tileSlides = Array.from(slideshow.children);
+                if (tileSlides.length <= 1) return; // Nichts zu tun, wenn nur ein Bild vorhanden ist
+
+                let current = 0;
+                setInterval(() => {
+                    tileSlides[current].classList.remove('is-active');
+                    current = (current + 1) % tileSlides.length;
+                    tileSlides[current].classList.add('is-active');
+                }, SLIDESHOW_INTERVAL_MS);
+            });
+        })();
+    </script>
+    <%- include('partials/footer') %>

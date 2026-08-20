@@ -1,0 +1,230 @@
+<%- include('partials/header') %>
+
+<main>
+    <div class="product-detail-container">
+        <!-- Linke Spalte: Bildergalerie -->
+        <div class="product-image-column">
+            <!-- Großes Hauptbild -->
+            <div class="image-with-arrows">
+                <% if (product.varianten[0].pricing.hatRabatt) { %>
+                    <span class="product-discount-badge">-<%= Math.round(product.discount * 100) %>%</span>
+                <% } %>
+                <div class="image-container">
+                    <img id="mainProductImage"
+                         src="<%= product.bilder[0] %>"
+                         alt="<%= product.name %>"
+                         class="product-detail-image"
+                         onerror="this.onerror=null; this.src='/images/products/no-image.jpg';"> <!-- Fallback-Bild, falls das Produktbild nicht geladen werden kann -->
+
+                    <!-- Pfeile im Bild -->
+                    <button id="prevArrow" class="arrow-btn prev-arrow" onclick="switchToThumbnail('prev')">&#8249;</button>
+                    <button id="nextArrow" class="arrow-btn next-arrow" onclick="switchToThumbnail('next')">&#8250;</button>
+                </div>
+            </div>
+
+            <!-- Thumbnail-Leiste -->
+            <div class="product-thumbnails">
+                <% product.bilder.forEach(function(bild, index) { %>
+                    <img src="<%= bild %>"
+                         alt="<%= product.name %> Ansicht <%= index + 1 %>"
+                         class="product-thumbnail <%= index === 0 ? 'active' : '' %>"
+                         onerror="this.onerror=null; this.src='/images/products/no-image.jpg';"
+                         onclick="switchImage(this)">  
+                <% }); %>
+            </div>
+        </div>
+
+        <!-- Rechte Spalte: Produktinformationen -->
+        <div class="product-info-column">
+            <div class="product-category"><%= product.kategorie %></div>
+            <h1><%= product.name %></h1>
+            <div class="product-sku">Artikel-Nr: <%= product.artikelnummer %></div>
+            
+            <div class="product-price" id="productPrice">
+                <% if (product.varianten[0].pricing.hatRabatt) { %>
+                    <span class="price-original"><%= product.varianten[0].pricing.bruttoPreisVorRabatt.toFixed(2).replace('.', ',') %> €</span>
+                    <span class="price-final"><%= product.varianten[0].pricing.endpreisBrutto.toFixed(2).replace('.', ',') %> €</span>
+                <% } else { %>
+                    <%= product.varianten[0].pricing.endpreisBrutto.toFixed(2).replace('.', ',') %> €
+                <% } %>
+                <span class="price-incl-vat">(inkl. MwSt.)</span>
+            </div>
+            
+            <!-- Variante auswählen -->
+            <div class="variant-select">
+                <label for="variant">Variante wählen:</label>
+                <select id="variant" name="variant" onchange="updateVariantPrice()">
+                    <% product.varianten.forEach(function(variant) { %>
+                        <option value="<%= variant.pricing.endpreisBrutto %>"
+                                data-beschreibung="<%= variant.beschreibung %>"
+                                data-original="<%= variant.pricing.bruttoPreisVorRabatt %>"
+                                data-hat-rabatt="<%= variant.pricing.hatRabatt %>"><%= variant.beschreibung %></option>
+                    <% }); %>
+                </select>
+            </div>
+            
+            <!-- Stückzahl auswählen -->
+            <div class="quantity-select">
+                <label for="quantity">Stückzahl:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" max="<%= product.bestand %>" style="width: 60px;" oninput="checkAvailability()">
+            </div>
+
+            <!-- Bestandsampel -->
+            <div class="stock-indicator <%= product.bestand === 0 ? 'stock-unavailable' : (product.bestand < 10 ? 'stock-low' : 'stock-available') %>">
+                <span class="dot"></span>
+                <span class="stock-text">
+                    <% if (product.bestand === 0) { %>
+                        Aktuell nicht lieferbar
+                    <% } else if (product.bestand < 10) { %>
+                        Nur noch <%= product.bestand %> auf Lager
+                    <% } else { %>
+                        Verfügbar
+                    <% } %>
+                </span>
+            </div>
+
+            <!-- In den Warenkorb Button -->
+            <button id="addToCartBtn" class="add-to-cart"
+                    onclick="addToCartFromDetail('<%= product.artikelnummer %>', '<%= product.name %>', '<%= product.bilder[0] %>')"
+                    <% if (product.bestand === 0) { %>disabled title="Aktuell nicht lieferbar"<% } else { %>title="In den Warenkorb"<% } %>>
+                In den Warenkorb
+            </button>
+            
+            <!-- Beschreibung -->
+            <h3>Beschreibung:</h3>
+            <p class="product-description"><%= product.beschreibung %></p>
+            
+            <!-- Technische Eigenschaften als Liste -->
+            <h3>Technische Eigenschaften:</h3>
+            <ul class="technical-specs">
+                <% for (let key in product.technische_eigenschaften) { %>
+                    <li><strong><%= key.charAt(0).toUpperCase() + key.slice(1) %>:</strong> <%= product.technische_eigenschaften[key] %></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<script>
+    function updateVariantPrice() {
+        const select = document.getElementById('variant');
+        const selectedOption = select.options[select.selectedIndex];
+        const price = parseFloat(select.value);
+        const original = parseFloat(selectedOption.dataset.original);
+        const hatRabatt = selectedOption.dataset.hatRabatt === 'true';
+
+        const priceHtml = hatRabatt
+            ? '<span class="price-original">' + original.toFixed(2).replace('.', ',') + ' \u20ac</span> ' +
+              '<span class="price-final">' + price.toFixed(2).replace('.', ',') + ' \u20ac</span>'
+            : price.toFixed(2).replace('.', ',') + ' \u20ac';
+
+        document.getElementById('productPrice').innerHTML =
+            priceHtml + ' <span class="price-incl-vat">(inkl. MwSt.)</span>';
+    }
+
+    function addToCartFromDetail(artikelnummer, name, imagePath) {
+        const select = document.getElementById('variant');
+        const price = parseFloat(select.value);
+        const variantBeschreibung = select.options[select.selectedIndex].dataset.beschreibung;
+        const quantity = document.getElementById('quantity').value;
+        addToCart(artikelnummer, name, price, imagePath, quantity, variantBeschreibung);
+    }
+
+    // Verfügbarer Bestand wird über das max-Attribut des Quantity-Feldes
+    // aus dem product-Objekt gesetzt. Dadurch bleibt der Wert konsistent mit
+    // dem Server-Rendering und muss nicht zusätzlich über ein data-Attribut
+    // bereitgestellt werden.
+    const AVAILABLE_STOCK = parseInt(document.getElementById('quantity').max, 10) || 0;
+
+    /**
+     * Prüft, ob die aktuell eingegebene Stückzahl innerhalb des verfügbaren
+     * Bestands liegt und aktiviert/deaktiviert den "In den Warenkorb"-Button
+     * entsprechend. Setzt außerdem einen passenden Tooltip (title-Attribut),
+     * der beim Hover als nativer Browser-Tooltip eingeblendet wird.
+     */
+    function checkAvailability() {
+        const quantityInput = document.getElementById('quantity');
+        const addToCartBtn = document.getElementById('addToCartBtn');
+
+        // Defensive Auswertung: ungültige/negative/leere Eingaben werden
+        // wie 0 behandelt, damit der Button im Zweifel deaktiviert bleibt.
+        const quantity = parseInt(quantityInput.value, 10) || 0;
+
+        if (AVAILABLE_STOCK === 0) {
+            addToCartBtn.disabled = true;
+            addToCartBtn.title = 'Aktuell nicht lieferbar';
+        } else if (quantity > AVAILABLE_STOCK) {
+            addToCartBtn.disabled = true;
+            addToCartBtn.title = 'Die gewählte Stückzahl ist aktuell nicht verfügbar (max. ' + AVAILABLE_STOCK + ' auf Lager)';
+        } else if (quantity < 1) {
+            addToCartBtn.disabled = true;
+            addToCartBtn.title = 'Bitte eine gültige Stückzahl eingeben';
+        } else {
+            addToCartBtn.disabled = false;
+            addToCartBtn.title = 'In den Warenkorb';
+        }
+    }
+
+    // Initialprüfung beim Laden der Seite, damit der Button-Zustand auch
+    // clientseitig konsistent ist (zusätzlich zum server-gerenderten disabled).
+    document.addEventListener('DOMContentLoaded', checkAvailability);
+
+    // Globale Variable für den aktuellen Index
+    let currentImageIndex = 0;
+    
+    /**
+     * Wechselt das große Hauptbild und setzt den Active-Status
+     * auf das angeklickte Thumbnail.
+     * @param {HTMLImageElement} clickedThumb - Das angeklickte Thumbnail-Element
+     * @param {string} bildPfad - Der Bildpfad, der im Hauptbild angezeigt werden soll
+     */
+    function switchImage(clickedThumb) {
+        // 1. Hauptbild austauschen – tatsächliches src des Thumbnails verwenden,
+        //    damit ein bereits ausgelöstes Fallback-Bild korrekt übernommen wird
+        const mainImg = document.getElementById('mainProductImage'); //Referenz auf das Hauptbild (dynamisch)
+        mainImg.onerror = function() { this.onerror = null; this.src = '/images/products/no-image.jpg'; };
+        
+        // 2. Fade-out Effekt vor dem Wechsel
+        mainImg.style.opacity = '0';
+        
+        // 3. Nach einer kurzen Verzögerung das neue Bild laden und fade-in Effekt
+        setTimeout(function() {
+            mainImg.src = clickedThumb.src;
+            mainImg.style.opacity = '1';
+        }, 150);
+        
+        // 4. Alle Thumbnails aus der DOM suchen und in ein Array umwandeln
+        const thumbnails = Array.from(document.querySelectorAll('.product-thumbnail'));
+        
+        // 5. Den Index des angeklickten Thumbnails herausfinden
+        currentImageIndex = thumbnails.indexOf(clickedThumb);
+
+        // 6. Active-Klasse aktualisieren
+        thumbnails.forEach(function(thumb) {
+            thumb.classList.remove('active');
+        });
+        clickedThumb.classList.add('active');
+    }
+    
+    /**
+     * Wechselt zum vorherigen oder nächsten Thumbnail (zyklisch)
+     * @param {string} direction - 'prev' oder 'next'
+     */
+    function switchToThumbnail(direction) {
+        // 1. Alle Thumbnails auf der Seite suchen
+        const thumbnails = document.querySelectorAll('.product-thumbnail');
+        const totalImages = thumbnails.length;
+        
+        // 2. Neuen Index berechnen
+        if (direction === 'prev') {
+            currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+        } else {
+            currentImageIndex = (currentImageIndex + 1) % totalImages;
+        }
+
+        // Klick auf Thumbnail simulieren, damit switchImage() aufgerufen wird und Active-Klasse gesetzt wird
+        thumbnails[currentImageIndex].click();
+    }
+</script>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,57 @@
+<%- include('partials/header') %>
+
+<div class="product-toolbar">
+    
+    <h2>
+        <% if (typeof selectedSubcategory !== 'undefined' && selectedSubcategory && selectedSubcategory !== 'alle') { %>
+            <%= selectedSubcategory %>
+        <% } else { %>
+            <%= (selectedCategory === "alle" || selectedCategory === undefined) ? "Unsere Produkte" : selectedCategory %>
+        <% } %>
+    </h2>
+
+    <form class="product-filter-bar" method="GET" action="/produkte">
+        <%# Verstecktes Feld: aktive Kategorie aus der Navbar/URL mitführen,
+            damit sie beim Ändern von Sortierung/Angebots-Filter erhalten bleibt. %>
+        <input type="hidden" name="category"
+               value="<%= typeof selectedCategory !== 'undefined' ? selectedCategory : 'alle' %>">
+         <%# Verstecktes Feld: aktive Subkategorie mitführen, damit sie beim
+            Ändern von Sortierung/Angebots-Filter erhalten bleibt. %>
+        <input type="hidden" name="subcategory"
+               value="<%= typeof selectedSubcategory !== 'undefined' ? selectedSubcategory : 'alle' %>">
+
+        <label class="filter-checkbox">
+            <input type="checkbox" name="nurAngebote" value="true"
+                   onchange="this.form.submit()"
+                   <%= typeof nurAngebote !== 'undefined' && nurAngebote ? 'checked' : '' %>>
+            <%# Häkchen-Icon im Switch-Knopf, nur sichtbar wenn aktiv (siehe CSS). %>
+            <svg class="check-icon" viewBox="0 0 12 12" aria-hidden="true">
+                <path d="M2 6.5l2.5 2.5L10 3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="checkbox-text">Nur Angebote anzeigen</span>
+        </label>
+
+        <label class="filter-sort">
+            <span>Sortieren nach:</span>
+            <select name="sort" onchange="this.form.submit()">
+                <option value="name_asc" <%= selectedSort === 'name_asc' ? 'selected' : '' %>>Name (A–Z)</option>
+                <option value="name_desc" <%= selectedSort === 'name_desc' ? 'selected' : '' %>>Name (Z–A)</option>
+                <option value="price_asc" <%= selectedSort === 'price_asc' ? 'selected' : '' %>>Preis aufsteigend</option>
+                <option value="price_desc" <%= selectedSort === 'price_desc' ? 'selected' : '' %>>Preis absteigend</option>
+            </select>
+        </label>
+
+        <noscript>
+            <button type="submit">Anwenden</button>
+        </noscript>
+
+        <span class="product-count">
+            <%= products.length %>
+            <%= products.length === 1 ? 'Produkt' : 'Produkte' %>
+        </span>
+    </form>
+</div>
+
+<%- include('partials/product-grid', { title: '', products: products }) %>
+
+<%- include('partials/footer') %>

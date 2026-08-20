@@ -1,0 +1,70 @@
+<%# Überschrift nur rendern, wenn ein Titel übergeben wurde. Auf der
+    Produktübersicht (/produkte) wird die h2 inzwischen im .product-toolbar
+    neben der Filterleiste angezeigt, daher wird hier kein title übergeben. %>
+<% if (typeof title !== 'undefined' && title) { %>
+    <h2><%= title %></h2>
+<% } %>
+<div class="product-grid">
+
+    <% if (products && products.length> 0) { %>
+        <% products.forEach(function(product) { %>
+            <a href="/produkte/<%= product.artikelnummer %>" class="product-card-link">
+                <div class="product-card">
+
+                    <%# Rabatt-Badge anzeigen, wenn das Produkt einen Rabatt hat %>
+                    <% if (product.pricing.hatRabatt) { %>
+                        <span class="product-discount-badge">-<%= Math.round(product.discount * 100) %>%</span>
+                    <% } %>
+
+                    <img src="<%= product.bilder[0] %>" 
+                         alt="<%= product.name %>" 
+                         class="product-image"
+                         onerror="this.onerror=null; this.src='/images/products/no-image.jpg';">
+                    <h3>
+                        <%= product.name %>
+                    </h3>
+                    <p>
+                        <%= product.beschreibung %>
+                    </p>
+                    <div class="product-price">
+                        <%# Falls Rabatt vorhanden, alten Preis durchstreichen und neuen in rot anzeigen %>
+                        <% if (product.pricing.hatRabatt) { %>
+                            <span class="price-original">
+                                <%= product.pricing.bruttoPreisVorRabatt.toFixed(2).replace('.', ',' ) %> €
+                            </span>
+                            <span class="price-final">
+                                <%= product.pricing.endpreisBrutto.toFixed(2).replace('.', ',' ) %> €
+                            </span>
+                        <% } else { %>
+                            <%= product.pricing.endpreisBrutto.toFixed(2).replace('.', ',' ) %> €
+                        <% } %>
+                    </div>
+                    <% if (product.bestand === 0) { %>
+                        <%# Wenn der Bestand 0 ist, wird der Warenkorb-Button
+                            komplett durch einen roten Hinweis ersetzt -
+                            passend zum roten Zustand der Ampel auf der
+                            Detailseite. Der Hinweis übernimmt den vollen
+                            Platz des Buttons, damit das Karten-Layout
+                            konsistent bleibt. %>
+                        <div class="out-of-stock-notice" title="Aktuell nicht lieferbar">
+                            <span class="out-of-stock-dot"></span>
+                            Aktuell nicht lieferbar
+                        </div>
+                    <% } else { %>
+                        <button class="add-to-cart"
+                                onclick="event.preventDefault();
+                                         event.stopPropagation();
+                                         addToCart('<%= product.artikelnummer %>', '<%= product.name %>', '<%= product.pricing.endpreisBrutto %>',
+                                                   '<%= product.bilder[0] %>', 1, '<%= product.varianten[0].beschreibung %>')">In den Warenkorb
+                        </button>
+                    <% } %>
+                </div>
+            </a>
+        <% }); %>
+    <% } else { %>
+        <%# Wenn eine eigene emptyMessage übergeben wurde, diese nutzen,
+            sonst auf den Standard-Text zurückfallen (bestehende Seiten) %>
+        <p><%= (typeof emptyMessage !== 'undefined' && emptyMessage) ? emptyMessage : 'Aktuell sind keine Produkte verfügbar.' %></p>
+    <% } %>
+
+</div>

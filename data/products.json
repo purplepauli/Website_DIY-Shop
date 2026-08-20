@@ -1,0 +1,2134 @@
+[
+    {
+        "artikelnummer": "SKU-001",
+        "name": "Premium Wandfarbe Weiß",
+        "beschreibung": "Hohe Deckkraft, waschbeständig und leicht zu verarbeiten. Ideal für Innenrenovierungen.",
+        "bilder": [
+            "/images/products/SKU-001.jpg",
+            "/images/products/SKU-001_1.jpg",
+            "/images/products/SKU-001_2.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "glanzgrad": "Matt",
+            "ergiebigkeit": "ca. 7m² pro Liter",
+            "trocknungszeit": "4 Stunden"
+        },
+        "varianten": [
+            {
+                "beschreibung": "5 Liter",
+                "netto_preis": 33.6
+            },
+            {
+                "beschreibung": "10 Liter",
+                "netto_preis": 59.9
+            },
+            {
+                "beschreibung": "15 Liter",
+                "netto_preis": 84.9
+            }
+        ],
+        "bestand": 45,
+        "preis_netto": 33.6,
+        "steuersatz": 0.19,
+        "discount": 0.2,
+        "unterkategorie": "Wandgestaltung"
+    },
+    {
+        "artikelnummer": "SKU-002",
+        "name": "Laminatboden Eiche Rustikal",
+        "beschreibung": "Kratzfestes Laminat in authentischer Holzoptik mit Klick-System.",
+        "bilder": [
+            "/images/products/SKU-002.jpg",
+            "/images/products/SKU-002_1.jpg",
+            "/images/products/SKU-002_2.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "nutzungsklasse": "32",
+            "staerke": "8 mm",
+            "paketinhalt": "2,13 m²"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Eiche Hell",
+                "netto_preis": 14.95
+            },
+            {
+                "beschreibung": "Eiche Dunkel",
+                "netto_preis": 14.95
+            },
+            {
+                "beschreibung": "Eiche Hell",
+                "netto_preis": 14.95
+            },
+            {
+                "beschreibung": "Eiche Dunkel",
+                "netto_preis": 14.95
+            }
+        ],
+        "bestand": 87,
+        "preis_netto": 14.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Bodenbeläge"
+    },
+    {
+        "artikelnummer": "SKU-003",
+        "name": "Malerrollen-Set Profi",
+        "beschreibung": "Fusselarme Mikrofaser-Rollen für glatte Wände inkl. Abstreifgitter.",
+        "bilder": [
+            "/images/products/SKU-003.jpg",
+            "/images/products/SKU-003_1.jpg",
+            "/images/products/SKU-003_2.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "material": "Mikrofaser",
+            "breite": "25 cm",
+            "buegel": "Ergonomischer Softgriff"
+        },
+        "varianten": [
+            {
+                "beschreibung": "3-teilig",
+                "netto_preis": 8.5
+            },
+            {
+                "beschreibung": "5-teilig",
+                "netto_preis": 12.9
+            }
+        ],
+        "bestand": 12,
+        "preis_netto": 8.5,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-004",
+        "name": "Vliestapete Betonoptik",
+        "beschreibung": "Hochwertige Vliestapete im Industrie-Look, einfach nass abziehbar.",
+        "bilder": [
+            "/images/products/SKU-004.jpg",
+            "/images/products/SKU-004_1.avif",
+            "/images/products/SKU-004_2.avif"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "rollenmass": "10,05 m x 0,53 m",
+            "gewicht": "180 g/m²",
+            "eigenschaft": "Hoch waschbeständig"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Grau",
+                "netto_preis": 19.99
+            },
+            {
+                "beschreibung": "Dunkelgrau",
+                "netto_preis": 19.99
+            },
+            {
+                "beschreibung": "Anthrazit",
+                "netto_preis": 19.99
+            },
+            {
+                "beschreibung": "Grau",
+                "netto_preis": 19.99
+            },
+            {
+                "beschreibung": "Dunkelgrau",
+                "netto_preis": 19.99
+            },
+            {
+                "beschreibung": "Anthrazit",
+                "netto_preis": 19.99
+            }
+        ],
+        "bestand": 34,
+        "preis_netto": 19.99,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Wandgestaltung"
+    },
+    {
+        "artikelnummer": "SKU-005",
+        "name": "Acryl Dichtmasse Weiß",
+        "beschreibung": "Überstreichbare Fugendichtmasse für den Innenbereich.",
+        "bilder": [
+            "/images/products/SKU-005.jpg",
+            "/images/products/SKU-005_1.jpg",
+            "/images/products/SKU-005_2.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "inhalt": "310 ml",
+            "temperaturbestaendigkeit": "-20°C bis +80°C",
+            "hautbildungszeit": "ca. 15 Minuten"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Weiß",
+                "netto_preis": 2.4
+            },
+            {
+                "beschreibung": "Grau",
+                "netto_preis": 2.4
+            }
+        ],
+        "bestand": 0,
+        "preis_netto": 2.4,
+        "steuersatz": 0.19,
+        "discount": 0.05,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-006",
+        "name": "Fliesenkleber Flex",
+        "beschreibung": "Flexibler Dünnbettmörtel für keramische Fliesen und Naturstein.",
+        "bilder": [
+            "/images/products/SKU-006.jpg",
+            "/images/products/SKU-006_1.jpg",
+            "/images/products/SKU-006_2.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "gewicht": "25 kg",
+            "verarbeitungszeit": "ca. 3 Stunden",
+            "begehbar_nach": "24 Stunden"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 18.5
+            },
+            {
+                "beschreibung": "Schnellabbindend",
+                "netto_preis": 22.9
+            }
+        ],
+        "bestand": 65,
+        "preis_netto": 18.5,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Bodenbeläge"
+    },
+    {
+        "artikelnummer": "SKU-007",
+        "name": "Feinspachtel Innen",
+        "beschreibung": "Gebrauchsfertige Spachtelmasse für höchste Oberflächengüte.",
+        "bilder": [
+            "/images/products/SKU-007.jpg",
+            "/images/products/SKU-007_1.jpg",
+            "/images/products/SKU-007_2.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "gewicht": "10 kg",
+            "schichtdicke_max": "3 mm",
+            "verbrauch": "ca. 1,6 kg/m²"
+        },
+        "varianten": [
+            {
+                "beschreibung": "5 kg Eimer",
+                "netto_preis": 22.9
+            },
+            {
+                "beschreibung": "10 kg Eimer",
+                "netto_preis": 39.9
+            },
+            {
+                "beschreibung": "20 kg Eimer",
+                "netto_preis": 72
+            }
+        ],
+        "bestand": 18,
+        "preis_netto": 22.9,
+        "steuersatz": 0.19,
+        "discount": 0.1,
+        "unterkategorie": "Wandgestaltung"
+    },
+    {
+        "artikelnummer": "SKU-008",
+        "name": "Portlandzement CEM I",
+        "beschreibung": "Vielseitig einsetzbarer Zement für Beton und Mörtel.",
+        "bilder": [
+            "/images/products/SKU-008.jpg",
+            "/images/products/SKU-008_1.jpg",
+            "/images/products/SKU-008_2.jpg"
+        ],
+        "kategorie": "Bau",
+        "technische_eigenschaften": {
+            "gewicht": "25 kg",
+            "festigkeitsklasse": "42,5 N",
+            "norm": "DIN EN 197-1"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Einzelsack",
+                "netto_preis": 4.1
+            },
+            {
+                "beschreibung": "Palette (40 Stück)",
+                "netto_preis": 148
+            }
+        ],
+        "bestand": 100,
+        "preis_netto": 4.1,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Rohbau"
+    },
+    {
+        "artikelnummer": "SKU-009",
+        "name": "Konstruktionsvollholz Fichte",
+        "beschreibung": "Gehobeltes und gefastes Konstruktionsholz für den Holzbau.",
+        "bilder": [
+            "/images/products/SKU-009.jpg",
+            "/images/products/SKU-009_1.jpg",
+            "/images/products/SKU-009_2.jpg"
+        ],
+        "kategorie": "Bau",
+        "technische_eigenschaften": {
+            "querschnitt": "60 x 120 mm",
+            "laenge": "3000 mm",
+            "feuchtegehalt": "15 % (+/- 3 %)"
+        },
+        "varianten": [
+            {
+                "beschreibung": "2000 mm",
+                "netto_preis": 11.2
+            },
+            {
+                "beschreibung": "3000 mm",
+                "netto_preis": 16.5
+            },
+            {
+                "beschreibung": "4000 mm",
+                "netto_preis": 21.9
+            }
+        ],
+        "bestand": 41,
+        "preis_netto": 11.2,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Holz & Plattenwerkstoffe"
+    },
+    {
+        "artikelnummer": "SKU-010",
+        "name": "Porenbetonstein Planstein",
+        "beschreibung": "Leichter Mauerstein mit hervorragenden Wärmedämmeigenschaften.",
+        "bilder": [
+            "/images/products/SKU-010.jpg",
+            "/images/products/SKU-010_1.jpg",
+            "/images/products/SKU-010_2.jpg"
+        ],
+        "kategorie": "Bau",
+        "technische_eigenschaften": {
+            "abmessungen": "600 x 200 x 250 mm",
+            "druckfestigkeitsklasse": "2",
+            "waermeleitfaehigkeit": "0,09 W/(m·K)"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Dicke 11,5 cm",
+                "netto_preis": 3.8
+            },
+            {
+                "beschreibung": "Dicke 17,5 cm",
+                "netto_preis": 5.2
+            },
+            {
+                "beschreibung": "Dicke 24,0 cm",
+                "netto_preis": 6.8
+            }
+        ],
+        "bestand": 55,
+        "preis_netto": 3.8,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Rohbau"
+    },
+    {
+        "artikelnummer": "SKU-011",
+        "name": "OSB-3 Verlegeplatte",
+        "beschreibung": "Feuchtebeständige Bauplatte mit Nut und Feder.",
+        "bilder": [
+            "/images/products/SKU-011.jpg",
+            "/images/products/SKU-011_1.jpg",
+            "/images/products/SKU-011_2.jpg"
+        ],
+        "kategorie": "Bau",
+        "technische_eigenschaften": {
+            "abmessungen": "2050 x 625 mm",
+            "staerke": "15 mm",
+            "emissionsklasse": "E1"
+        },
+        "varianten": [
+            {
+                "beschreibung": "12 mm",
+                "netto_preis": 8.5
+            },
+            {
+                "beschreibung": "15 mm",
+                "netto_preis": 9.9
+            },
+            {
+                "beschreibung": "22 mm",
+                "netto_preis": 12.9
+            }
+        ],
+        "bestand": 73,
+        "preis_netto": 8.5,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Holz & Plattenwerkstoffe"
+    },
+    {
+        "artikelnummer": "SKU-012",
+        "name": "Baufolie Transparent",
+        "beschreibung": "Reißfeste Abdeck- und Schutzfolie für Baustellen.",
+        "bilder": [
+            "/images/products/SKU-012.jpg",
+            "/images/products/SKU-012_1.jpg",
+            "/images/products/SKU-012_2.jpg"
+        ],
+        "kategorie": "Bau",
+        "technische_eigenschaften": {
+            "abmessungen": "4 x 50 m",
+            "staerke": "120 µm",
+            "material": "Polyethylen (LDPE)"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Transparent",
+                "netto_preis": 34
+            },
+            {
+                "beschreibung": "Schwarz",
+                "netto_preis": 34
+            }
+        ],
+        "bestand": 29,
+        "preis_netto": 34,
+        "steuersatz": 0.19,
+        "discount": 0.25,
+        "unterkategorie": "Rohbau"
+    },
+    {
+        "artikelnummer": "SKU-013",
+        "name": "Bauschraube Sechskant m. Mutter",
+        "beschreibung": "Diese Bauschraube mit Außensechskant-Antrieb und einer Gewindegröße von M12 ist ideal für den Einsatz im Innenbereich sowie in geschützten Außenbereichen.",
+        "bilder": [
+            "/images/products/SKU-013.jpg",
+            "/images/products/SKU-013_1.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "abmessungen": "5,0 x 80 mm",
+            "antrieb": "TX 25",
+            "verpackungseinheit": "200 Stück"
+        },
+        "varianten": [
+            {
+                "beschreibung": "5,0 x 60 mm",
+                "netto_preis": 12.9
+            },
+            {
+                "beschreibung": "5,0 x 80 mm",
+                "netto_preis": 14.9
+            },
+            {
+                "beschreibung": "5,0 x 100 mm",
+                "netto_preis": 16.9
+            }
+        ],
+        "bestand": 88,
+        "preis_netto": 12.9,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Verbindungstechnik"
+    },
+    {
+        "artikelnummer": "SKU-014",
+        "name": "Armierungsgewebe alkalibeständig 145 g/m² 4,5 x 4 mm weiß",
+        "beschreibung": "Alkalibeständiges Glasfasergewebe für Putz- und WDVS-Systeme.",
+        "bilder": [
+            "/images/products/SKU-014.jpg",
+            "/images/products/SKU-014_1.jpg"
+        ],
+        "kategorie": "Bau",
+        "technische_eigenschaften": {
+            "breite": "1 m",
+            "maschenweite": "4 x 4 mm",
+            "flächengewicht": "165 g/m²"
+        },
+        "varianten": [
+            {
+                "beschreibung": "10 m",
+                "netto_preis": 12.95
+            },
+            {
+                "beschreibung": "50 m",
+                "netto_preis": 44.95
+            }
+        ],
+        "bestand": 16,
+        "preis_netto": 28.5,
+        "steuersatz": 0.19,
+        "discount": 0.2,
+        "unterkategorie": "Dämmung & Isolierung"
+    },
+    {
+        "artikelnummer": "SKU-015",
+        "name": " Randdämmstreifen FE mit Anschlussfolie für Estriche",
+        "beschreibung": "Zur Schallentkopplung von Estrichen an angrenzenden Bauteilen.",
+        "bilder": [
+            "/images/products/SKU-015.jpg",
+            "/images/products/SKU-015_1.jpg",
+            "/images/products/SKU-015_2.jpg"
+        ],
+        "kategorie": "Bau",
+        "technische_eigenschaften": {
+            "breite": "150 mm",
+            "dicke": "8 mm",
+            "rollenlaenge": "25 m"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Mit Folienflansch",
+                "netto_preis": 9.95
+            },
+            {
+                "beschreibung": "Ohne Folienflansch",
+                "netto_preis": 8.9
+            }
+        ],
+        "bestand": 40,
+        "preis_netto": 9.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Dämmung & Isolierung"
+    },
+    {
+        "artikelnummer": "SKU-016",
+        "name": "Arbeitsschutzbrille Klar",
+        "beschreibung": "Kratzfeste und beschlagfreie Schutzbrille mit Seitenschutz.",
+        "bilder": [
+            "/images/products/SKU-016.jpg",
+            "/images/products/SKU-016_1.jpg",
+            "/images/products/SKU-016_2.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "material_scheibe": "Polycarbonat",
+            "uv_schutz": "100%",
+            "norm": "EN 166"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Klar",
+                "netto_preis": 7.4
+            },
+            {
+                "beschreibung": "Getönt",
+                "netto_preis": 7.4
+            }
+        ],
+        "bestand": 67,
+        "preis_netto": 7.4,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Arbeitsschutz & Betriebsaustattung"
+    },
+    {
+        "artikelnummer": "SKU-017",
+        "name": "Arbeitshandschuhe weiß/anthrazit",
+        "beschreibung": "Nahtlose Handschuhe mit PU-Beschichtung für sicheres Arbeiten.",
+        "bilder": [
+            "/images/products/SKU-017.jpg",
+            "/images/products/SKU-017_1.jpg",
+            "/images/products/SKU-017_2.jpg"
+        ],
+        "kategorie": "Verschiedene",
+        "technische_eigenschaften": {
+            "material": "Leder, Spandex",
+            "Anwendungsbereich": "Feinmontage, Instandhaltung, Malerarbeiten, Montage",
+            "norm": "EN 388"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Größe 8 (M)",
+                "netto_preis": 6.8
+            },
+            {
+                "beschreibung": "Größe 9 (L)",
+                "netto_preis": 6.8
+            },
+            {
+                "beschreibung": "Größe 10 (XL)",
+                "netto_preis": 6.8
+            }
+        ],
+        "bestand": 52,
+        "preis_netto": 6.8,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Saisonale Angebote & Restposten"
+    },
+    {
+        "artikelnummer": "SKU-018",
+        "name": "Schutzhelm",
+        "beschreibung": "Schutzhelm mit 6-Punkt-Gurtband für optimalen Tragekomfort.",
+        "bilder": [
+            "/images/products/SKU-018.jpg",
+            "/images/products/SKU-018_1.jpg",
+            "/images/products/SKU-018_2.jpg"
+        ],
+        "kategorie": "Verschiedene",
+        "technische_eigenschaften": {
+            "material": "HDPE",
+            "kofpumfang": "52-62 cm",
+            "norm": "EN 397"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Gelb",
+                "netto_preis": 11.5
+            },
+            {
+                "beschreibung": "Weiß",
+                "netto_preis": 11.5
+            },
+            {
+                "beschreibung": "Blau",
+                "netto_preis": 11.5
+            }
+        ],
+        "bestand": 24,
+        "preis_netto": 11.5,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Saisonale Angebote & Restposten"
+    },
+    {
+        "artikelnummer": "SKU-019",
+        "name": "Kapselgehörschutz SNR 32dB",
+        "beschreibung": "Komfortabler Gehörschutz für laute Umgebungen in Werkstatt und Bau.",
+        "bilder": [
+            "/images/products/SKU-019.jpg",
+            "/images/products/SKU-019_1.jpg",
+            "/images/products/SKU-019_2.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "daemmwert": "SNR 32 dB",
+            "gewicht": "220 g",
+            "einstellbarkeit": "Stufenlose Höhenverstellung"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 19.9
+            },
+            {
+                "beschreibung": "Mit Radiofunktion",
+                "netto_preis": 34.9
+            }
+        ],
+        "bestand": 38,
+        "preis_netto": 19.9,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Arbeitsschutz & Betriebsaustattung"
+    },
+    {
+        "artikelnummer": "SKU-020",
+        "name": "Sicherheitsschuhe S3",
+        "beschreibung": "Wasserabweisende Arbeitsschuhe mit Stahlkappe und durchtrittsicherer Sohle.",
+        "bilder": [
+            "/images/products/SKU-020.jpg",
+            "/images/products/SKU-020_1.jpg",
+            "/images/products/SKU-020_2.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "schutzklasse": "S3",
+            "obermaterial": "Rindvollleder",
+            "kappe": "Stahl"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Größe 42",
+                "netto_preis": 45
+            },
+            {
+                "beschreibung": "Größe 43",
+                "netto_preis": 45
+            },
+            {
+                "beschreibung": "Größe 44",
+                "netto_preis": 45
+            },
+            {
+                "beschreibung": "Größe 45",
+                "netto_preis": 45
+            }
+        ],
+        "bestand": 15,
+        "preis_netto": 45,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Arbeitsschutz & Betriebsaustattung"
+    },
+    {
+        "artikelnummer": "SKU-021",
+        "name": "Atemschutzmaske FFP3 mit Ventil",
+        "beschreibung": "Zuverlässiger Schutz vor giftigen Feinstäuben beim Schleifen.",
+        "bilder": [
+            "/images/products/SKU-021.jpg",
+            "/images/products/SKU-021_1.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "schutzstufe": "FFP3",
+            "ventil": "Ausatemventil vorhanden",
+            "norm": "EN 149:2001"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Einzelpack",
+                "netto_preis": 4.5
+            },
+            {
+                "beschreibung": "5er Pack",
+                "netto_preis": 19.9
+            },
+            {
+                "beschreibung": "20er Pack",
+                "netto_preis": 72
+            }
+        ],
+        "bestand": 81,
+        "preis_netto": 4.5,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Arbeitsschutz & Betriebsaustattung"
+    },
+    {
+        "artikelnummer": "SKU-022",
+        "name": "Erste-Hilfe-Koffer Baustelle",
+        "beschreibung": "Staubdichter Koffer mit Füllung nach DIN 13157 für Baustellen.",
+        "bilder": [
+            "/images/products/SKU-022.avif",
+            "/images/products/SKU-022_1.avif",
+            "/images/products/SKU-022_2.avif",
+            "/images/products/SKU-022_3.avif"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "norm": "DIN 13157",
+            "material_koffer": "ABS-Kunststoff",
+            "halterung": "Inkl. Wandhalterung"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 39
+            },
+            {
+                "beschreibung": "Mit Zusatzausstattung",
+                "netto_preis": 54.9
+            }
+        ],
+        "bestand": 9,
+        "preis_netto": 39,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Arbeitsschutz & Betriebsaustattung"
+    },
+    {
+        "artikelnummer": "SKU-023",
+        "name": "Akku-Schlagbohrschrauber 18 V",
+        "beschreibung": "Ein vielseitiges Werkzeug für anspruchsvolle Bohr- und Schraubarbeiten",
+        "bilder": [
+            "/images/products/SKU-023.jpg",
+            "/images/products/SKU-023_1.jpg",
+            "/images/products/SKU-023_2.jpg",
+            "/images/products/SKU-023_3.jpg",
+            "/images/products/SKU-023_4.jpg",
+            "/images/products/SKU-023_5.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "spannung": "18V",
+            "drehmoment_max": "110 Nm",
+            "gewicht": "2,1 kg"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Solo (ohne Akku)",
+                "netto_preis": 215
+            },
+            {
+                "beschreibung": "Inkl. 2x 5.0Ah Akku",
+                "netto_preis": 349
+            }
+        ],
+        "bestand": 11,
+        "preis_netto": 215,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Maschinenteile & Lager"
+    },
+    {
+        "artikelnummer": "SKU-024",
+        "name": "Schwerlastregal Verzinkt",
+        "beschreibung": "Steckregal für Lager und Werkstatt mit enormer Tragkraft.",
+        "bilder": [
+            "/images/products/SKU-024.jpg",
+            "/images/products/SKU-024_1.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "abmessungen": "180 x 90 x 40 cm",
+            "traglast_pro_boden": "175 kg",
+            "anzahl_boeden": "5"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Tiefe 40 cm",
+                "netto_preis": 35.5
+            },
+            {
+                "beschreibung": "Tiefe 60 cm",
+                "netto_preis": 49.9
+            }
+        ],
+        "bestand": 27,
+        "preis_netto": 35.5,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Maschinenteile & Lager"
+    },
+    {
+        "artikelnummer": "SKU-025",
+        "name": "Industrie-Kompressor 50L",
+        "beschreibung": "Ölgeschmierter Druckluftkompressor für Werkstätten.",
+        "bilder": [
+            "/images/products/SKU-025.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "kesselvolumen": "50 Liter",
+            "ansaugleistung": "410 l/min",
+            "max_druck": "10 bar"
+        },
+        "varianten": [
+            {
+                "beschreibung": "50 Liter Kessel",
+                "netto_preis": 349
+            },
+            {
+                "beschreibung": "100 Liter Kessel",
+                "netto_preis": 549
+            }
+        ],
+        "bestand": 4,
+        "preis_netto": 349,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Maschinenteile & Lager"
+    },
+    {
+        "artikelnummer": "SKU-026",
+        "name": "Hochleistungs-Winkelschleifer 230mm",
+        "beschreibung": "Robustes Werkzeug für Trenn- und Schrupparbeiten in Stahl.",
+        "bilder": [
+            "/images/products/SKU-026.jpg",
+            "/images/products/SKU-026_1.jpg",
+            "/images/products/SKU-026_2.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "leistung": "2200 W",
+            "scheibendurchmesser": "230 mm",
+            "leerlaufdrehzahl": "6500 min-1"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Mit Totmannschalter",
+                "netto_preis": 129.95
+            },
+            {
+                "beschreibung": "Standard-Schalter",
+                "netto_preis": 119.95
+            },
+            {
+                "beschreibung": "Mit Totmannschalter",
+                "netto_preis": 129.95
+            },
+            {
+                "beschreibung": "Standard-Schalter",
+                "netto_preis": 119.95
+            }
+        ],
+        "bestand": 14,
+        "preis_netto": 129.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Maschinenteile & Lager"
+    },
+    {
+        "artikelnummer": "SKU-027",
+        "name": "Stahlträger HEB 100",
+        "beschreibung": "Breitflanschträger für tragende Konstruktionen im Stahlbau.",
+        "bilder": [
+            "/images/products/SKU-027.webp"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "profil": "HEB 100",
+            "material": "S235JR",
+            "gewicht_pro_meter": "20,4 kg"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Länge 2m",
+                "netto_preis": 45
+            },
+            {
+                "beschreibung": "Länge 3m",
+                "netto_preis": 67.5
+            },
+            {
+                "beschreibung": "Länge 6m",
+                "netto_preis": 135
+            }
+        ],
+        "bestand": 48,
+        "preis_netto": 45,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Maschinenteile & Lager"
+    },
+    {
+        "artikelnummer": "SKU-028",
+        "name": "Seilhebezug",
+        "beschreibung": "Er bewegt 125 kg locker auf eine Hubhöhe von bis zu 6 m.",
+        "bilder": [
+            "/images/products/SKU-028.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "tragkraft": "250 kg",
+            "hubhoehe": "6 m",
+            "gewicht": "12 kg"
+        },
+        "varianten": [
+            {
+                "beschreibung": "1000 kg",
+                "netto_preis": 89
+            },
+            {
+                "beschreibung": "2000 kg",
+                "netto_preis": 145
+            },
+            {
+                "beschreibung": "3000 kg",
+                "netto_preis": 215
+            }
+        ],
+        "bestand": 8,
+        "preis_netto": 89,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Maschinenteile & Lager"
+    },
+    {
+        "artikelnummer": "SKU-029",
+        "name": "Profi Nass und Trockensauger",
+        "beschreibung": "Leistungsstarker Sauger mit Gerätesteckdose und automatischer Abreinigung.",
+        "bilder": [
+            "/images/products/SKU-029.avif",
+            "/images/products/SKU-029_1.avif",
+            "/images/products/SKU-029_2.avif"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "leistung": "1400 W",
+            "behaeltervolumen": "30 Liter",
+            "staubklasse": "M"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Klasse L",
+                "netto_preis": 480
+            },
+            {
+                "beschreibung": "Klasse M",
+                "netto_preis": 529
+            }
+        ],
+        "bestand": 6,
+        "preis_netto": 480,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Maschinenteile & Lager"
+    },
+    {
+        "artikelnummer": "SKU-030",
+        "name": "Bohr- & Meißelhammer SDS-Max",
+        "beschreibung": "Für schwere Abbruch- und Bohrarbeiten in armiertem Beton.",
+        "bilder": [
+            "/images/products/SKU-030.jpg",
+            "/images/products/SKU-030_1.jpg",
+            "/images/products/SKU-030_2.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "leistung": "1500 W",
+            "schlagenergie": "12,5 J",
+            "werkzeugaufnahme": "SDS-Max"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Inklusive Koffer",
+                "netto_preis": 549
+            },
+            {
+                "beschreibung": "Inklusive Meißel-Set",
+                "netto_preis": 569
+            }
+        ],
+        "bestand": 10,
+        "preis_netto": 549,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Maschinenteile & Lager"
+    },
+    {
+        "artikelnummer": "SKU-031",
+        "name": "Dampftapetenablöser 2300 W",
+        "beschreibung": "Zum Aufweichen und Ablösen von Tapeten und Klebstoffen.",
+        "bilder": [
+            "/images/products/SKU-031.avif",
+            "/images/products/SKU-031_1.avif",
+            "/images/products/SKU-031_2.avif",
+            "/images/products/SKU-031_3.avif",
+            "/images/products/SKU-031_4.avif",
+            "/images/products/SKU-031_5.avif"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "leistung": "2300 W",
+            "schlauchlänge": "4 Meter",
+            "wassertank": "4,5 Liter"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 49.95
+            }
+        ],
+        "bestand": 5,
+        "preis_netto": 49.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-032",
+        "name": "Fineline Tape Kreppband Washitape gold",
+        "beschreibung": "Für besonders scharfe Farbkanten! Zum Abkleben für glatte und leicht raue Untergründe.",
+        "bilder": [
+            "/images/products/SKU-032.jpg",
+            "/images/products/SKU-032_1.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "ausführung": "Flachkrepp",
+            "max. Klebedauer": "0,062 Tage",
+            "temperaturbeständigkeit": "Bis zu 100 °C"
+        },
+        "varianten": [
+            {
+                "beschreibung": "18mm Breite",
+                "netto_preis": 4.45
+            },
+            {
+                "beschreibung": "30mm Breite",
+                "netto_preis": 6.55
+            },
+            {
+                "beschreibung": "48mm Breite",
+                "netto_preis": 8.45
+            }
+        ],
+        "bestand": 30,
+        "preis_netto": 6.55,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Wandgestaltung"
+    },
+    {
+        "artikelnummer": "SKU-033",
+        "name": "Aussen- und Feuchtraumspachtelmasse weiß",
+        "beschreibung": "Wurde speziell für kleine Ausbesserungs- und Renovierungsarbeiten im Außenbereich entwickelt. So lassen sich Risse, Dübel- und Bohrlöchern sowie ausgebrochene Stellen im Putz und Mauerwerk schnell und einfach reparieren!",
+        "bilder": [
+            "/images/products/SKU-033.jpg",
+            "/images/products/SKU-033_1.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "schichtdicke max. je Arbeitsgang": "10 mm",
+            "Reichweite/Ergiebigkeit": "1,2 kg/m²",
+            "Basis": "Dispersion, Calciumcarbonat"
+        },
+        "varianten": [
+            {
+                "beschreibung": "0,33 kg",
+                "netto_preis": 4.95
+            },
+            {
+                "beschreibung": "1 kg",
+                "netto_preis": 8.95
+            },
+            {
+                "beschreibung": "5 kg",
+                "netto_preis": 29.95
+            }
+        ],
+        "bestand": 20,
+        "preis_netto": 4.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Wandgestaltung"
+    },
+    {
+        "artikelnummer": "SKU-034",
+        "name": "Tapeziergrund weiß",
+        "beschreibung": "Sorgt für eine gleichmäßige Saugfähigkeit, verhindert ein Durchscheinen der Wand und garantiert, dass der Tapetenkleister optimal haftet.",
+        "bilder": [
+            "/images/products/SKU-034.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Trockendauer": "12 h",
+            "Reichweite (ca.) bei einmaligem Anstrich": "8m²/Liter",
+            "Basis": "Wasserbasierend"
+        },
+        "varianten": [
+            {
+                "beschreibung": "2,5 Liter",
+                "netto_preis": 12.95
+            },
+            {
+                "beschreibung": "5 Liter",
+                "netto_preis": 22.95
+            }
+        ],
+        "bestand": 12,
+        "preis_netto": 12.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Wandgestaltung"
+    },
+    {
+        "artikelnummer": "SKU-035",
+        "name": "Universal Abdeckvlies 270 g/m²",
+        "beschreibung": " Dieses Universal Abdeckvlies eignet sich perfekt für Abdeckungen aller Art im Innenbereich. Durch die hohe Grammatur von 270 g/m² bietet es einen robusten Schutz gegen Flüssigkeiten und Schmutz.",
+        "bilder": [
+            "/images/products/SKU-035.jpg",
+            "/images/products/SKU-035_1.jpg",
+            "/images/products/SKU-035_2.jpg",
+            "/images/products/SKU-035_3.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Farbton": "grau",
+            "Material": "Vlies",
+            "Grammatur": "270 g/m²"
+        },
+        "varianten": [
+            {
+                "beschreibung": "1 x 25 m",
+                "netto_preis": 27.95
+            },
+            {
+                "beschreibung": "1 x 50 m",
+                "netto_preis": 44.95
+            }
+        ],
+        "bestand": 12,
+        "preis_netto": 27.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Wandgestaltung"
+    },
+    {
+        "artikelnummer": "SKU-036",
+        "name": "Grundierung Acryl-Tiefengrund konservierungsmittelfrei",
+        "beschreibung": "Diese Grundierung auf Wasserbasis ist ideal für den Innen- und Außenbereich geeignet und bietet eine hohe Tiefenwirkung. Sie reguliert ungleichmäßige Saugfähigkeit, was eine gleichmäßige Farbaufnahme bei nachfolgenden Anstrichen ermöglicht.",
+        "bilder": [
+            "/images/products/SKU-036.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Reichweite (ca.) bei einmaligem Anstrich": "6 m²/Liter",
+            "Basis": "Dispersion, wasserbasierend",
+            "Trockendauer ca.": "4 h"
+        },
+        "varianten": [
+            {
+                "beschreibung": "1 Liter",
+                "netto_preis": 7.95
+            },
+            {
+                "beschreibung": "5 Liter",
+                "netto_preis": 18.95
+            },
+            {
+                "beschreibung": "10 Liter",
+                "netto_preis": 29.95
+            }
+        ],
+        "bestand": 14,
+        "preis_netto": 7.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Wandgestaltung"
+    },
+    {
+        "artikelnummer": "SKU-037",
+        "name": "Vliestapetenkleister weiß",
+        "beschreibung": "Der Vliestapetenkleister ist ideal für Flächenverklebungen im Innenbereich geeignet. Er zeichnet sich durch seine extrem hohe Endfestigkeit aus, die nach ca. 36 Stunden erreicht wird. Dadurch bleibt die Tapete auch auf schwierigen Untergründen dauerhaft haften.",
+        "bilder": [
+            "/images/products/SKU-037.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Ablösbarkeit": "Wasserlöslich",
+            "Reichweite (ca.)": "100 m²/kg",
+            "Material": "Methylzellulose, Stärke"
+        },
+        "varianten": [
+            {
+                "beschreibung": "200 g",
+                "netto_preis": 5.65
+            },
+            {
+                "beschreibung": "250 g",
+                "netto_preis": 5.65
+            },
+            {
+                "beschreibung": "500 g",
+                "netto_preis": 10.95
+            }
+        ],
+        "bestand": 13,
+        "preis_netto": 5.65,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Wandgestaltung"
+    },
+    {
+        "artikelnummer": "SKU-038",
+        "name": "2K-Tapetenandrückroller 18 cm",
+        "beschreibung": "Zum vollflächigen Andrücken von Tapeten. Tapeten werden gleichmäßig und ohne Luftblasen geklebt. ",
+        "bilder": [
+            "/images/products/SKU-038.jpg",
+            "/images/products/SKU-038_1.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Breite": "18 cm",
+            "Material": "Kunststoff, Metall",
+            "Inhalt": "1 Stück"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 12.45
+            }
+        ],
+        "bestand": 10,
+        "preis_netto": 12.45,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-039",
+        "name": "Wasserwaage Aluminium 80 cm",
+        "beschreibung": "Aus Aluminium gefertigte Wasserwaage mit hoch präzise geschliffenen Auflageflächen für eine Genauigkeit von 0,5 mm pro Meter.",
+        "bilder": [
+            "/images/products/SKU-039.avif",
+            "/images/products/SKU-039_1.avif"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Länge": "80 cm",
+            "Material": "Aluminium",
+            "Genauigkeit": "0,5 mm/m"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 11.99
+            }
+        ],
+        "bestand": 11,
+        "preis_netto": 11.99,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-040",
+        "name": "Rollbandmaß 8 m",
+        "beschreibung": "Ideal für vielfältige Messaufgaben im Innen- und Außenbereich geeignet.",
+        "bilder": [
+            "/images/products/SKU-040.jpg",
+            "/images/products/SKU-040_1.jpg",
+            "/images/products/SKU-040_2.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Länge": "8 m",
+            "Material": "Kunststoff",
+            "Breite": "25 mm"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 17.9
+            }
+        ],
+        "bestand": 18,
+        "preis_netto": 17.9,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-041",
+        "name": "Garten- und Straßenbesen 400x1430 mm rot/grün",
+        "beschreibung": "Robuster Garten- und Straßenbesen für die gründliche Reinigung von Gehwegen, Einfahrten, Terrassen und Gartenflächen.",
+        "bilder": [
+            "/images/products/SKU-041.jpg",
+            "/images/products/SKU-041_1.jpg",
+            "/images/products/SKU-041_2.jpg"
+        ],
+        "kategorie": "Verschiedene",
+        "technische_eigenschaften": {
+            "Material Griff": "Holz",
+            "Material Borsten": "Elaston rot",
+            "Aufbau Borsten": "7-reihig"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 9.95
+            }
+        ],
+        "bestand": 7,
+        "preis_netto": 9.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Gartenbedarf"
+    },
+    {
+        "artikelnummer": "SKU-042",
+        "name": "Flachpinsel Holzschutz 80 mm",
+        "beschreibung": "Geeignet für größere Streichoberflächen. Formstabile Synthetikborsten sorgen für gute Farbaufnahme und -abgabe.",
+        "bilder": [
+            "/images/products/SKU-042.jpg",
+            "/images/products/SKU-042_1.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Material Stiel": "Holz",
+            "Material Borsten": "Synthetikborsten",
+            "Arbeitsbreite": "80 mm"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 6.95
+            }
+        ],
+        "bestand": 11,
+        "preis_netto": 6.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-043",
+        "name": "Schraubendreher Set VDE 6-tlg",
+        "beschreibung": "Praktisches 6-teiliges Schraubendreher-Set für Arbeiten im Haushalt, in der Werkstatt oder in der Garage.",
+        "bilder": [
+            "/images/products/SKU-043.jpg",
+            "/images/products/SKU-043_1.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Material Klinge": "Chrom-Vanadium-Stahl",
+            "Material Griff": "Polypropylen (PP)",
+            "Gesamtlänge": "320 mm"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 18.75
+            }
+        ],
+        "bestand": 7,
+        "preis_netto": 18.75,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-044",
+        "name": "INBUS® 70419 Winkelschraubendreher Set (Zoll) 10tlg., 0.05–5/16",
+        "beschreibung": "Das Set umfasst 10 INBUS®-Schlüssel aus Chrom-Vanadium-Stahl begleitet Sie zuverlässig im Keller, auf der Baustelle, in der Werkstatt oder der Garage.",
+        "bilder": [
+            "/images/products/SKU-044.jpg",
+            "/images/products/SKU-044_1.jpg",
+            "/images/products/SKU-044_2.jpg",
+            "/images/products/SKU-044_3.jpg",
+            "/images/products/SKU-044_4.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Material": "Chrom-Vanadium-Stahl",
+            "Inhalt": "10 Stück",
+            "Größen": "0.05, 1/16, 5/64, 3/32, 1/8, 5/32, 3/16, 7/32, 1/4, 5/16"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 19.95
+            }
+        ],
+        "bestand": 9,
+        "preis_netto": 19.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-045",
+        "name": "Universalschraube Senkkopf m. I-Stern 5x60 mm galv. verzinkt 100 Stück",
+        "beschreibung": "Diese Schrauben sind ideal für den Einsatz im Innenbereich und geschützten Außenbereich.",
+        "bilder": [
+            "/images/products/SKU-045.jpg",
+            "/images/products/SKU-045_1.jpg",
+            "/images/products/SKU-045_2.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "Material": "Stahl",
+            "Anwendungsbereich": "Holz",
+            "Antrieb": "I-Stern"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 7.4
+            }
+        ],
+        "bestand": 23,
+        "preis_netto": 7.4,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Verbindungstechnik"
+    },
+    {
+        "artikelnummer": "SKU-046",
+        "name": "Sparren-Pfettenanker Rechts 32 x 32 x 170 mm, sendzimirverzinkt, 1 Stück",
+        "beschreibung": "Der Sparren-Pfettenanker ist speziell für den Außenbereich konzipiert und aus sendzimirverzinktem Stahl gefertigt, was optimalen Korrosionsschutz bietet. ",
+        "bilder": [
+            "/images/products/SKU-046.jpg",
+            "/images/products/SKU-046_1.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "Material": "Stahl",
+            "Materialstärke": "2 mm",
+            "Lochdurchmesser": "5 mm"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 1.15
+            }
+        ],
+        "bestand": 20,
+        "preis_netto": 1.15,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Verbindungstechnik"
+    },
+    {
+        "artikelnummer": "SKU-047",
+        "name": "Bodenplatte (lang) für 60x40 Pfosten - Anthrazit",
+        "beschreibung": "Die Premium Bodenplatte ermöglicht eine stabile Montage von Zaunpfosten mit den Maßen 60x40 mm auf befestigten oder betonierten Böden.",
+        "bilder": [
+            "/images/products/SKU-047.avif",
+            "/images/products/SKU-047_1.avif",
+            "/images/products/SKU-047_2.avif",
+            "/images/products/SKU-047_3.avif"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "Material": "Metall",
+            "Oberfläche": "Pulverbeschichtet",
+            "Grundfarbe": "Grau"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 9.19
+            }
+        ],
+        "bestand": 8,
+        "preis_netto": 9.19,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Befestigungssysteme"
+    },
+    {
+        "artikelnummer": "SKU-048",
+        "name": "Latte Fichte",
+        "beschreibung": "Die robuste Konstruktion mit einer Breite von 48 mm und einer Stärke von 24 mm macht sie zu einem stabilen Element für Wand, Boden oder Decke.",
+        "bilder": [
+            "/images/products/SKU-048.jpg",
+            "/images/products/SKU-048_1.jpg"
+        ],
+        "kategorie": "Bau",
+        "technische_eigenschaften": {
+            "Holzart": "Fichte",
+            "Oberfläche": "Sägerau",
+            "Herkunftsland": "Europa"
+        },
+        "varianten": [
+            {
+                "beschreibung": "2000mm",
+                "netto_preis": 1.68
+            },
+            {
+                "beschreibung": "2500mm",
+                "netto_preis": 2.1
+            },
+            {
+                "beschreibung": "3000mm",
+                "netto_preis": 2.52
+            },
+            {
+                "beschreibung": "4000mm",
+                "netto_preis": 3.36
+            }
+        ],
+        "bestand": 8,
+        "preis_netto": 1.68,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Holz & Plattenwerkstoffe"
+    },
+    {
+        "artikelnummer": "SKU-049",
+        "name": "Handsäge 350 mm",
+        "beschreibung": "Robuste Handsäge für präzise Sägearbeiten an Holz und ähnlichen Werkstoffen. Ideal für Heimwerker, Gartenarbeiten und den täglichen Einsatz.",
+        "bilder": [
+            "/images/products/SKU-049.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Ausführung": "Fuchsschwanz",
+            "Anwendungsbereich": "Kunststoff, Polyvinylchlorid (PVC), Holz",
+            "Gesamtlänge": "350 mm"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 16.9
+            }
+        ],
+        "bestand": 9,
+        "preis_netto": 16.9,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-050",
+        "name": "Akku-Handkreissäge 18V, ohne Akku und Ladegerät",
+        "beschreibung": "Mit einer Schnitttiefe in Holz von 5,7 cm und einem kraftvollen Motor kannst Du mit dieser Akku-Handkreissäge alle Holzsägearbeiten beispielsweise am Dach mobil ausführen.",
+        "bilder": [
+            "/images/products/SKU-050.jpg",
+            "/images/products/SKU-050_1.jpg",
+            "/images/products/SKU-050_2.jpg",
+            "/images/products/SKU-050_3.jpg",
+            "/images/products/SKU-050_4.jpg",
+            "/images/products/SKU-050_5.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "Antriebsart": "Akku",
+            "Anwendungsbereich": "Holz, Aluminium",
+            "leerlaufdrehzahl": "5000 r/min"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 209.99
+            }
+        ],
+        "bestand": 2,
+        "preis_netto": 209.99,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Maschinenteile & Lager"
+    },
+    {
+        "artikelnummer": "SKU-051",
+        "name": "Winkelmesser inkl. 4 x Batterie (AA) und Zubehör-Set",
+        "beschreibung": "Misst präzise Neigungen in Grad, Prozent oder Millimeter/meter.",
+        "bilder": [
+            "/images/products/SKU-051.jpg",
+            "/images/products/SKU-051_1.jpg",
+            "/images/products/SKU-051_2.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Nivellierbereich": "220°",
+            "Gewicht": "1,1 kg",
+            "In Lieferumfang enthalten": "4 x AAA Batterien, Schutztasche, Schenkelverlängerung, Karton"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 169
+            }
+        ],
+        "bestand": 7,
+        "preis_netto": 169,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-052",
+        "name": "Edelstahl Winkelverbinder Lochwinkel Verbinder Holzverbinder Regalhalter 5-12 Rund",
+        "beschreibung": "Unsere hochwertigen Edelstahlwinkel eignen sich ideal für den Einsatz im Holz- und Trockenbau.",
+        "bilder": [
+            "/images/products/SKU-052.avif",
+            "/images/products/SKU-052_1.avif"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "Einsatzbereich": "Außen",
+            "Breite": "45 mm",
+            "Länge": "45 mm"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 1.56
+            }
+        ],
+        "bestand": 21,
+        "preis_netto": 1.56,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Verbindungstechnik"
+    },
+    {
+        "artikelnummer": "SKU-053",
+        "name": "Spitzhacke, Kopfgewicht 1,5 kg",
+        "beschreibung": "Für alle Erdarbeiten im Garten eignet sich diese robuste Spitzhacke. Sie hat ein geringes Gewicht und lässt sich auch von Ungeübten mit Erfolg handhaben.",
+        "bilder": [
+            "/images/products/SKU-053.jpg",
+            "/images/products/SKU-053_1.jpg"
+        ],
+        "kategorie": "Verschiedene",
+        "technische_eigenschaften": {
+            "Stiellänge": "90 cm",
+            "Gewicht": "2,25 kg",
+            "Verbindung mit Stiel": "Eingepresst"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 29.99
+            }
+        ],
+        "bestand": 5,
+        "preis_netto": 29.99,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Gartenbedarf"
+    },
+    {
+        "artikelnummer": "SKU-054",
+        "name": "Messer Cutter XH-AL/HBB10 25 mm",
+        "beschreibung": "Profi Cutter mit 25 mm Klingenbreite und Edelstahl-Klingenführung – maximale Schneidkraft bei harten Materialien",
+        "bilder": [
+            "/images/products/SKU-054.jpg"
+        ],
+        "kategorie": "Verschiedene",
+        "technische_eigenschaften": {
+            "Anwendungsbereich": "Papier, Filz, Folie, Gummi, Holz, Leder",
+            "Länge Klinge": "126 mm",
+            "Material Klinge": "Stahl"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 12.25
+            }
+        ],
+        "bestand": 25,
+        "preis_netto": 12.25,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Saisonale Angebote & Restposten"
+    },
+    {
+        "artikelnummer": "SKU-055",
+        "name": "Stechbeitelsatz 4 tlg.",
+        "beschreibung": "Zuverlässiges Werkzeug für präzise Holzarbeiten",
+        "bilder": [
+            "/images/products/SKU-055.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Einsatzbereich": "Haus, Hobbykeller, Werkstatt",
+            "Farbton": "Aluminium, Buche",
+            "Material": "Chrom-Vanadium-Stahl"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 12.95
+            }
+        ],
+        "bestand": 23,
+        "preis_netto": 12.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-056",
+        "name": "Sockelleiste MDF FU60L foliert",
+        "beschreibung": "Diese Sockelleiste fügt sich harmonisch in jedes Raumdesign ein. Sie ist speziell für Laminatböden geeignet, was ein einheitliches Gesamtbild ermöglicht.",
+        "bilder": [
+            "/images/products/SKU-056.jpg",
+            "/images/products/SKU-056_1.jpg",
+            "/images/products/SKU-056_2.jpg"
+        ],
+        "kategorie": "Bau",
+        "technische_eigenschaften": {
+            "Geeignet für": "Laminatboden",
+            "Montageart": "Clipsen",
+            "Material": "Holzwerkstoff"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Weiß",
+                "netto_preis": 8.7
+            },
+            {
+                "beschreibung": "Oak basic",
+                "netto_preis": 8.7
+            },
+            {
+                "beschreibung": "Akazie",
+                "netto_preis": 8.7
+            },
+            {
+                "beschreibung": "Nimbus dark",
+                "netto_preis": 8.7
+            }
+        ],
+        "bestand": 25,
+        "preis_netto": 8.7,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Holz & Plattenwerkstoffe"
+    },
+    {
+        "artikelnummer": "SKU-057",
+        "name": "Aqua Stop Silber Unterlagsbahn 2mm Pack 20m²",
+        "beschreibung": "Diese Unterlagsbahn bietet eine Kombination aus Trittschalldämmung und Dampfbremse, wodurch sie ideal für Miet- und Etagenwohnungen geeignet ist. Sie schützt effektiv vor Restbaufeuchte, sodass das zusätzliche Verlegen einer PE-Folie entfällt.",
+        "bilder": [
+            "/images/products/SKU-057.jpg",
+            "/images/products/SKU-057_1.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Anwendungsbereich": "Laminat",
+            "Dämmung Trittschall": "20 dB",
+            "Material": "Polystyrolschaum (EPS) mit Alu- Dampfsperre"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 1.65
+            }
+        ],
+        "bestand": 32,
+        "preis_netto": 1.65,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Bodenbeläge"
+    },
+    {
+        "artikelnummer": "SKU-058",
+        "name": "Bitumen Schweissbahn",
+        "beschreibung": "Diese Schweissbahn bietet nicht nur eine zuverlässige Abdichtung für Dächer, Gartenhäuser und als Oberlagsbahn, sondern trägt auch zur Reduzierung von Stickoxiden in der Luft bei.",
+        "bilder": [
+            "/images/products/SKU-058.jpg",
+            "/images/products/SKU-058_1.jpg"
+        ],
+        "kategorie": "Bau",
+        "technische_eigenschaften": {
+            "Anwendungsbereich": "Dach, Gartenhaus, Oberlagsbahn",
+            "Oberfläche": "Beschiefert",
+            "Material": "Bitumen"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 44.95
+            }
+        ],
+        "bestand": 25,
+        "preis_netto": 44.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Dachbaustoffe"
+    },
+    {
+        "artikelnummer": "SKU-059",
+        "name": "Dachpappstifte 16 mm Feuerverzinkt 1 KG",
+        "beschreibung": "Dachpappstifte im praktischen 1-kg-Pack für die sichere Befestigung von Dachpappe, Bitumenbahnen und weiteren Bedachungsmaterialien.",
+        "bilder": [
+            "/images/products/SKU-059.jpg",
+            "/images/products/SKU-059_1.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "Kopfform": "Flachkopf",
+            "Länge": "20 mm",
+            "Material": "Draht"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Durchmesser 2 mm",
+                "netto_preis": 5.95
+            },
+            {
+                "beschreibung": "Durchmesser 2,5 mm",
+                "netto_preis": 5.95
+            },
+            {
+                "beschreibung": "Durchmesser 2,8 mm",
+                "netto_preis": 5.95
+            }
+        ],
+        "bestand": 25,
+        "preis_netto": 5.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Befestigungssysteme"
+    },
+    {
+        "artikelnummer": "SKU-060",
+        "name": "Holzlasur Plus farblos",
+        "beschreibung": "Diese wasserverdünnbare Universallasur eignet sich ideal für den Außenbereich und bietet extrem hohen Wetter- und UV-Schutz.",
+        "bilder": [
+            "/images/products/SKU-060.jpg",
+            "/images/products/SKU-060_1.jpg"
+        ],
+        "kategorie": "Bau",
+        "technische_eigenschaften": {
+            "Trockendauer ca.": "8 h",
+            "Farbton": "Transparent",
+            "Reichweite (ca.) bei einmaligem Anstrich": "15 m²/l"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Gebindegröße 0,375 l",
+                "netto_preis": 9.95
+            },
+            {
+                "beschreibung": "Gebindegröße 0,75 l",
+                "netto_preis": 16.95
+            },
+            {
+                "beschreibung": "Gebindegröße 2,5 l",
+                "netto_preis": 42.95
+            },
+            {
+                "beschreibung": "Gebindegröße 5 l",
+                "netto_preis": 59.95
+            },
+            {
+                "beschreibung": "Gebindegröße 6 l",
+                "netto_preis": 59.95
+            }
+        ],
+        "bestand": 15,
+        "preis_netto": 59.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Holz & Plattenwerkstoffe"
+    },
+    {
+        "artikelnummer": "SKU-061",
+        "name": "Unterlegscheibe Reyher DIN 9021 galv. verzinkt 100 Stück",
+        "beschreibung": "Diese Unterlegscheiben nach DIN 9021 bieten eine verlässliche Druckverteilung bei Verschraubungen. Sie bestehen aus hochwertigem Stahl, was hohe Belastbarkeit und Langlebigkeit sicherstellt.",
+        "bilder": [
+            "/images/products/SKU-061.jpg",
+            "/images/products/SKU-061_1.jpg"
+        ],
+        "kategorie": "Industriehardware",
+        "technische_eigenschaften": {
+            "Material": "Stahl",
+            "Oberfläche": "Galvanisiert",
+            "Inhalt": "100 Stück"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Größe 3,2 mm",
+                "netto_preis": 1.45
+            },
+            {
+                "beschreibung": "Größe 4,3 mm",
+                "netto_preis": 1.85
+            },
+            {
+                "beschreibung": "Größe 5,3 mm",
+                "netto_preis": 2.95
+            },
+            {
+                "beschreibung": "Größe 6,4 mm",
+                "netto_preis": 3.65
+            },
+            {
+                "beschreibung": "Größe 8,5 mm",
+                "netto_preis": 6.35
+            },
+            {
+                "beschreibung": "Größe 10,5 mm",
+                "netto_preis": 6.55
+            },
+            {
+                "beschreibung": "Größe 13,0 mm",
+                "netto_preis": 17.15
+            }
+        ],
+        "bestand": 40,
+        "preis_netto": 1.45,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Verbindungstechnik"
+    },
+    {
+        "artikelnummer": "SKU-062",
+        "name": "Schlosserhammer Eschenstiel",
+        "beschreibung": "Robuster Schlosserhammer für vielseitige Arbeiten in Werkstatt, Haushalt und auf der Baustelle.",
+        "bilder": [
+            "/images/products/SKU-062.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Material Kopf": "Stahl",
+            "Material Stiel": "Esche",
+            "Oberfläche Stiel": "Holz lackiert"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Gewicht Hammerkopf 0,1 kg",
+                "netto_preis": 4.9
+            },
+            {
+                "beschreibung": "Gewicht Hammerkopf 0,3 kg",
+                "netto_preis": 7.4
+            },
+            {
+                "beschreibung": "Gewicht Hammerkopf 0,5 kg",
+                "netto_preis": 9.45
+            }
+        ],
+        "bestand": 40,
+        "preis_netto": 4.9,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-063",
+        "name": "Klappbock Kiefer 74 x 73,5 x 37 cm natur, 200 kg",
+        "beschreibung": "Der Klappbock aus Kiefernholz bietet Dir eine belastbare und klappbare Lösung für verschiedenste Arbeiten. Mit einer Tragkraft von bis zu 200 kg trägt der Klappbock auch schwere Lasten mühelos.",
+        "bilder": [
+            "/images/products/SKU-063.jpg",
+            "/images/products/SKU-063_1.jpg",
+            "/images/products/SKU-063_2.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Material": "Holz",
+            "Montageart": "Stecksystem",
+            "Max. Tragkraft": "200 kg"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 6.95
+            }
+        ],
+        "bestand": 20,
+        "preis_netto": 6.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-064",
+        "name": "Handschleifer Set 41-tlg",
+        "beschreibung": "1 Handschleifer-Set bestehend aus: Handschleifer 165 x 85 x 45 mm, 40 Schleifstreifen Korund 93 x 230 Korn 60, 80, 120, 180",
+        "bilder": [
+            "/images/products/SKU-064.jpg",
+            "/images/products/SKU-064_1.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Maße": "93 x 230 mm",
+            "Körnung": "60, 80, 120, 180",
+            "Material": "Korund"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 7.95
+            }
+        ],
+        "bestand": 42,
+        "preis_netto": 7.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    },
+    {
+        "artikelnummer": "SKU-065",
+        "name": "Stufenstehleiter ML einseitig begehbar, eloxiert 4 Stufen",
+        "beschreibung": "Handlich, schlank und mit ergonomisch geformten Leiterholmen, bestens geeignet für den täglichen Einsatz.",
+        "bilder": [
+            "/images/products/SKU-065.avif",
+            "/images/products/SKU-065_1.avif",
+            "/images/products/SKU-065_2.avif",
+            "/images/products/SKU-065_3.avif",
+            "/images/products/SKU-065_4.avif",
+            "/images/products/SKU-065_5.avif"
+        ],
+        "kategorie": "Verschiedene",
+        "technische_eigenschaften": {
+            "Arbeitshöhe": "2,95 m",
+            "Maximales Belastungsgewicht": "150 kg",
+            "Material": "Aluminium"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 166.06
+            }
+        ],
+        "bestand": 22,
+        "preis_netto": 166.06,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Saisonale Angebote & Restposten"
+    },
+    {
+        "artikelnummer": "SKU-066",
+        "name": "Gummidichtung für Schnellkupplung",
+        "beschreibung": "Gummidichtung für Armaturen zur zuverlässigen Abdichtung von Wasseranschlüssen und Sanitärinstallationen.",
+        "bilder": [
+            "/images/products/SKU-066.jpg"
+        ],
+        "kategorie": "Verschiedene",
+        "technische_eigenschaften": {
+            "Anwendungsbereich": "Armatur",
+            "Inhalt": "2 Stück",
+            "Material": "Gummi"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 3.79
+            }
+        ],
+        "bestand": 28,
+        "preis_netto": 3.79,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Sanitärbedarf"
+    },
+    {
+        "artikelnummer": "SKU-067",
+        "name": "Steuerkartusche für Einhebelmischer",
+        "beschreibung": "Ersatz-Kartusche 35mm geschlossen ohne Temperaturregler",
+        "bilder": [
+            "/images/products/SKU-067.jpg",
+            "/images/products/SKU-067_1.jpg"
+        ],
+        "kategorie": "Verschiedene",
+        "technische_eigenschaften": {
+            "Anwendungsbereich": "Waschtischarmatur, Küchenarmatur",
+            "Anschluss": "3/8 AG",
+            "Material": "Kunststoff"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 13.59
+            }
+        ],
+        "bestand": 22,
+        "preis_netto": 13.59,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Sanitärbedarf"
+    },
+    {
+        "artikelnummer": "SKU-068",
+        "name": "Wasserpumpenzange 240 mm rot",
+        "beschreibung": "Robuste Wasserpumpenzange für vielseitige Greif-, Halte- und Montagearbeiten.",
+        "bilder": [
+            "/images/products/SKU-068.jpg"
+        ],
+        "kategorie": "Renovierung",
+        "technische_eigenschaften": {
+            "Material Kopf": "Chrom-Vanadium-Stahl",
+            "Material Griff": "Chrom-Vanadium-Stahl",
+            "Norm": "DIN ISO 8976"
+        },
+        "varianten": [
+            {
+                "beschreibung": "Standard",
+                "netto_preis": 6.95
+            }
+        ],
+        "bestand": 32,
+        "preis_netto": 6.95,
+        "steuersatz": 0.19,
+        "discount": 0,
+        "unterkategorie": "Werkzeuge & Zubehör"
+    }
+]

@@ -1,0 +1,53 @@
+        <section class="guides-section">
+            <div class="guide-grid" id="guideGrid">
+
+                <% Object.keys(items).forEach(function(itemId) { %>
+                    <% const item=items[itemId]; %>
+                        <% const isVisible=(!showFilter || activeCategory==='all' || item.category===activeCategory); %>
+                            <a href="/<%= urlPrefix %>/<%= itemId %>" class="guide-card" data-category="<%= item.category %>"
+                                style="display: <%= isVisible ? 'flex' : 'none' %>;">
+                                <div class="guide-image" style="background-image: url('<%= item.image %>');">
+                                    <% if (false) { %>
+                                        <span class="guide-tag">
+                                            <%= item.tag %>
+                                        </span>
+                                        <% } %>
+                                </div>
+                                <div class="guide-content">
+                                    <h3>
+                                        <%= item.title %>
+                                    </h3>
+                                    <p>
+                                        <%= item.teaser %>
+                                    </p>
+                                    <span class="guide-link">mehr</span>
+                                </div>
+                            </a>
+                            <% }); %>
+
+            </div>
+        </section>
+
+        <% if (showFilter) { %>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const filterBtns = document.querySelectorAll('.filter-btn');
+                    const guideCards = document.querySelectorAll('.guide-card');
+
+                    filterBtns.forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            filterBtns.forEach(b => b.classList.remove('active'));
+                            btn.classList.add('active');
+                            const filterValue = btn.getAttribute('data-filter');
+                            guideCards.forEach(card => {
+                                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                                    card.style.display = 'flex';
+                                } else {
+                                    card.style.display = 'none';
+                                }
+                            });
+                        });
+                    });
+                });
+            </script>
+        <% } %>

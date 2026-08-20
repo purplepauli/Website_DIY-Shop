@@ -1,0 +1,150 @@
+<%- include('partials/header') %>
+    <link rel="stylesheet" href="/stylesheets/guide-detail.css">
+
+    <main class="guide-detail-page">
+
+        <a href="<%= typeof backUrl !== 'undefined' ? backUrl : '/guides' %>" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Zurück zur Übersicht
+        </a>
+
+        <section class="guide-intro" style="--hero-image: url('<%= guide.image %>');">
+            <h1>
+                <%= guide.title %>
+            </h1>
+
+            <% if (!isRatgeber) { %>
+                <div class="guide-meta">
+                    <div class="meta-item time">
+                        <strong>Zeitaufwand:</strong>
+                        <%= guide.time %>
+                    </div>
+                    <div class="meta-item difficulty">
+                        <strong>Schwierigkeit:</strong>
+                        <div class="difficulty-bars">
+                            <% for(let i=1; i <=5; i++) { %>
+                                <div class="bar <%= guide.difficulty >= i ? 'filled' : '' %>"></div>
+                                <% } %>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+        </section>
+
+        <section class="guide-description">
+            <%- guide.intro %>
+        </section>
+
+        <% if (!isRatgeber) { %>
+            <section class="guide-ingredients">
+                <h2>Das brauchst Du dafür</h2>
+
+                <div class="product-sliders">
+                    <% ['material', 'werkzeug' ].forEach(function(type) { %>
+                        <% const items=guide.products.filter(p=> p.type === type); %>
+                            <% if (items.length> 0) { %>
+                                <% const sliderId='slider-' + type; %>
+                                    <div class="product-slider" id="<%= sliderId %>"
+                                        data-products='<%- JSON.stringify(items) %>'>
+                                        <span class="guide-tag slider-tag">
+                                            <%= type==='material' ? 'Material' : 'Werkzeuge' %>
+                                        </span>
+
+                                        <h3 class="slider-title">
+                                            <%= items[0].name %>
+                                        </h3>
+
+                                        <button class="slider-arrow slider-arrow-prev" aria-label="Vorheriges Produkt"
+                                            onclick="moveSlide('<%= sliderId %>', -1)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="15 18 9 12 15 6"></polyline>
+                                            </svg>
+                                        </button>
+                                        <button class="slider-arrow slider-arrow-next" aria-label="Nächstes Produkt"
+                                            onclick="moveSlide('<%= sliderId %>', 1)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="9 18 15 12 9 6"></polyline>
+                                            </svg>
+                                        </button>
+
+                                        <div class="slider-track">
+                                            <div class="slider-slides-wrapper" data-total="<%= items.length %>">
+                                                <% items.forEach(function(product) { %>
+                                                    <a href="/produkte/<%= product.productId %>" class="slider-image"
+                                                        style="background-image: url('<%= product.image %>');"></a>
+                                                    <% }); %>
+                                            </div>
+                                        </div>
+
+                                        <p class="slider-beschreibung">
+                                            <%= items[0].beschreibung %>
+                                        </p>
+                                        <div class="slider-counter">
+                                            1 von <%= items.length %>
+                                        </div>
+                                        <a href="/produkte/<%= items[0].productId %>" class="slider-shop-link">ZUM
+                                            SORTIMENT</a>
+                                    </div>
+                                    <% } %>
+                                        <% }); %>
+                </div>
+            </section>
+            <% } %>
+
+                <% if (!isRatgeber) { %>
+                    <section class="guide-steps">
+                        <h2>Schritt-für-Schritt Anleitung</h2>
+
+                        <% guide.steps.forEach(function(step, index) { %>
+                            <article class="step-row">
+                                <div class="step-image <%= step.imageFit === 'contain' ? 'step-image--contain' : '' %>">
+                                    <img src="<%= step.image %>" alt="<%= step.title %>">
+                                </div>
+                                <div class="step-text">
+                                    <h3>Schritt <%= index + 1 %>: <%= step.title %>
+                                    </h3>
+                                    <p>
+                                        <%= step.text %>
+                                    </p>
+                                </div>
+                            </article>
+                            <% }); %>
+                    </section>
+                    <% } %>
+
+    </main>
+
+    <% if (!isRatgeber) { %>
+        <script>
+            function moveSlide(sliderId, direction) {
+                const slider = document.getElementById(sliderId);
+                const wrapper = slider.querySelector('.slider-slides-wrapper');
+                const products = JSON.parse(slider.dataset.products);
+                const total = products.length;
+
+                let currentIndex = parseInt(wrapper.dataset.currentIndex || '0', 10);
+                let newIndex = currentIndex + direction;
+                if (newIndex < 0) newIndex = total - 1;
+                if (newIndex >= total) newIndex = 0;
+
+                wrapper.dataset.currentIndex = newIndex;
+                wrapper.style.transform = `translateX(-${newIndex * 100}%)`;
+
+                const product = products[newIndex];
+                slider.querySelector('.slider-title').textContent = product.name;
+                slider.querySelector('.slider-beschreibung').textContent = product.beschreibung;
+                slider.querySelector('.slider-counter').textContent = `${newIndex + 1} von ${total}`;
+                slider.querySelector('.slider-shop-link').href = '/produkt/' + product.productId;
+            }
+        </script>
+        <% } %>
+
+            <%- include('partials/footer') %>

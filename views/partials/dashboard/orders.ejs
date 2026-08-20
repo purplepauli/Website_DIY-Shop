@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/css/dashboard/lists.css">
+<script src="/js/dashboard/orders.js" defer></script>
+
+<% 
+    const orders = data ?? []; console.log(orders);
+    console.log(orders[0]?.cart);
+    function formatDate(date){
+        const formatted =
+            `${String(date.getDate()).padStart(2, "0")}.` +
+            `${String(date.getMonth() + 1).padStart(2, "0")}.` +
+            `${date.getFullYear()} - ` +
+            `${String(date.getHours()).padStart(2, "0")}:` +
+            `${String(date.getMinutes()).padStart(2, "0")} Uhr`;
+        return formatted;
+    }
+%>
+
+<h3>Offene Bestellungen (<%= orders.filter(order => !order.fulfilled).length %>)</h3>
+<hr>
+<br>
+<div class="list" id="list-orders-outstanding">
+    <% orders.filter(order => !order.fulfilled).forEach(order => { %>
+        <div class="list-row" data-id="<%= order.id %>">
+            <div class="list-row-title"><%= order.name %> <%= order.surname %> - <%= order.email %> (<%= formatDate(new Date(order.timestamp)) %>)</div>
+            <div class="list-row-content">
+                <div class="list-row-tags">
+                    <div class="list-row-tag-amount"><%= order.cart.length %> Artikel</div>
+                    <div class="list-row-tag-amount"><%= order.cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2) %> Euro</div>
+                </div>
+                <div class="list-row-actions">
+                    <button type="button" class="btn btn--primary" data-action="edit" data-id="<%= order.id %>" onclick="fulfillOrder(this)">Bestellung erfüllen</button>
+                    <button type="button" class="btn btn--delete" data-action="delete" data-id="<%= order.id %>" onclick="deleteOrder(this)">Löschen</button>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+</div>
+<br>
+
+<h3>Bearbeitete Bestellungen (<%= orders.filter(order => order.fulfilled).length %>)</h3>
+<hr>
+<br>
+<div class="list" id="list-orders-fullfilled">
+    <% orders.filter(order => order.fulfilled).forEach(order => { %>
+        <div class="list-row" data-id="<%= order.id %>">
+            <div class="list-row-title"><%= order.name %> <%= order.surname %> - <%= order.email %> (<%= formatDate(new Date(order.timestamp)) %>)</div>
+            <div class="list-row-content">
+                <div class="list-row-tags">
+                    <div class="list-row-tag-amount"><%= order.cart.length %> Artikel</div>
+                    <div class="list-row-tag-amount"><%= order.cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2) %> Euro</div>
+                </div>
+                <div class="list-row-actions">
+                    <button type="button" class="btn btn--delete" data-action="delete" data-id="<%= order.id %>" onclick="deleteOrder(this)">Löschen</button>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+</div>

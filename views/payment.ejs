@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="/css/_style.css">
+<link rel="stylesheet" href="/css/payment.css">
+<script src="/js/payment.js" defer></script>
+
+<%- include("partials/header-min") %>
+
+<div class="checkout-container">
+
+    <h1 id="payment-heading">Jetzt bezahlen</h1>
+
+    <div class="checkout-layout">
+
+        <!-- Linke Seite: Warenkorb -->
+        <section id="cartSection" class="checkout-card cart-summary">
+
+            <h2>Warenkorb</h2>
+
+            <div id="checkoutItems" class="checkout-items">
+                <!-- Dynamisch -->
+            </div>
+        </section>
+
+
+        <!-- Rechte Seite: Zahlung -->
+        <section id="paymentSection" class="checkout-card payment-summary">
+
+            <div class="checkout-total">
+                Gesamtbetrag:
+                <span id="checkoutTotal">0,00 €</span>
+            </div>
+
+            <h2>Zahlungsmethode</h2>
+
+            <div class="payment-options">
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="visa">
+                    <span class="payment-logo">VISA</span>
+                    <span>Visa</span>
+                </label>
+
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="mastercard">
+                    <span class="payment-logo mastercard">
+                        Mastercard
+                    </span>
+                    <span>Mastercard</span>
+                </label>
+
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="paypal">
+                    <span class="payment-logo paypal">
+                        PayPal
+                    </span>
+                    <span>PayPal</span>
+                </label>
+
+            </div>
+
+
+            <div class="checkout-actions">
+
+                <a href="/warenkorb" class="checkout-back">
+                    ← Zurück
+                </a>
+
+                <button id="payButton" class="checkout-pay _btn-attention">
+                    Jetzt bezahlen
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- Erfolgsanzeige -->
+    <section id="successSection" class="checkout-card success hidden">
+
+        <h2>Vielen Dank für deine Bestellung.</h2>
+
+        <p>
+            Deine Zahlung war erfolgreich und deine Bestellung wird umgehend bearbeitet.
+            <br>
+            In Kürze erhälst du eine Bestätigung per E-Mail.
+        </p>
+
+        <a href="/" class="_btn-primary">
+            Zurück zum Shop
+        </a>
+
+    </section>
+
+</div>
+
+
+<%- include("partials/footer-min") %>

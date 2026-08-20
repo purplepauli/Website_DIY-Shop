@@ -1,0 +1,58 @@
+<style>
+    body{
+        overflow: hidden;
+    }
+    #overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.156);
+        backdrop-filter: blur(1px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        padding: 10vh;
+    }
+
+    #overlay[hidden] {
+        display: none;
+    }
+
+    .overlay-content {
+        position: relative;
+        background: white;
+        height: 80vh;
+        width: 60vw;
+        overflow-y: scroll;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* X-Button */
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: none;
+        background: --var(--stahlblau);
+        font-size: 24px;
+        cursor: pointer;
+    }
+</style>
+
+
+<div id="overlay">
+    <div class="overlay-content">
+        <a href="?o=false" class="close-button" aria-label="Schließen">
+            &times;
+        </a>
+
+
+        <%- include('safetyOverlay') %>
+    </div>
+</div>

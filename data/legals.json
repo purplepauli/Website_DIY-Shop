@@ -1,0 +1,108 @@
+{
+  "impressum": {
+    "title": "Impressum - DIY Store Würzburg",
+    "heading": "Impressum",
+    "intro": "Dies ist ein Dummy-Impressum für das Studienprojekt DIY Store Würzburg. Die folgenden Angaben sind Platzhalter und müssen vor einer echten Veröffentlichung rechtlich und inhaltlich geprüft werden.",
+    "sections": [
+      {
+        "title": "Angaben zum Anbieter",
+        "paragraphs": [
+          "DIY Store Würzburg GmbH",
+          "Handwerksstraße 1, 97070 Würzburg",
+          "Vertreten durch die Geschäftsführung: Max Mustermann"
+        ]
+      },
+      {
+        "title": "Kontakt",
+        "paragraphs": [
+          "Telefon: 0931 / 123456-0",
+          "E-Mail: kontakt@diy-store-wuerzburg.example",
+          "Kundenservice: Montag bis Freitag von 08:00 bis 19:00 Uhr"
+        ]
+      },
+      {
+        "title": "Register und Umsatzsteuer",
+        "paragraphs": [
+          "Handelsregister: Amtsgericht Würzburg, HRB 000000",
+          "Umsatzsteuer-ID gemäß § 27a Umsatzsteuergesetz: DE000000000"
+        ]
+      },
+      {
+        "title": "Verantwortlich für den Inhalt",
+        "paragraphs": [
+          "Max Mustermann, Handwerksstraße 1, 97070 Würzburg"
+        ]
+      }
+    ]
+  },
+  "datenschutz": {
+    "title": "Datenschutz - DIY Store Würzburg",
+    "heading": "Datenschutz",
+    "intro": "Diese Datenschutzerklärung ist ein Dummytext für das Studienprojekt. Sie beschreibt beispielhaft, wie ein DIY-Shop über die Verarbeitung personenbezogener Daten informieren könnte.",
+    "sections": [
+      {
+        "title": "Verantwortliche Stelle",
+        "paragraphs": [
+          "Verantwortlich für die Datenverarbeitung ist die DIY Store Würzburg GmbH, Handwerksstraße 1, 97070 Würzburg.",
+          "Für Fragen zum Datenschutz kann die Kontaktadresse kontakt@diy-store-wuerzburg.example verwendet werden."
+        ]
+      },
+      {
+        "title": "Erhobene Daten",
+        "paragraphs": [
+          "Beim Besuch dieser Website können technisch notwendige Daten wie IP-Adresse, Datum und Uhrzeit des Zugriffs, Browsertyp und aufgerufene Seiten verarbeitet werden.",
+          "Wenn Nutzerinnen und Nutzer freiwillig Formulare verwenden, können zusätzlich die dort eingegebenen Angaben verarbeitet werden."
+        ]
+      },
+      {
+        "title": "Zwecke der Verarbeitung",
+        "paragraphs": [
+          "Die Daten werden im Dummy-Szenario genutzt, um die Website bereitzustellen, Bestellungen zu simulieren, Suchfunktionen zu ermöglichen und den Warenkorb darzustellen.",
+          "Eine Weitergabe an Dritte findet in diesem Platzhaltertext nicht statt, außer sie wäre für die technische Bereitstellung erforderlich."
+        ]
+      },
+      {
+        "title": "Speicherdauer und Rechte",
+        "paragraphs": [
+          "Personenbezogene Daten werden nur so lange gespeichert, wie es für den jeweiligen Zweck erforderlich ist.",
+          "Betroffene Personen haben beispielhaft Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch."
+        ]
+      }
+    ]
+  },
+  "agb": {
+    "title": "AGB - DIY Store Würzburg",
+    "heading": "Allgemeine Geschäftsbedingungen",
+    "intro": "Diese AGB sind Dummytexte für das Studienprojekt DIY Store Würzburg. Sie dienen nur als Platzhalter für Layout und Navigation.",
+    "sections": [
+      {
+        "title": "Geltungsbereich",
+        "paragraphs": [
+          "Diese Allgemeinen Geschäftsbedingungen gelten beispielhaft für alle Bestellungen, Reservierungen und Anfragen über den Dummy-Shop.",
+          "Abweichende Bedingungen der Kundinnen und Kunden gelten nur, wenn sie ausdrücklich bestätigt wurden."
+        ]
+      },
+      {
+        "title": "Angebote und Vertragsschluss",
+        "paragraphs": [
+          "Die Darstellung von Produkten im Shop stellt im Dummy-Szenario kein rechtlich bindendes Angebot dar.",
+          "Ein Vertrag käme erst zustande, wenn eine Bestellung ausdrücklich angenommen und bestätigt wird."
+        ]
+      },
+      {
+        "title": "Preise und Zahlung",
+        "paragraphs": [
+          "Alle angezeigten Preise sind Platzhalterpreise und dienen ausschließlich der Demonstration.",
+          "Als beispielhafte Zahlungsmethoden werden Visa, Mastercard und PayPal angezeigt."
+        ]
+      },
+      {
+        "title": "Lieferung, Abholung und Gewährleistung",
+        "paragraphs": [
+          "Liefer- und Abholinformationen sind im Dummy-Shop nicht verbindlich.",
+          "Für eine echte Website müssten Gewährleistung, Widerruf, Lieferung und Rückgabe rechtlich konkret formuliert werden."
+        ]
+      }
+    ]
+  }
+}

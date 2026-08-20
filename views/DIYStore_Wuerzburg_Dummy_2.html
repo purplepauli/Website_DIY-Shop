@@ -1,0 +1,483 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY Store - Würzburg</title>
+    <!-- Einbindung der geforderten Schriftarten -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Farbpalette laut Lastenheft */
+        :root {
+            --stahlblau: #335C67;
+            --kalkweiss: #F7F6F2;
+            --orange: #E09F3E;
+            --text-dark: #1a1a1a;
+        }
+        
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            background-color: var(--kalkweiss);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Archivo', sans-serif;
+            color: var(--stahlblau);
+        }
+
+        /* Header Bereich */
+        header {
+            background-color: var(--stahlblau);
+            color: var(--kalkweiss);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-family: 'Archivo', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--kalkweiss);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            background-color: var(--orange);
+            color: var(--kalkweiss);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        /* Suchfunktion */
+        .search-bar {
+            display: flex;
+            flex-grow: 1;
+            max-width: 500px;
+            margin: 0 20px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+        .search-bar input:focus {
+            outline: 2px solid var(--orange);
+        }
+        .search-bar button {
+            background-color: var(--orange);
+            border: none;
+            color: var(--kalkweiss);
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 0 4px 4px 0;
+            font-weight: 600;
+            font-family: 'IBM Plex Sans', sans-serif;
+            transition: background 0.3s;
+        }
+        .search-bar button:hover {
+            background-color: #c48a35;
+        }
+
+        /* User Aktionen (Login, Warenkorb) */
+        .user-actions {
+            display: flex;
+            gap: 15px;
+        }
+        .user-actions button {
+            background: none;
+            border: 1px solid var(--kalkweiss);
+            color: var(--kalkweiss);
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .user-actions button:hover {
+            background: var(--kalkweiss);
+            color: var(--stahlblau);
+        }
+
+        /* Horizontale Navigation */
+        nav {
+            background-color: #264650;
+            padding: 0;
+            overflow-x: auto;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            white-space: nowrap;
+        }
+        nav ul li a {
+            display: block;
+            color: var(--kalkweiss);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 15px 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: var(--orange);
+            color: var(--kalkweiss);
+        }
+
+        /* Hauptinhalt */
+        main {
+            padding: 40px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-grow: 1;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Projektvorschläge Grid */
+        .projects-section {
+            margin-bottom: 50px;
+        }
+        .projects-section h2 {
+            margin-bottom: 20px;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-tile {
+            background-color: var(--stahlblau);
+            color: var(--kalkweiss);
+            height: 250px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Archivo', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, background-color 0.3s;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-tile:hover {
+            transform: translateY(-5px);
+            background-color: var(--orange);
+            border-color: var(--kalkweiss);
+        }
+        .project-tile::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .project-tile span {
+            position: relative;
+            z-index: 2;
+            padding: 0 20px;
+        }
+
+        /* Produkt Grid */
+        .product-section h2 {
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+        }
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            background-color: var(--kalkweiss);
+            height: 180px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--stahlblau);
+            font-weight: 500;
+            border: 1px dashed #ccc;
+        }
+        .product-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            flex-grow: 1;
+        }
+        .product-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .product-price {
+            font-family: 'Archivo', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--orange);
+            margin-bottom: 15px;
+        }
+        .add-to-cart {
+            background-color: var(--stahlblau);
+            color: var(--kalkweiss);
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: 'IBM Plex Sans', sans-serif;
+            transition: background 0.3s;
+            margin-top: auto;
+        }
+        .add-to-cart:hover {
+            background-color: var(--orange);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: var(--kalkweiss);
+            padding: 40px 30px;
+            margin-top: 50px;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        .footer-col h4 {
+            color: var(--orange);
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .footer-col p, .footer-col ul {
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+        .footer-col a {
+            color: var(--kalkweiss);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-col a:hover {
+            color: var(--orange);
+        }
+
+        /* Responsive Design Anpassungen */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .search-bar {
+                margin: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+            nav ul {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header mit aktualisiertem Logo -->
+    <header>
+        <a href="#" class="logo">
+            <span class="logo-icon">🛠️</span> DIY Store - Würzburg
+        </a>
+        
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Werkzeuge, Materialien, Ratgeber suchen...">
+            <button onclick="handleSearch()">Suchen</button>
+        </div>
+        
+        <div class="user-actions">
+            <button onclick="handleLogin()">👤 Login</button>
+            <button onclick="handleCart()">🛒 Warenkorb (0)</button>
+        </div>
+    </header>
+
+    <!-- Horizontale Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#">Renovierung</a></li>
+            <li><a href="#">Bau</a></li>
+            <li><a href="#">Verschiedene Produkte</a></li>
+            <li><a href="#">Sicherheitsratgeber</a></li>
+            <li><a href="#">Industriehardware</a></li>
+            <li><a href="#">Projektratgeber und Guides</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Neue Projekt-Kacheln (Ersetzt die Hero-Sektion) -->
+        <section class="projects-section">
+            <h2>Starten Sie Ihr nächstes Projekt</h2>
+            <div class="project-grid">
+                <a href="#" class="project-tile" onclick="alert('Dummy: Guide zum Terrassenbau wird geöffnet.')">
+                    <span>Terrassenbau</span>
+                </a>
+                <a href="#" class="project-tile" onclick="alert('Dummy: Guide zum Baumhaus bauen wird geöffnet.')">
+                    <span>Baumhaus</span>
+                </a>
+                <a href="#" class="project-tile" onclick="alert('Dummy: Guide zur Badsanierung wird geöffnet.')">
+                    <span>Badsanierung</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Produkt Grid -->
+        <section class="product-section">
+            <h2>Passende Produkte</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">[Bild: Akku-Bohrschrauber]</div>
+                    <h3>Profi Akku-Bohrschrauber 18V</h3>
+                    <p>Inkl. 2 Akkus und Ladegerät im Koffer. Ideal für Heim- und Profikunden.</p>
+                    <div class="product-price">149,00 €</div>
+                    <button class="add-to-cart" onclick="addToCart()">In den Warenkorb</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">[Bild: Terrassendielen]</div>
+                    <h3>WPC Terrassendielen</h3>
+                    <p>Witterungsbeständig und rutschfest. Verschiedene Farben verfügbar.</p>
+                    <div class="product-price">12,50 € / lfm</div>
+                    <button class="add-to-cart" onclick="addToCart()">In den Warenkorb</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">[Bild: Premium Wandfarbe]</div>
+                    <h3>Premium Wandfarbe Weiß 10L</h3>
+                    <p>Hohe Deckkraft, waschbeständig. Geeignet für Innenrenovierungen.</p>
+                    <div class="product-price">39,99 €</div>
+                    <button class="add-to-cart" onclick="addToCart()">In den Warenkorb</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">[Bild: Konstruktionsholz]</div>
+                    <h3>Konstruktionsvollholz (KVH)</h3>
+                    <p>Gehobelt und gefast. Perfekt für das nächste Baumhaus-Projekt.</p>
+                    <div class="product-price">8,90 € / m</div>
+                    <button class="add-to-cart" onclick="addToCart()">In den Warenkorb</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Neuer Footer Bereich -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Lokaler Store & Anfahrt</h4>
+                <p>
+                    <strong>DIY Store Würzburg</strong><br>
+                    Handwerksstraße 1<br>
+                    97070 Würzburg<br><br>
+                    <a href="#" onclick="alert('Dummy: Google Maps Anfahrtsskizze öffnet sich.')">📍 Anfahrt planen</a>
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Öffnungszeiten</h4>
+                <p>
+                    Montag - Freitag: 08:00 - 19:00 Uhr<br>
+                    Samstag: 08:00 - 16:00 Uhr<br>
+                    Sonntag: Geschlossen
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Zahlungsmethoden</h4>
+                <ul>
+                    <li>💳 Visa</li>
+                    <li>💳 Mastercard</li>
+                    <li>🅿️ PayPal</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Rechtliches</h4>
+                <ul>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">AGB</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value;
+            if(query) {
+                alert('Dummy-Aktion: Suche nach "' + query + '" wird ausgeführt.');
+            } else {
+                alert('Bitte geben Sie einen Suchbegriff ein.');
+            }
+        }
+
+        function handleLogin() {
+            alert('Dummy-Aktion: Login-Modal öffnet sich.');
+        }
+
+        function handleCart() {
+            alert('Dummy-Aktion: Warenkorb aufgerufen.');
+        }
+
+        function addToCart() {
+            alert('Dummy-Aktion: Das Produkt wurde Ihrem Warenkorb hinzugefügt!');
+        }
+    </script>
+</body>
+</html>

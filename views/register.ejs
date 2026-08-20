@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrieren - DIY Store Würzburg</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/_style.css">
+</head>
+
+<body>
+    <%- include('partials/header-min') %>
+
+    <div class="page-wrapper">
+
+        <div class="panel">
+
+            <h1 class="title">Registrieren</h1>
+
+            <div class="error-box" id="error-box" hidden>NO ERROR</div>
+
+            <% if (typeof error !== 'undefined' && error) { %>
+                <div class="error-box"><%= error %></div>
+            <% } %>
+
+            <form id="registerForm" method="POST" action="/auth/register">
+
+                <div class="form-group">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-input" type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="surname">Nachname</label>
+                    <input class="form-input" type="text" id="surname" name="surname" placeholder="Nachname" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">E-Mail</label>
+                    <input class="form-input" type="email" id="email" name="email" placeholder="email@anbieter.de" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="password">Passwort</label>
+                    <input class="form-input" type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+
+               <div class="form-group">
+                    <label class="form-label" for="confirmPassword">Passwort bestätigen</label>
+                    <input class="form-input" type="password" id="confirmPassword" name="confirmPassword" placeholder="••••••••" required>
+                </div>
+
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="isAdmin" value="true" class="checkbox-input">
+                        Als Administrator registrieren
+                    </label>
+                </div>
+
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input class="checkbox-input" type="checkbox" value="true" name="isHuman">
+                        Ich bin ein Mensch
+                    </label>
+                </div>
+
+                <button class="submit-btn" type="submit">Registrieren</button>
+            </form>
+
+            <div class="footer-text">
+                Sie haben bereits ein Konto?
+                <a href="/auth/login">Jetzt anmelden</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <%- include('partials/footer-min') %>
+</body>
+
+<script defer>
+    const form = document.getElementById("registerForm");
+
+    const nameInput = document.getElementById("name");
+    const surnameInput = document.getElementById("surname");
+    const emailInput = document.getElementById("email");
+    const isAdminInput = document.querySelector('input[name="isAdmin"]');
+    const isHumanInput = document.querySelector('input[name="isHuman"]');
+
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+    const errorBox = document.getElementById("error-box");
+
+
+    function saveToLocalStorage() {
+        const data = {
+            name: nameInput.value,
+            surname: surnameInput.value,
+            email: emailInput.value,
+            isAdmin: isAdminInput?.checked || false
+        };
+
+        localStorage.setItem("registerFormCache", JSON.stringify(data));
+    }
+
+    function loadFromLocalStorage() {
+        const raw = localStorage.getItem("registerFormCache");
+        if (!raw) return;
+
+        try {
+            const data = JSON.parse(raw);
+
+            if(data.surname) surnameInput.value = data.surname;
+            if(data.name) nameInput.value = data.name;
+            if(data.email) emailInput.value = data.email;
+            if(data.isAdmin) isAdminInput.checked = true;
+        } catch (e) {
+            console.warn("Failed to load cached form data", e);
+        }
+    }
+
+    loadFromLocalStorage();
+
+    form.addEventListener("input", saveToLocalStorage);
+
+
+    function rejectParams(msg){
+        errorBox.innerText = msg;
+        errorBox.removeAttribute("hidden");
+    }
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        console.log("validating!")
+        errorBox.classList.add("hidden");
+        if (password.value !== confirmPassword.value) return rejectParams('"Passwort" und "Passwort Bestätigen" stimmen nicht überein.');
+
+        if (password.value.length < 8) return rejectParams("Das Passwort muss mindestens 8 Zeichen lang sein.");
+        if (password.value.length > 200) return rejectParams("Das Passwort kann höchstens 200 Zeichen lang sein.");
+
+        const isValid = /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).+$/.test(password.value);
+        if (!isValid) return rejectParams("Das Passwort muss mindestens eine Zahl, einen Großbuchstaben und ein Sonderzeichen enthalten.");
+
+        if(!isHumanInput.checked) return rejectParams("Bitte bestätige, dass Du ein Mensch bist");
+        
+        saveToLocalStorage();
+
+        form.submit();
+    });
+</script>
+
+</html>

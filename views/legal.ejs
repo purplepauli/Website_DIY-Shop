@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+    <section class="legal-page">
+        <p class="legal-eyebrow">Rechtliches</p>
+        <h1><%= page.heading %></h1>
+        <p class="legal-intro"><%= page.intro %></p>
+
+        <% page.sections.forEach(function(section) { %>
+            <section class="legal-section">
+                <h2><%= section.title %></h2>
+                <% section.paragraphs.forEach(function(paragraph) { %>
+                    <p><%= paragraph %></p>
+                <% }); %>
+            </section>
+        <% }); %>
+
+        <p class="legal-note">
+            Hinweis: Dieser Text ist ein Dummy für ein Studienprojekt und ersetzt keine rechtliche Prüfung.
+        </p>
+    </section>
+
+<%- include('partials/footer') %>

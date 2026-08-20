@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+    <link rel="stylesheet" href="/stylesheets/guides.css">
+
+    <main>
+        <section class="guides-header">
+            <h1>Sicherheit geht vor.</h1>
+            <p>Unsere Sicherheitsratgeber helfen Dir, Dein Projekt richtig und sicher anzugehen.</p>
+        </section>
+
+        <%- include('partials/card-grid', { items: ratgeber, urlPrefix: 'ratgeber', showFilter: false, activeCategory: 'all' }) %>
+
+    </main>
+
+    <%- include('partials/footer') %>

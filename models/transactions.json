@@ -1,0 +1,75 @@
+[
+  {
+    "id": "348f89c2-8b27-40df-8d36-65763c1dce05",
+    "email": "klaus.werner96@gmail.com",
+    "name": "Klaus",
+    "surname": "Werner",
+    "timestamp": 1783440405451,
+    "cart": [
+      {
+        "id": "SKU-050",
+        "name": "Akku-Handkreissäge 18V, ohne Akku und Ladegerät",
+        "price": 249.89,
+        "quantity": 1,
+        "imagePath": "/images/products/SKU-050.jpg",
+        "variant": "Standard"
+      }
+    ],
+    "paymentMethod": "mastercard",
+    "fulfilled": false
+  },
+  {
+    "id": "ab78269f-8994-463e-93ec-9282b3ee2558",
+    "email": "nein@doof.com",
+    "name": "hallo",
+    "surname": "lol",
+    "timestamp": 1783448470996,
+    "cart": [
+      {
+        "id": "SKU-050",
+        "name": "Akku-Handkreissäge 18V, ohne Akku und Ladegerät",
+        "price": 249.89,
+        "quantity": 2,
+        "imagePath": "/images/products/SKU-050.jpg",
+        "variant": "Standard"
+      },
+      {
+        "id": "SKU-040",
+        "name": "Rollbandmaß 8 m",
+        "price": 21.3,
+        "quantity": 1,
+        "imagePath": "/images/products/SKU-040.jpg",
+        "variant": "Standard"
+      },
+      {
+        "id": "SKU-001",
+        "name": "Premium Wandfarbe Weiß",
+        "price": 31.99,
+        "quantity": 3,
+        "imagePath": "/images/products/SKU-001.jpg",
+        "variant": "5 Liter"
+      }
+    ],
+    "paymentMethod": "paypal",
+    "fulfilled": false
+  },
+  {
+    "id": "1073cb4f-b636-4593-ab77-0c339c1a703b",
+    "email": "nein@doof.com",
+    "name": "hallo",
+    "surname": "lol",
+    "timestamp": 1783448532861,
+    "cart": [
+      {
+        "id": "SKU-057",
+        "name": "Aqua Stop Silber Unterlagsbahn 2mm Pack 20m²",
+        "price": 1.96,
+        "quantity": 1,
+        "imagePath": "/images/products/SKU-057.jpg",
+        "variant": "Standard"
+      }
+    ],
+    "paymentMethod": "mastercard",
+    "fulfilled": false
+  }
+]

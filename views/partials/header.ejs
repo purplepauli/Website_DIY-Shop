@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= typeof title !=='undefined' ? title : 'DIY Store - Würzburg' %>
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <%# Dynamically include additional stylesheets if provided %>
+
+        <% if (typeof extraStyles !=='undefined' ) { %>
+            <% extraStyles.forEach(function(style) { %>
+                <link rel="stylesheet" href="<%= style %>">
+                <% }); %>
+                    <% } %>
+
+                        <style>
+                            /* Farbpalette laut Lastenheft */
+                            :root {
+                                --stahlblau: #335C67;
+                                --kalkweiss: #F7F6F2;
+                                --orange: #E09F3E;
+                                --text-dark: #1a1a1a;
+                            }
+
+                            body {
+                                font-family: 'IBM Plex Sans', sans-serif;
+                                background-color: var(--kalkweiss);
+                                color: var(--text-dark);
+                                margin: 0;
+                                padding: 0;
+                                display: flex;
+                                flex-direction: column;
+                                min-height: 100vh;
+                            }
+
+                            h1,
+                            h2,
+                            h3,
+                            h4,
+                            h5,
+                            h6 {
+                                font-family: 'Archivo', sans-serif;
+                                color: var(--stahlblau);
+                            }
+
+                            header {
+                                background-color: var(--stahlblau);
+                                color: var(--kalkweiss);
+                                padding: 15px 30px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                flex-wrap: wrap;
+                            }
+
+                            .logo {
+                                font-family: 'Archivo', sans-serif;
+                                font-size: 24px;
+                                font-weight: 700;
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                color: var(--kalkweiss);
+                                text-decoration: none;
+                            }
+
+                            .search-bar {
+                                display: flex;
+                                flex-grow: 1;
+                                max-width: 500px;
+                                margin: 0 20px;
+                                border-radius: 4px;
+                                background-color: var(--kalkweiss);
+                                position: relative;
+                            }
+
+                            .search-bar input {
+                                width: 100%;
+                                padding: 10px 15px;
+                                border: none;
+                                border-radius: 4px 0 0 4px;
+                                background-color: var(--kalkweiss);
+                                font-family: 'IBM Plex Sans', sans-serif;
+                            }
+
+                            /* Statt outline (würde das Input 2px vergrößern und so
+                               den Verbund mit dem Button optisch verschieben) bekommt
+                               das Form-Element selbst einen box-shadow-Rahmen. So
+                               bleibt das Layout unverändert und der orange Ring
+                               umschließt Input + Button als Einheit. */
+                            .search-bar:focus-within {
+                                box-shadow: 0 0 0 2px var(--orange);
+                            }
+
+                            .search-bar input:focus {
+                                outline: none;
+                            }
+
+                            /* Live-Suche / Autocomplete-Dropdown.
+                               Wird vom public/javascripts/live-search.js gefüllt. */
+
+                            .search-suggestions {
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                right: 0;
+                                background-color: var(--kalkweiss);
+                                border-radius: 0 0 4px 4px;
+                                box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+                                z-index: 30;
+                                max-height: 360px;
+                                overflow-y: auto;
+                            }
+
+                            .search-suggestions[hidden] {
+                                display: none;
+                            }
+
+                            .search-suggestion {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                padding: 8px 12px;
+                                color: var(--text-dark);
+                                text-decoration: none;
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                            }
+
+                            .search-suggestion:last-child {
+                                border-bottom: none;
+                            }
+
+                            .search-suggestion:hover,
+                            .search-suggestion:focus-visible {
+                                background-color: rgba(224, 159, 62, 0.12);
+                            }
+
+                            .search-suggestion-image {
+                                width: 40px;
+                                height: 40px;
+                                object-fit: contain;
+                                flex-shrink: 0;
+                                background-color: #fff;
+                                border-radius: 4px;
+                            }
+
+                            .search-suggestion-name {
+                                flex-grow: 1;
+                                color: var(--stahlblau);
+                                font-family: 'Archivo', sans-serif;
+                                font-weight: 600;
+                                font-size: 14px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+
+                            .search-suggestion-price {
+                                flex-shrink: 0;
+                                color: var(--orange);
+                                font-family: 'IBM Plex Sans', sans-serif;
+                                font-weight: 600;
+                                font-size: 14px;
+                            }
+
+                            .search-suggestion-empty {
+                                padding: 12px;
+                                color: #666;
+                                font-size: 14px;
+                                font-style: italic;
+                            }
+
+                            .search-bar button {
+                                background-color: var(--orange);
+                                border: none;
+                                color: var(--kalkweiss);
+                                padding: 10px 20px;
+                                cursor: pointer;
+                                border-radius: 0 4px 4px 0;
+                                font-weight: 600;
+                                font-family: 'IBM Plex Sans', sans-serif;
+                                transition: background 0.3s;
+                            }
+
+                            .search-bar button:hover {
+                                background-color: #c48a35;
+                            }
+
+                            .user-actions {
+                                display: flex;
+                                gap: 15px;
+                            }
+
+                            .user-actions button {
+                                background: none;
+                                border: 1px solid var(--kalkweiss);
+                                color: var(--kalkweiss);
+                                padding: 8px 15px;
+                                cursor: pointer;
+                                border-radius: 4px;
+                                font-family: 'IBM Plex Sans', sans-serif;
+                                font-weight: 500;
+                                transition: all 0.3s ease;
+                            }
+
+                            .user-actions button:hover {
+                                background: var(--kalkweiss);
+                                color: var(--stahlblau);
+                            }
+
+                            nav {
+                                background-color: #264650;
+                                padding: 0;
+                                position: relative;
+                                z-index: 10;
+                            }
+
+                            .nav-list {
+                                list-style: none;
+                                padding: 0;
+                                margin: 0;
+                                display: flex;
+                                justify-content: center;
+                                white-space: nowrap;
+                            }
+
+                            .nav-list>li {
+                                position: relative;
+                            }
+
+                            .nav-list a,
+                            .nav-link {
+                                display: block;
+                                color: var(--kalkweiss);
+                                text-decoration: none;
+                                font-weight: 500;
+                                font-size: 15px;
+                                padding: 15px 20px;
+                                transition: background 0.3s, color 0.3s;
+                                cursor: pointer;
+                                font-family: 'IBM Plex Sans', sans-serif;
+                                list-style: none;
+                            }
+
+                            .nav-list a:hover,
+                            .nav-link:hover {
+                                background-color: var(--orange);
+                                color: var(--kalkweiss);
+                            }
+
+                            /* Aktiver Navigations-Eintrag: orange Schrift auf dem
+                               dunklen Nav-Hintergrund, dezent aber klar erkennbar. */
+                            .nav-list a.nav-active,
+                            .nav-link.nav-active {
+                                color: var(--orange);
+                            }
+                            /* Beim Hover über den aktiven Eintrag: orange Schrift + heller Hintergrund
+                               (sonst wäre der Text auf gleichem Orange nicht mehr lesbar). */
+                            .nav-list a.nav-active:hover,
+                            .nav-link.nav-active:hover {
+                                background-color: var(--orange);
+                                color: var(--kalkweiss);
+                            }
+
+                            .nav-dropdown {
+                                position: relative;
+                            }
+
+                            .nav-link {
+                                display: block;
+                                padding: 15px 20px;
+                                color: inherit;
+                                text-decoration: none;
+                            }
+
+                            .nav-link::after {
+                                content: '▾';
+                                display: inline-block;
+                                margin-left: 8px;
+                                font-size: 11px;
+                                transition: transform 0.2s ease;
+                            }
+
+                            .dropdown-menu {
+                                display: none;
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                background-color: #264650;
+                                box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+                                min-width: 220px;
+                                z-index: 20;
+                                list-style: none;
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            .nav-dropdown:hover .dropdown-menu,
+                            .nav-dropdown:focus-within .dropdown-menu {
+                                display: block;
+                            }
+
+                            .nav-dropdown:hover .nav-link::after,
+                            .nav-dropdown:focus-within .nav-link::after {
+                                transform: rotate(-90deg);
+                            }
+
+                            .dropdown-menu a {
+                                min-width: 170px;
+                                padding: 12px 20px;
+                            }
+
+                            .nav-secondary-start {
+                                border-left: 1px solid rgba(247, 246, 242, 0.35);
+                                margin-left: 12px;
+                                padding-left: 12px;
+                            }
+
+                            .nav-primary-end {
+                                border-right: 1px solid rgba(247, 246, 242, 0.35);
+                                margin-right: 12px;
+                                padding-right: 12px;
+                            }
+
+                            main {
+                                padding: 40px 30px;
+                                max-width: 1200px;
+                                margin: 0 auto;
+                                flex-grow: 1;
+                                width: 100%;
+                                box-sizing: border-box;
+                            }
+
+                            .legal-page {
+                                max-width: 860px;
+                            }
+
+                            .legal-page h1 {
+                                margin: 0 0 16px;
+                            }
+
+                            .legal-eyebrow {
+                                color: var(--orange);
+                                font-family: 'Archivo', sans-serif;
+                                font-size: 14px;
+                                font-weight: 700;
+                                margin: 0 0 8px;
+                                text-transform: uppercase;
+                            }
+
+                            .legal-intro {
+                                color: #444;
+                                font-size: 17px;
+                                line-height: 1.7;
+                                margin: 0 0 28px;
+                            }
+
+                            .legal-section {
+                                border-top: 1px solid #dedbd2;
+                                padding: 24px 0 4px;
+                            }
+
+                            .legal-section h2 {
+                                font-size: 22px;
+                                margin: 0 0 12px;
+                            }
+
+                            .legal-section p {
+                                line-height: 1.7;
+                                margin: 0 0 12px;
+                            }
+
+                            .legal-note {
+                                border-left: 4px solid var(--orange);
+                                color: #444;
+                                margin: 30px 0 0;
+                                padding: 10px 0 10px 16px;
+                            }
+
+                            .projects-section {
+                                margin-bottom: 50px;
+                            }
+
+                            .projects-section h2 {
+                                margin-bottom: 20px;
+                                text-align: center
+                            }
+
+                            /* ===== Projekt-Karussell ===== */
+
+                            .project-carousel {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                            }
+
+                            .carousel-viewport {
+                                flex: 1;
+                                overflow: hidden;
+                                position: relative;
+                            }
+
+                            .carousel-track {
+                                display: flex;
+                                will-change: transform;
+                            }
+
+                            .carousel-arrow {
+                                flex: 0 0 auto;
+                                width: 44px;
+                                height: 44px;
+                                border-radius: 50%;
+                                border: 0;
+                                background-color: var(--stahlblau);
+                                color: var(--kalkweiss);
+                                font-size: 22px;
+                                line-height: 1;
+                                cursor: pointer;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transition: background 0.3s, transform 0.2s;
+                                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+                            }
+
+                            .carousel-arrow:hover {
+                                background-color: var(--orange);
+                                transform: scale(1.08);
+                            }
+
+                            .carousel-arrow:focus-visible {
+                                outline: 3px solid var(--orange);
+                                outline-offset: 3px;
+                            }
+
+                            .carousel-dots {
+                                display: flex;
+                                justify-content: center;
+                                gap: 10px;
+                                margin-top: 18px;
+                            }
+
+                            .carousel-dot {
+                                width: 10px;
+                                height: 10px;
+                                padding: 0;
+                                border: 0;
+                                border-radius: 50%;
+                                background-color: #d8d4c8;
+                                cursor: pointer;
+                                transition: background 0.3s, transform 0.2s;
+                            }
+
+                            .carousel-dot:hover {
+                                background-color: var(--orange);
+                            }
+
+                            .carousel-dot.is-active {
+                                background-color: var(--stahlblau);
+                                transform: scale(1.25);
+                            }
+
+                            /* Eine "Kachel" + zugehöriger Link untereinander */
+                            .project-slide {
+                                flex: 0 0 auto;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 15px;
+                                opacity: 0.45;
+                                transition: opacity 0.5s ease;
+                            }
+
+                            .project-slide.is-active {
+                                opacity: 1;
+                            }
+
+                            .project-tile {
+                                background-color: var(--kalkweiss);
+                                color: var(--kalkweiss);
+                                aspect-ratio: 1200 / 750;
+                                width: 100%;
+                                text-decoration: none;
+                                font-family: 'Archivo', sans-serif;
+                                transition: transform 0.3s;
+                                border: 0;
+                                outline: none;
+                                position: relative;
+                                overflow: hidden;
+                                /* Verhindert, dass die rotierte/mit Schatten versehene Diashow
+                                   über den Kachelrand hinausragt und dadurch die Klickfläche
+                                   des Guide-Links darunter überlagert. */
+                            }
+
+                            .project-tile:focus-visible {
+                                outline: 3px solid var(--orange);
+                                outline-offset: 6px;
+                            }
+
+                            /* Diashow: mehrere Bilder pro Kachel, mit Pinsel-Maske ausgefranst */
+                            .tile-slideshow {
+                                position: absolute;
+                                inset: 0;
+                                z-index: 0;
+                                transform: rotate(var(--tile-rot, 0deg));
+                                transition: transform 0.3s, filter 0.3s;
+                                filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.28));
+                                -webkit-mask-image: url('/images/brush-mask.svg');
+                                mask-image: url('/images/brush-mask.svg');
+                                -webkit-mask-repeat: no-repeat;
+                                mask-repeat: no-repeat;
+                                -webkit-mask-position: center;
+                                mask-position: center;
+                                -webkit-mask-size: 100% 100%;
+                                mask-size: 100% 100%;
+                            }
+
+                            .project-slide.is-active .project-tile:hover .tile-slideshow {
+                                transform: rotate(var(--tile-rot, 0deg)) translateY(-5px);
+                                filter: drop-shadow(0 14px 20px rgba(0, 0, 0, 0.34));
+                            }
+
+                            .tile-slide {
+                                position: absolute;
+                                inset: 0;
+                                background-image: var(--slide-image);
+                                background-position: var(--tile-position, center);
+                                background-size: cover;
+                                opacity: 0;
+                                transform: scale(1.05);
+                                transition: opacity 1.2s ease, transform 6s ease;
+                            }
+
+                            .tile-slide.is-active {
+                                opacity: 1;
+                                transform: scale(1.12);
+                            }
+
+                            .project-tile-bauen {
+                                --tile-position: 62% center;
+                                --tile-rot: -0.6deg;
+                            }
+
+                            .project-tile-renovieren {
+                                --tile-position: center 55%;
+                                --tile-rot: 0.5deg;
+                            }
+
+                            .project-tile-reparieren {
+                                --tile-position: 58% center;
+                                --tile-rot: -0.4deg;
+                            }
+
+                            .tile-slideshow::after {
+                                content: '';
+                                position: absolute;
+                                inset: 0;
+                                background: rgba(0, 0, 0, 0.16);
+                                z-index: 1;
+                            }
+
+                            .tile-overlay {
+                                position: absolute;
+                                inset: 0;
+                                z-index: 2;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 12% 10%;
+                                text-align: center;
+                            }
+
+                            .tile-overlay-card {
+                                background: rgba(26, 26, 26, 0.62);
+                                backdrop-filter: blur(2px);
+                                border-radius: 6px;
+                                padding: 22px 32px;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                max-width: 440px;
+                            }
+
+                            .tile-title {
+                                font-size: 34px;
+                                font-weight: 700;
+                                color: var(--kalkweiss);
+                                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+                            }
+
+                            .tile-subtext {
+                                margin: 0;
+                                font-family: 'IBM Plex Sans', sans-serif;
+                                font-size: 15px;
+                                line-height: 1.5;
+                                color: var(--kalkweiss);
+                                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+                            }
+
+                            /* Verlinkung zum konkreten Guide: Text-Link mit Pfeil statt Button */
+                            .guide-link {
+                                display: inline-flex;
+                                align-items: center;
+                                gap: 8px;
+                                align-self: flex-start;
+                                color: var(--stahlblau);
+                                text-decoration: none;
+                                font-weight: 600;
+                                font-family: 'IBM Plex Sans', sans-serif;
+                                transition: color 0.3s, gap 0.2s;
+                            }
+
+                            .guide-link:hover {
+                                color: var(--orange);
+                                gap: 12px;
+                            }
+
+                            .guide-link-arrow {
+                                transition: transform 0.3s;
+                            }
+
+                            .guide-link:hover .guide-link-arrow {
+                                transform: translateX(2px);
+                            }
+
+                            @media (max-width: 640px) {
+                                .tile-title {
+                                    font-size: 24px;
+                                }
+
+                                .carousel-arrow {
+                                    width: 36px;
+                                    height: 36px;
+                                    font-size: 18px;
+                                }
+                            }
+
+                            footer {
+                                background-color: #1a1a1a;
+                                color: var(--kalkweiss);
+                                padding: 40px 30px;
+                                margin-top: 50px;
+                            }
+
+                            .footer-container {
+                                max-width: 1200px;
+                                margin: 0 auto;
+                                display: grid;
+                                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                                gap: 30px;
+                            }
+
+                            .footer-col h4 {
+                                color: var(--orange);
+                                font-size: 18px;
+                                margin-top: 0;
+                                margin-bottom: 15px;
+                            }
+
+                            .footer-col p,
+                            .footer-col ul {
+                                font-size: 14px;
+                                line-height: 1.6;
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            .footer-col ul {
+                                list-style: none;
+                            }
+
+                            .footer-col ul li {
+                                margin-bottom: 8px;
+                            }
+
+                            .footer-col a {
+                                color: var(--kalkweiss);
+                                text-decoration: none;
+                                transition: color 0.3s;
+                            }
+
+                            .footer-col a:hover {
+                                color: var(--orange);
+                            }
+
+                            @media (max-width: 768px) {
+                                header {
+                                    flex-direction: column;
+                                    gap: 15px;
+                                }
+
+                                .search-bar {
+                                    margin: 0;
+                                    width: 100%;
+                                    max-width: 100%;
+                                }
+
+                                .nav-list {
+                                    justify-content: flex-start;
+                                    flex-wrap: wrap;
+                                }
+
+                                .dropdown-menu {
+                                    position: static;
+                                    box-shadow: none;
+                                    min-width: 0;
+                                }
+
+                                .nav-secondary-start {
+                                    border-left: none;
+                                    margin-left: 0;
+                                    padding-left: 0;
+                                }
+
+                                .nav-primary-end {
+                                    border-right: none;
+                                    margin-right: 0;
+                                    padding-right: 0;
+                                }
+                            }
+                        </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="/" class="logo"> DIY Store - Würzburg </a>
+
+        <form class="search-bar" method="GET" action="/suche" autocomplete="off">
+            <input id="searchInput" type="text" name="q" placeholder="Produkt suchen" autocomplete="off"
+                   value="<%= typeof searchTerm !== 'undefined' ? searchTerm : '' %>">
+            <button type="submit">Suchen</button>
+            <div id="searchSuggestions" class="search-suggestions" hidden></div>
+        </form>
+
+        <div class="user-actions">
+            <% if (typeof isLoggedIn !=='undefined' && isLoggedIn) { %>
+                <button onclick="window.location.href='/auth/logout'">🚪 Abmelden</button>
+                <% } else { %>
+                    <button onclick="window.location.href='/auth/login'">👤 Anmelden</button>
+                    <% } %>
+
+                        <button id="cartBtn" onclick="window.location.href='/warenkorb'">🛒 Warenkorb (0)</button>
+        </div>
+    </header>
+
+    <nav>
+        <%# Hilfsvariablen für die aktive Nav-Erkennung. currentPath und
+            currentCategory werden in app.js per Middleware in res.locals gesetzt. %>
+        <% const isProdukte = (typeof currentPath !== 'undefined' && currentPath === '/produkte'); %>
+        <% const activeCat = (typeof currentCategory !== 'undefined' && currentCategory) ? currentCategory : ''; %>
+        <% const activeSubcat = (typeof currentSubcategory !== 'undefined' && currentSubcategory) ? currentSubcategory : ''; %>
+        <ul class="nav-list">
+            <li class="nav-primary-end">
+                <a href="/produkte"
+                   class="<%= (isProdukte && !activeCat) ? 'nav-active' : '' %>">Alle Produkte</a>
+            </li>
+            <li class="nav-dropdown">
+                <a href="/produkte?category=<%= encodeURIComponent("Renovierung") %>"
+                   class="nav-link <%= (isProdukte && activeCat === 'Renovierung') ? 'nav-active' : '' %>">Renovierung</a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Renovierung") %>&subcategory=<%= encodeURIComponent("Wandgestaltung") %>"
+                        class="<%= (isProdukte && activeCat === 'Renovierung' && activeSubcat === 'Wandgestaltung') ? 'nav-active' : '' %>">Wandgestaltung</a></li>
+
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Renovierung") %>&subcategory=<%= encodeURIComponent("Bodenbeläge") %>"
+                        class="<%= (isProdukte && activeCat === 'Renovierung' && activeSubcat === 'Bodenbeläge') ? 'nav-active' : '' %>">Bodenbeläge</a></li>
+
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Renovierung") %>&subcategory=<%= encodeURIComponent("Türen & Fenster") %>"
+                        class="<%= (isProdukte && activeCat === 'Renovierung' && activeSubcat === 'Türen & Fenster') ? 'nav-active' : '' %>">Türen & Fenster</a></li>
+
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Renovierung") %>&subcategory=<%= encodeURIComponent("Werkzeuge & Zubehör") %>"
+                        class="<%= (isProdukte && activeCat === 'Renovierung' && activeSubcat === 'Werkzeuge & Zubehör') ? 'nav-active' : '' %>">Werkzeuge & Zubehör</a></li>
+                </ul>
+            </li>
+            <li class="nav-dropdown">
+                <a href="/produkte?category=<%= encodeURIComponent("Bau") %>"
+                   class="nav-link <%= (isProdukte && activeCat === 'Bau') ? 'nav-active' : '' %>">Bau</a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Bau") %>&subcategory=<%= encodeURIComponent("Rohbau") %>"
+                        class="<%= (isProdukte && activeCat === 'Bau' && activeSubcat === 'Rohbau') ? 'nav-active' : '' %>">Rohbau</a></li>
+
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Bau") %>&subcategory=<%= encodeURIComponent("Holz & Plattenwerkstoffe") %>"
+                        class="<%= (isProdukte && activeCat === 'Bau' && activeSubcat === 'Holz & Plattenwerkstoffe') ? 'nav-active' : '' %>">Holz & Plattenwerkstoffe</a></li>
+
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Bau") %>&subcategory=<%= encodeURIComponent("Dachbaustoffe") %>"
+                        class="<%= (isProdukte && activeCat === 'Bau' && activeSubcat === 'Dachbaustoffe') ? 'nav-active' : '' %>">Dachbaustoffe</a></li>
+
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Bau") %>&subcategory=<%= encodeURIComponent("Dämmung & Isolierung") %>"
+                        class="<%= (isProdukte && activeCat === 'Bau' && activeSubcat === 'Dämmung & Isolierung') ? 'nav-active' : '' %>">Dämmung & Isolierung</a></li>
+                </ul>
+            </li>
+            <li class="nav-dropdown">
+                <a href="/produkte?category=<%= encodeURIComponent("Industriehardware") %>"
+                   class="nav-link <%= (isProdukte && activeCat === 'Industriehardware') ? 'nav-active' : '' %>">Industriehardware</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Industriehardware") %>&subcategory=<%= encodeURIComponent("Verbindungstechnik") %>"
+                        class="<%= (isProdukte && activeCat === 'Industriehardware' && activeSubcat === 'Verbindungstechnik') ? 'nav-active' : '' %>">Verbindungstechnik</a></li>
+
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Industriehardware") %>&subcategory=<%= encodeURIComponent("Befestigungssysteme") %>"
+                        class="<%= (isProdukte && activeCat === 'Industriehardware' && activeSubcat === 'Befestigungssysteme') ? 'nav-active' : '' %>">Befestigungssysteme</a></li>
+
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Industriehardware") %>&subcategory=<%= encodeURIComponent("Maschinenteile & Lager") %>"
+                        class="<%= (isProdukte && activeCat === 'Industriehardware' && activeSubcat === 'Maschinenteile & Lager') ? 'nav-active' : '' %>">Maschinenteile & Lager</a></li>
+
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Industriehardware") %>&subcategory=<%= encodeURIComponent("Arbeitsschutz & Betriebsaustattung") %>"
+                        class="<%= (isProdukte && activeCat === 'Industriehardware' && activeSubcat === 'Arbeitsschutz & Betriebsaustattung') ? 'nav-active' : '' %>">Arbeitsschutz & Betriebsaustattung</a></li>
+                </ul>
+            </li>
+            <li class="nav-dropdown">
+                <a href="/produkte?category=<%= encodeURIComponent("Verschiedene") %>"
+                   class="nav-link <%= (isProdukte && activeCat === 'Verschiedene') ? 'nav-active' : '' %>">Verschiedene Produkte</a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Verschiedene") %>&subcategory=<%= encodeURIComponent("Gartenbedarf") %>"
+                        class="<%= (isProdukte && activeCat === 'Verschiedene' && activeSubcat === 'Gartenbedarf') ? 'nav-active' : '' %>">Gartenbedarf</a></li>
+
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Verschiedene") %>&subcategory=<%= encodeURIComponent("Elektro-Installationsmaterial") %>"
+                        class="<%= (isProdukte && activeCat === 'Verschiedene' && activeSubcat === 'Elektro-Installationsmaterial') ? 'nav-active' : '' %>">Elektro-Installationsmaterial</a></li>
+
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Verschiedene") %>&subcategory=<%= encodeURIComponent("Sanitärbedarf") %>"
+                        class="<%= (isProdukte && activeCat === 'Verschiedene' && activeSubcat === 'Sanitärbedarf') ? 'nav-active' : '' %>">Sanitärbedarf</a></li>
+                        
+                    <li><a href="/produkte?category=<%= encodeURIComponent("Verschiedene") %>&subcategory=<%= encodeURIComponent("Saisonale Angebote & Restposten") %>"
+                        class="<%= (isProdukte && activeCat === 'Verschiedene' && activeSubcat === 'Saisonale Angebote & Restposten') ? 'nav-active' : '' %>">Saisonale Angebote & Restposten</a></li>
+                </ul>
+            </li>
+            <li class="nav-secondary-start">
+                <a href="/guides"
+                   class="<%= (typeof currentPath !== 'undefined' && currentPath === '/guides') ? 'nav-active' : '' %>">Projektratgeber und Guides</a>
+            </li>
+            <li><a href="/ratgeber">Sicherheitsratgeber</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
