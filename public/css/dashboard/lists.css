@@ -1,0 +1,141 @@
+.list-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list-row {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background: #FFFFFF;
+    border: 1px solid #DADFDD;
+    border-radius: 6px;
+    padding: 14px 18px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.list-row:hover {
+    border-color: var(--orange);
+    box-shadow: 0 4px 12px rgba(51, 92, 103, 0.1);
+}
+
+.list-row-title {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.list-row-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding-left: 1%;
+}
+
+.list-row-actions {
+    display: flex;
+    justify-content: right;
+    gap: 8px;
+    flex: 0 0 auto;
+}
+
+.list-row-tags {
+    display: flex; 
+    gap: 10px;
+}
+
+.list-row-tag {
+    background: var(--stahlblau);
+    color: var(--kalkweiss);
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.list-row-tag-admin {
+    background-color: var(--stahlblau);
+    color: var(--kalkweiss);
+    padding: 10px 12px;
+    border-radius: 24px;
+}
+
+.list-row-tag-amount{
+    background: var(--stahlblau);
+    color: var(--kalkweiss);
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+/* buttons */
+.btn {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 9px 16px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn--primary {
+  background: var(--stahlblau);
+  color: var(--kalkweiss);
+}
+.btn--primary:hover {
+  background: var(--orange);
+  color: var(--text-dark);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--stahlblau);
+  border-color: var(--stahlblau);
+}
+.btn--secondary:hover {
+  background: var(--stahlblau);
+  color: var(--kalkweiss);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--stahlblau);
+  border: 1px dashed var(--stahlblau);
+  font-size: 13px;
+  padding: 6px 12px;
+}
+.btn--ghost:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.btn--edit {
+  background: transparent;
+  color: var(--stahlblau);
+  border-color: var(--stahlblau);
+}
+.btn--edit:hover {
+  background: var(--stahlblau);
+  color: var(--kalkweiss);
+}
+
+.btn--delete {
+  background: #ffe5e5;
+  color: #7a1f1f;
+  border-color: #f3c6c6;
+}
+.btn--delete:hover {
+  background: #7a1f1f;
+  color: #ffe5e5;
+  border-color: #7a1f1f;
+}

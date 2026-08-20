@@ -1,0 +1,278 @@
+header {
+    background-color: var(--stahlblau);
+    color: var(--kalkweiss);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-family: 'Archivo', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--kalkweiss);
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 0 20px;
+    border-radius: 4px;
+    background-color: var(--kalkweiss);
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    background-color: var(--kalkweiss);
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Statt outline (würde das Input 2px vergrößern und so
+    den Verbund mit dem Button optisch verschieben) bekommt
+    das Form-Element selbst einen box-shadow-Rahmen. So
+    bleibt das Layout unverändert und der orange Ring
+    umschließt Input + Button als Einheit. */
+.search-bar:focus-within {
+    box-shadow: 0 0 0 2px var(--orange);
+}
+
+.search-bar input:focus {
+    outline: none;
+}
+
+/* Live-Suche / Autocomplete-Dropdown.
+    Wird vom public/javascripts/live-search.js gefüllt. */
+
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--kalkweiss);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    z-index: 30;
+    max-height: 360px;
+    overflow-y: auto;
+}
+
+.search-suggestions[hidden] {
+    display: none;
+}
+
+.search-suggestion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    color: var(--text-dark);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.search-suggestion:last-child {
+    border-bottom: none;
+}
+
+.search-suggestion:hover,
+.search-suggestion:focus-visible {
+    background-color: rgba(224, 159, 62, 0.12);
+}
+
+.search-suggestion-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.search-suggestion-name {
+    flex-grow: 1;
+    color: var(--stahlblau);
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.search-suggestion-price {
+    flex-shrink: 0;
+    color: var(--orange);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.search-suggestion-empty {
+    padding: 12px;
+    color: #666;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.search-bar button {
+    background-color: var(--orange);
+    border: none;
+    color: var(--kalkweiss);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    font-weight: 600;
+    font-family: 'IBM Plex Sans', sans-serif;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #c48a35;
+}
+
+.user-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.user-actions button {
+    background: none;
+    border: 1px solid var(--kalkweiss);
+    color: var(--kalkweiss);
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.user-actions button:hover {
+    background: var(--kalkweiss);
+    color: var(--stahlblau);
+}
+
+nav {
+    background-color: #264650;
+    padding: 0;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.nav-list>li {
+    position: relative;
+}
+
+.nav-list a,
+.nav-link {
+    display: block;
+    color: var(--kalkweiss);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 15px 20px;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif;
+    list-style: none;
+}
+
+.nav-list a:hover,
+.nav-link:hover {
+    background-color: var(--orange);
+    color: var(--kalkweiss);
+}
+
+/* Aktiver Navigations-Eintrag: orange Schrift auf dem
+    dunklen Nav-Hintergrund, dezent aber klar erkennbar. */
+.nav-list a.nav-active,
+.nav-link.nav-active {
+    color: var(--orange);
+}
+/* Beim Hover über den aktiven Eintrag: orange Schrift + heller Hintergrund
+    (sonst wäre der Text auf gleichem Orange nicht mehr lesbar). */
+.nav-list a.nav-active:hover,
+.nav-link.nav-active:hover {
+    background-color: var(--orange);
+    color: var(--kalkweiss);
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 20px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '▾';
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 11px;
+    transition: transform 0.2s ease;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #264650;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    min-width: 220px;
+    z-index: 20;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+    display: block;
+}
+
+.nav-dropdown:hover .nav-link::after,
+.nav-dropdown:focus-within .nav-link::after {
+    transform: rotate(-90deg);
+}
+
+.dropdown-menu a {
+    min-width: 170px;
+    padding: 12px 20px;
+}
+
+.nav-secondary-start {
+    border-left: 1px solid rgba(247, 246, 242, 0.35);
+    margin-left: 12px;
+    padding-left: 12px;
+}
+
+.nav-primary-end {
+    border-right: 1px solid rgba(247, 246, 242, 0.35);
+    margin-right: 12px;
+    padding-right: 12px;
+}

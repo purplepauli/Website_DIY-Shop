@@ -1,0 +1,55 @@
+/* Farbpalette laut Lastenheft */
+:root {
+    --stahlblau: #335C67;
+    --kalkweiss: #F7F6F2;
+    --orange: #E09F3E;
+    --text-dark: #1a1a1a;
+}
+
+html {
+    background-color: var(--text-dark);
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: var(--kalkweiss);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Archivo', sans-serif;
+    color: var(--stahlblau);
+}
+
+._btn-primary {
+    display: inline-block;
+    background-color: var(--stahlblau);
+    color: var(--kalkweiss);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+._btn-attention {
+    display: inline-block;
+    background-color: var(--orange);
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+}

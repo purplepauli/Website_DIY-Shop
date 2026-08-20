@@ -1,0 +1,347 @@
+.guide-detail-page * {
+    box-sizing: border-box;
+}
+
+.guide-detail-page h2 {
+    border-bottom: 2px solid var(--stahlblau);
+    padding-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* --- Zurück-Link --- */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--stahlblau);
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    margin-bottom: 25px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.back-link svg {
+    transition: transform 0.2s;
+}
+
+.back-link:hover {
+    color: var(--orange);
+}
+
+.back-link:hover svg {
+    transform: translateX(-4px);
+}
+
+/* --- Hero-Bereich: Titel & Meta-Daten vor Hintergrundbild --- */
+.guide-intro {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border-radius: 8px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.guide-intro::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--hero-image);
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.guide-intro::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.65));
+    z-index: 1;
+}
+
+.guide-intro h1 {
+    position: relative;
+    z-index: 2;
+    color: var(--kalkweiss);
+    margin: 0;
+    font-size: 36px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Meta-Daten (Schwierigkeit & Zeit) --- */
+.guide-meta {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 40px;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--orange);
+    font-size: 16px;
+    align-self: flex-start;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.difficulty-bars {
+    display: flex;
+    gap: 5px;
+}
+
+.difficulty-bars .bar {
+    width: 20px;
+    height: 8px;
+    background-color: #ccc;
+    /* Ausgegraut */
+    border-radius: 2px;
+}
+
+.difficulty-bars .bar.filled {
+    background-color: var(--orange);
+    /* Eingefärbt laut Corporate Design */
+}
+
+/* --- Einleitungstext zum Projekt --- */
+.guide-description {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.guide-description p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #333;
+    max-width: 800px;
+}
+
+/* --- Material/Werkzeug-Slider --- */
+.product-sliders {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.product-slider {
+    position: relative;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 50px 60px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Tag-Badge: gleiche Optik wie .guide-tag bei den Guide-Kacheln */
+.slider-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--orange);
+    color: var(--kalkweiss);
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 5px 12px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.slider-arrow:hover {
+    background-color: var(--stahlblau);
+    border-color: var(--stahlblau);
+    color: var(--kalkweiss);
+}
+
+.slider-arrow-prev {
+    left: 12px;
+}
+
+.slider-arrow-next {
+    right: 12px;
+}
+
+.slider-title {
+    margin: 0 0 25px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.slider-track {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-slides-wrapper {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.slider-image {
+    flex: 0 0 100%;
+    min-width: 0;
+    display: block;
+    width: 100%;
+    height: 220px;
+    background-color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.slider-beschreibung {
+    text-align: center;
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.slider-counter {
+    text-align: center;
+    color: var(--stahlblau);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.slider-shop-link {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid var(--stahlblau);
+    color: var(--stahlblau);
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.slider-shop-link:hover {
+    background-color: var(--stahlblau);
+    color: var(--kalkweiss);
+}
+
+/* --- Schritt-für-Schritt (Rezept-Design) --- */
+.step-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.step-image {
+    flex: 0 0 40%;
+    /* Bild nimmt immer 40% der Breite ein */
+}
+
+.step-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.step-image--contain img {
+    object-fit: contain;
+    background-color: #fff;
+    /* füllt den Rand, wenn Bild nicht die volle Höhe/Breite braucht */
+}
+
+.step-text {
+    flex: 1;
+    /* Text füllt den restlichen Platz */
+    padding: 30px;
+}
+
+.step-text h3 {
+    margin-top: 0;
+    color: var(--orange);
+}
+
+/* Responsive Anpassung für Smartphones */
+@media (max-width: 768px) {
+    .step-row {
+        flex-direction: column;
+        /* Bild und Text untereinander */
+    }
+
+    .step-image {
+        height: 250px;
+    }
+
+    .guide-meta {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .guide-intro {
+        min-height: 220px;
+        padding: 25px;
+    }
+
+    .guide-intro h1 {
+        font-size: 26px;
+    }
+
+    .guide-meta {
+        align-self: stretch;
+    }
+
+    .product-slider {
+        padding: 50px 45px 25px;
+    }
+
+    .slider-arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .slider-arrow-prev {
+        left: 6px;
+    }
+
+    .slider-arrow-next {
+        right: 6px;
+    }
+}

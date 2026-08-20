@@ -1,0 +1,165 @@
+.checkout-container {
+    min-height: 55vh;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+
+.checkout-container h1 {
+    border-bottom: 2px solid var(--stahlblau);
+    padding-bottom: 12px;
+}
+
+
+/* Neue zweispaltige Anordnung */
+.checkout-layout {
+    display: flex;
+    gap: 5vw;
+    margin-top: 30px;
+}
+
+
+.checkout-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+
+/* Linke Warenkorbseite */
+.cart-summary {
+    min-width: 50vw;
+    height: fit-content;
+}
+
+
+/* Rechte Zahlungsseite */
+.payment-summary {
+    min-width: 20vw;
+    height: fit-content;
+}
+
+
+
+.checkout-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.checkout-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.checkout-total {
+    margin: 25px 0 0 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--stahlblau);
+}
+
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+.payment-option:hover {
+    border-color: var(--orange);
+}
+
+
+.payment-option input {
+    accent-color: var(--orange);
+}
+
+
+.payment-logo {
+    font-weight: bold;
+    color: var(--stahlblau);
+    min-width: 100px;
+}
+
+
+.mastercard {
+    color: #d35400;
+}
+
+
+.paypal {
+    color: #003087;
+}
+
+
+.checkout-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+
+.checkout-pay {
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+}
+
+
+.checkout-pay:hover {
+    filter: brightness(.95);
+}
+
+
+.checkout-back {
+    text-decoration: none;
+    color: var(--stahlblau);
+    padding: 14px 20px;
+}
+
+
+.success {
+    text-align: center;
+}
+
+
+.success p {
+    margin-bottom: 40px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* Mobile Ansicht */
+@media (max-width: 900px) {
+
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+
+}

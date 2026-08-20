@@ -1,0 +1,104 @@
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: .4rem;
+    color: var(--stahlblau);
+}
+
+input,
+select,
+textarea {
+    font: inherit;
+    padding: .8rem 1rem;
+    border: 2px solid #d5d5d5;
+    border-radius: 8px;
+    background: white;
+    transition: .2s;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(224, 159, 62, .25);
+}
+
+input[type="range"] {
+    padding: 0;
+}
+
+button {
+    align-self: flex-start;
+    background: var(--stahlblau);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: .9rem 1.8rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: .2s;
+}
+
+button:hover {
+    background: var(--orange);
+}
+
+#difficultyValue {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+input[type="file"] {
+    cursor: pointer;
+    padding: .6rem 1rem;
+}
+
+input[type="file"]::file-selector-button {
+    background: var(--stahlblau);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: .5rem 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: var(--orange);
+}
+
+.image-preview {
+    display: none;
+    margin-top: 1rem;
+    max-width: 250px;
+    max-height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #d5d5d5;
+}

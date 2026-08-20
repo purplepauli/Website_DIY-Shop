@@ -1,0 +1,326 @@
+/* Product Detail Page Styles */
+.product-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    gap: 2rem;
+}
+
+/* Container für das Hauptbild und die Pfeile.
+   isolation: isolate erzeugt einen eigenen Stacking Context, damit das
+   Discount-Badge (z-index: 11) NICHT in den Stacking Context des <body>
+   "entkommt" und mit dem <nav> (z-index: 10) im Header konkurriert.
+   Ohne diese Isolation lag das Badge über dem ausgeklappten Dropdown-Menü. */
+.image-with-arrows {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 400px; /* Festgelegte Höhe und breite für den Container */
+    background-color: #ffffff; /* Optional: Hintergrundfarbe für den Container */
+    isolation: isolate;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.product-discount-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #e63946;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    z-index: 11; /* über den Pfeil-Buttons (z-index: 10) */
+}
+
+
+
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.prev-arrow {
+    left: 10px;
+}
+
+.next-arrow {
+    right: 10px;
+}
+
+.product-image-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-detail-image {
+    width: 100%; /* Festgelegte Breite für alle Hauptbilder */
+    height: 400px; /* Festgelegte Höhe für alle Hauptbilder */
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 0.75rem;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+/* Füge eine Klasse für das fade-out Effekt hinzu */
+.image-fade-out {
+    opacity: 0 !important;
+}
+
+/* Thumbnail-Leiste */
+.product-thumbnails {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: nowrap; /* Änderung: Kein Wrap mehr, damit Thumbnails in einer Reihe bleiben */
+    padding: 0.5rem 0; /* Hinzugefügt: Abstand oben und unten */
+    align-items: flex-start; /* Verhindert das automatische Strecken in die Höhe */
+}
+
+.product-thumbnail {
+    flex: 1; /* Änderung: Flex-Eigenschaften für gleichmäßige Verteilung */
+    min-width: 0; /* Änderung: Mindestbreite auf 0 setzen, damit Thumbnails sich verkleinern können */
+    max-width: 100px;
+    height: auto; /* Änderung: Höhe automatisch anpassen */
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+    background-color: #f5f5f5;
+}
+
+.product-thumbnail:hover {
+    border-color: rgba(230, 126, 34, 0.5);
+}
+
+.product-thumbnail.active {
+    border: 2px solid var(--orange);
+}
+
+.product-info-column {
+    flex: 2;
+    min-width: 300px;
+}
+
+.product-category {
+    color: var(--stahlblau);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.product-info-column h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.product-sku {
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--orange);
+    margin-bottom: 2rem;
+}
+
+.price-original {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--orange);
+    opacity: 0.75;
+    text-decoration: line-through;
+    margin-right: 0.5rem;
+}
+
+.price-final {
+    color: #e63946;
+}
+
+.price-incl-vat {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    margin-left: 0.5rem;
+}
+
+.technical-specs {
+    color: var(--text-dark);
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.technical-specs li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.technical-specs li:last-child {
+    border-bottom: none;
+}
+
+.product-description {
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.variant-select {
+    margin-bottom: 1rem;
+}
+
+.quantity-select {
+    margin-bottom: 1rem;
+}
+
+.quantity-select label {
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.quantity-select input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 60px;
+}
+
+.variant-select label {
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.variant-select select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 200px;
+    font-size: 1rem;
+}
+
+.add-to-cart {
+    background-color: var(--stahlblau);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: var(--orange);
+}
+
+/* Deaktivierter Warenkorb-Button: ausgegraut, kein Hover-Effekt, kein Klick */
+.add-to-cart:disabled,
+.add-to-cart.disabled {
+    background-color: var(--stahlblau);
+    opacity: 0.5;
+    cursor: not-allowed;
+    /* pointer-events:none verhindert zusätzlich, dass Maus-Events (und damit
+       der Hover-Tooltip und Klicks) den Button überhaupt erreichen - das
+       title-Attribut wird dennoch vom Browser als nativer Tooltip gezeigt,
+       weil der Browser das Element selbst noch kennt. */
+    pointer-events: none;
+}
+
+.add-to-cart:disabled:hover,
+.add-to-cart.disabled:hover {
+    background-color: var(--stahlblau);
+}
+
+/* Bestandsampel: Container mit ausgefülltem Punkt + Statustext */
+.stock-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.stock-indicator .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0; /* verhindert, dass der Punkt beim Platzmangel gestaucht wird */
+}
+
+/* Grün: genug Bestand (>= 10) */
+.stock-indicator.stock-available {
+    color: var(--text-dark);
+}
+
+.stock-indicator.stock-available .dot {
+    background-color: #2ecc71;
+    box-shadow: 0 0 6px rgba(46, 204, 113, 0.6);
+}
+
+/* Gelb: niedriger Bestand (> 0 und < 10) */
+.stock-indicator.stock-low {
+    color: #f39c12;
+}
+
+.stock-indicator.stock-low .dot {
+    background-color: #f39c12;
+    box-shadow: 0 0 6px rgba(243, 156, 18, 0.6);
+}
+
+/* Rot: nicht lieferbar (Bestand = 0) */
+.stock-indicator.stock-unavailable {
+    color: #e74c3c;
+}
+
+.stock-indicator.stock-unavailable .dot {
+    background-color: #e74c3c;
+    box-shadow: 0 0 6px rgba(231, 76, 60, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-detail-container {
+        flex-direction: column;
+    }
+    
+    .product-image-column,
+    .product-info-column {
+        min-width: 100%;
+    }
+}

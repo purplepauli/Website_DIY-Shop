@@ -1,0 +1,157 @@
+:root {
+    --primary: #335C67;
+    --bg: #F7F6F2;
+    --accent: #E09F3E;
+    --text: #1a1a1a;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.page-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+}
+
+
+.panel {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 10px;
+    padding: 32px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+
+.title {
+    font-family: 'Archivo', sans-serif;
+    color: var(--primary);
+    font-size: 32px;
+    margin-bottom: 22px;
+}
+
+
+.error-box {
+    background: #ffe5e5;
+    color: #7a1f1f;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 18px;
+    margin-bottom: 17px;
+}
+
+
+.success-box {
+    background: rgb(191, 250, 193);
+    color: #1f5f3a;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 18px;
+    margin-bottom: 17px;
+}
+
+
+.form-group {
+    width: 100%;
+}
+
+
+.form-label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+
+.form-input {
+    width: 93.5%;
+    padding: 20px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+.form-input:focus {
+    outline: 2px solid var(--accent);
+    border-color: transparent;
+}
+
+
+.checkbox-group {
+    margin-bottom: 20px;
+}
+
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.checkbox-input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+
+.submit-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+
+.submit-btn:hover {
+    background: var(--accent);
+}
+
+
+.footer-text {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+.footer-text a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+
+.footer-text a:hover {
+    color: var(--accent);
+}

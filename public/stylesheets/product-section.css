@@ -1,0 +1,405 @@
+/* ===========================
+   Produktübersicht / Toolbar
+   =========================== */
+
+/* Toolbar als Karte im Stil der Produktkarten (weiß, Schatten, abgerundete Ecken).
+   Überschrift links, Steuerungselemente rechts in einer Zeile. */
+        .product-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 18px 24px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Doppelten Abstand vermeiden: die h2 innerhalb des Toolbars soll
+           keinen eigenen margin-bottom mitbringen, der Toolbar hat den schon. */
+        .product-toolbar h2 {
+            margin: 0;
+            font-size: 26px;
+            color: var(--stahlblau);
+        }
+
+        .product-section h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Formular im Toolbar: kompakt, einreihig, eigene Abstände zwischen den Gruppen. */
+        .product-filter-bar {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+
+        /* Gemeinsame Basis für die Gruppen (Checkbox + Sortier-Label). */
+        .filter-checkbox,
+        .filter-sort {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            white-space: nowrap;
+            color: #000000;
+            font-family: 'IBM Plex Sans', sans-serif;
+            position: relative;
+        }
+
+        .filter-sort {
+            color: #555;
+        }
+
+        /* Vertikale Trennlinie nur VOR dem Sortier-Dropdown (nicht vor der Checkbox,
+           damit die erste Gruppe keinen Trenner bekommt). */
+        .filter-sort::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 22px;
+            background-color: #e0e0e0;
+        }
+
+        /* Sortier-Dropdown: einheitlicher Look mit eigenem Pfeil. */
+        .filter-sort select {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 32px 8px 12px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            background-color: #ffffff;
+            color: var(--text-dark);
+            cursor: pointer;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%23335C67' d='M0 0l5 6 5-6z'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+        }
+
+        .filter-sort select:hover {
+            border-color: var(--stahlblau);
+        }
+
+        .filter-sort select:focus {
+            outline: none;
+            border-color: var(--orange);
+            box-shadow: 0 0 0 2px rgba(224, 159, 62, 0.25);
+        }
+
+        /* ===========================
+           Custom Checkbox (Switch-Look im Angebots-Farbschema)
+           =========================== */
+        .filter-checkbox input[type="checkbox"] {
+            /* visuell komplett verstecken, wir rendern den Switch per Label-Pseudo-Elementen */
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+            pointer-events: none;
+        }
+
+        .filter-checkbox {
+            /* Platz schaffen für den absolut positionierten Switch */
+            position: relative;
+            padding-left: 44px;
+        }
+
+        .filter-checkbox > .checkbox-text {
+            position: relative;
+            z-index: 1;
+            color: var(--text-dark);
+        }
+
+        /* Schiene */
+        .filter-checkbox::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 20px;
+            background-color: #d0d0d0;
+            border-radius: 20px;
+            transition: background-color 0.2s;
+            z-index: 0;
+        }
+
+        /* Knopf */
+        .filter-checkbox::after {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            transition: left 0.2s, background-color 0.2s;
+            z-index: 1;
+        }
+
+        /* Aktiver Zustand: Schiene orange, Knopf rechts.
+           :has() wird seit Ende 2023 von allen großen Browsern unterstützt. */
+        .filter-checkbox:has(input[type="checkbox"]:checked)::before {
+            background-color: var(--orange);
+        }
+
+        .filter-checkbox:has(input[type="checkbox"]:checked)::after {
+            left: 18px;
+            background-color: var(--kalkweiss);
+        }
+
+        /* Häkchen-Icon im Knopf, nur sichtbar wenn aktiv.
+           z-index: 2 damit es ÜBER dem ::after-Knopf liegt. */
+        .filter-checkbox .check-icon {
+            position: absolute;
+            left: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            color: var(--stahlblau);
+            opacity: 0;
+            transition: opacity 0.2s, left 0.2s;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .filter-checkbox:has(input[type="checkbox"]:checked) .check-icon {
+            opacity: 1;
+            left: 20px;
+            color: var(--stahlblau);
+        }
+
+        /* Fokus-Ring für Tastaturbedienung. */
+        .filter-checkbox:has(input[type="checkbox"]:focus-visible)::before {
+            box-shadow: 0 0 0 3px rgba(224, 159, 62, 0.35);
+        }
+
+        /* ===========================
+           Ergebnis-Anzahl (feste Breite, damit sich die Größe bei
+           ein- vs. zweistelligen Zahlen nicht ändert)
+           =========================== */
+        .product-count {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--stahlblau);
+            border: 1px solid #e0e0e0;
+            padding: 6px 14px;
+            border-radius: 20px;
+            white-space: nowrap;
+            /* Feste Breite: ausreichend für "999 Produkte" (3-stellig + Wort) */
+            min-width: 110px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+
+/* ===========================
+   Produktgrid & -karten
+   =========================== */
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            height: 90%;
+            position: relative; /* Anker für das Rabatt-Badge (position: absolute). Ansonsten sieht product-discount-badge seinen Vorfahren nicht und wandert ganz nach oben */
+        }
+
+        .product-discount-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background-color: #e63946;
+            color: #ffffff;
+            font-family: 'Archivo', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 1;
+            padding: 5px 10px;
+            border-radius: 20px;
+            z-index: 2;
+        }
+
+        .product-card-link {
+            text-decoration: none; /* Entfernt den Unterstrich */
+            color: inherit;        /* Zwingt den Text, seine normale Farbe zu behalten */
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            background-color: #ffffff;
+            height: 180px;
+            width: 100%;
+            object-fit: contain;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--stahlblau);
+            font-weight: 500;
+        }
+
+        /* Produktname */
+        .product-card h3 {
+            
+            font-size: 18px;
+            margin: 10px 0;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Zeigt maximal 2 Zeilen an */
+            line-clamp: 2; 
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Produktbeschreibung */
+        .product-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Zeigt maximal 3 Zeilen an */
+            line-clamp: 3; 
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis; 
+            margin-top: auto;
+        }
+
+        .product-price {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--orange);
+            margin-bottom: 15px;
+            margin-top: auto;
+        }
+
+        /* Falls das Produkt im Angebot ist */
+        .price-original {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--orange);
+            opacity: 0.75;
+            text-decoration: line-through;
+            margin-right: 8px;
+        }
+
+        .price-final {
+            font-family: 'IBM Plex Sans', sans-serif;
+            color: #e63946;
+        }
+
+        .add-to-cart {
+            background-color: var(--stahlblau);
+            color: var(--kalkweiss);
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: 'IBM Plex Sans', sans-serif;
+            transition: background 0.3s;
+            margin-top: auto;
+        }
+
+        .add-to-cart:hover {
+            background-color: var(--orange);
+        }
+
+        /* Hinweis-Box für nicht lieferbare Produkte im Karten-Grid.
+           Übernimmt den vollen Platz des Warenkorb-Buttons, damit das
+           Karten-Layout konsistent bleibt. Roter Look passend zum
+           Ampel-Zustand "nicht lieferbar" auf der Detailseite. */
+        .out-of-stock-notice {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 12px;
+            margin-top: auto; /* wie der .add-to-cart Button nach unten geschoben */
+            color: #e74c3c;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 4px;
+            /* cursor: default, weil das Element rein informativ ist -
+               die Karte selbst bleibt über den umschließenden <a> klickbar,
+               was zur Detailseite führt (gewünschtes Verhalten). */
+            cursor: default;
+            user-select: none;
+        }
+
+        .out-of-stock-notice .out-of-stock-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #e74c3c;
+            box-shadow: 0 0 6px rgba(231, 76, 60, 0.6);
+            flex-shrink: 0;
+        }
+
+/* ===========================
+   Responsive Anpassungen
+   =========================== */
+        @media (max-width: 640px) {
+            .product-toolbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 16px 18px;
+            }
+
+            .product-filter-bar {
+                width: 100%;
+                gap: 14px;
+            }
+
+            .filter-sort::before {
+                display: none;
+            }
+        }
