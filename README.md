@@ -1,4 +1,5 @@
 # Website DIY-Shop Würzburg
+![Startseite](https://github.com/purplepauli/Website_DIY-Shop/blob/main/public/images/DIYShop_Startseite.png?raw=true)
 
 Eine Fullstack-Webanwendung für einen fiktiven DIY-Shop, entwickelt als studentisches Gruppenprojekt im Fach Webapplikationen an der Hochschule Fulda.
 
